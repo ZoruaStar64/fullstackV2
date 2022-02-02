@@ -8,9 +8,12 @@ require_once('functions.php');
 $details = userCreds();
 $profilePicture = $details["profilePicture"];
 $userName = $details["userName"];
+$userId = $_SESSION['user']['userId'];
+if ($userId ==! 0) {
+    $showloggedin = true;
+}
 
 if (isset($_GET["logout"])) {
-    /*session_start();*/
     $_SESSION = array();
     $details = array();
     $profilePicture = "img/notLoggedIn.png";
@@ -29,7 +32,7 @@ if (isset($_GET["logout"])) {
     <title>Star Game Tracker</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="pageContainer">
@@ -40,22 +43,33 @@ if (isset($_GET["logout"])) {
 
 if ($showloggedin == false) {
 
-    ?>  <div class="linkContainer"><p>Home</p>  <p>Login</p>  <p>Register</p>  <p>About</p></div>
-
-    <!--<div id='registerButton'><figure><img src='img/Register.png' alt='Register button'></figure></div>
-        <div id='loginButton'><figure><img src='img/LoginButton.png' alt='Login button'></figure></div>
-        <div><a href='?logout'><figure><img src='img/LogoutButton.png' alt='Logout button'></figure></a></div>-->
-
+    ?>
+    <header>
+    <div class="linkContainer"><a href="index.php">Home</a> <p id="loginButton">Login</p> <p id="registerButton">Register</p> <a href="?about">About</a></div>
+    </header>
+    <div class="mainBody">
+    <h1>Startracker</h1>
+    <p>Welcome</p>
+        <p>Welcome to the Startracker website!<br>
+        You can use this website to keep track various games' progress that i plan to implement!
+        Currently the only game available is Terraria,
+        in which you can see the recipes on how to craft the more difficult items.
+        You will infortunately need to make an account to access the rest of the website.
+        This is so checked items can stay tracked within the database.
+        Other than that i hope you will enjoy the website and that it's helpfull!</p>
+</div>
+    <footer>
+    <p>&copy; 2022 SB-DEV</p>
+    </footer>
     <?php
 }
 if ($showloggedin == true) {
     $details = userCreds();
-    $profilePicture = $details["profilePicture"];
-    $userName = $details["userName"];
-    $bio = $details["bio"];
 
-    ?>  <div class="linkContainer"><p>Home  Login  Register  About</p></div>
-
+    ?>
+    <header>
+    <div class="linkContainer"><a href="index.php">Home</a> <a href="profile.php?id=<?php $userId ?>">Profile</a> <a href="?about">About</a></div>
+    </header>
     <!--<div><a href='mainMenu.php'><figure><img src='img/MainMenuButton.png' alt='main menu button'></figure></a></div>
     <div><a href='profile.php?id=<?php /*echo $userId */?>'><figure><img src='img/ProfileButton.png' alt='Profile button'></figure></a></div>
         <div><a href='?logout'><figure><img src='img/LogoutButton.png' alt='Logout button'></figure></a></div>-->
@@ -64,13 +78,16 @@ if ($showloggedin == true) {
 
 ?>
 
-    <form id="registerForm" style="display: none" action='<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>' method='POST'>
+<div id="modalBoxR" style="display: none;">
+
+    <p id="closeBox1">&times;</p>
+    <form id="registerForm" action='<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>' method='POST'>
         <div class="inputContainer">
-            <label>Email</label> &emsp;&ensp;&nbsp;: <input type='email' name='emailReg' value='' required>
+            <label>Email</label> : <input type='email' name='emailReg' value='' required>
         </div>
 
         <div class="inputContainer">
-            <label>Password</label> &nbsp;: <input type='text' name='passwordReg' value='' required>
+            <label>Password</label> : <input type='text' name='passwordReg' value='' required>
         </div>
 
         <div class="inputContainer">
@@ -78,7 +95,7 @@ if ($showloggedin == true) {
         </div>
 
         <div class="inputContainer">
-            <label>Gender</label> : <select style="width: 50%; margin-left: 12%" name="gender[]" multiple="multiple" required>
+            <label>Gender</label> : <select style="float: right; width: 65%; margin-right: 10px" name="gender[]" multiple="multiple" required>
                 <option value="male" >Male</option>
                 <option value="female">Female</option>
                 <option value="secret">keep secret</option>
@@ -88,21 +105,23 @@ if ($showloggedin == true) {
         <input id="creationButton" type='submit' name='createAcc' value='Create Account'>
 
     </form>
-    <br>
+</div>
 
-    <form id="loginForm" style="display: none" action='<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>' method='POST'>
+<div id="modalBoxL" style="display: none;">
+    <p id="closeBox2">&times;</p>
+    <form id="loginForm" action='<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>' method='POST'>
 
         <div class="inputContainer">
-            <label>Email</label>  &emsp;&ensp;&nbsp;: <input type='text' name='emailLogin' value=''>
+            <label>Email</label> : <input type='text' name='emailLogin' value=''>
         </div>
 
         <div class="inputContainer">
-            <label>Password</label> &nbsp;: <input type='password' name='passwordLogin' value=''>
+            <label>Password</label> : <input type='password' name='passwordLogin' value=''>
         </div>
 
         <input id="ActualLoginButton" type='submit' name='login' value='Login'>
     </form>
-    <br>
+</div>
     <?php
 
 

@@ -1,26 +1,39 @@
 const registerButton = document.getElementById('registerButton');
-const registerForm = document.getElementById('registerForm');
+const modalBoxR = document.getElementById('modalBoxR');
 const loginButton = document.getElementById('loginButton');
-const loginForm = document.getElementById('loginForm');
+const modalBoxL = document.getElementById('modalBoxL');
+const closeBox1 = document.getElementById('closeBox1');
+const closeBox2 = document.getElementById('closeBox2')
 
 function showRegisterForm() {
-    if (registerForm.style.display === 'none') {
-        registerForm.style.display = 'block';
-        loginForm.style.display = 'none';
+    if (modalBoxR.style.display === 'none') {
+        modalBoxR.style.display = 'block';
+        modalBoxL.style.display = 'none';
     }
     else {
-        registerForm.style.display = 'none';
+        modalBoxR.style.display = 'none';
     }
 }
 registerButton.addEventListener('click', showRegisterForm);
 
 function showLoginForm() {
-    if (loginForm.style.display === 'none') {
-        loginForm.style.display = 'block';
-        registerForm.style.display = 'none';
+    if (modalBoxL.style.display === 'none') {
+        modalBoxL.style.display = 'block';
+        modalBoxR.style.display = 'none';
     }
     else {
-        loginForm.style.display = 'none';
+        modalBoxL.style.display = 'none';
     }
 }
 loginButton.addEventListener('click', showLoginForm);
+
+function closeForm() {
+    if (modalBoxR.style.display === 'block') {
+        modalBoxR.style.display = 'none';
+    }
+    else if (modalBoxL.style.display === 'block') {
+        modalBoxL.style.display = 'none';
+    }
+}
+closeBox1.addEventListener('click', closeForm);
+closeBox2.addEventListener('click', closeForm)
