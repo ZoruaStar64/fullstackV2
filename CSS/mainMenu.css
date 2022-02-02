@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Saira Stencil One', cursive;
+    font-size: 25px;
+    color: #f3d400;
+
+}
+
+html {
+    background-color: #DAB9E3;
+
+}/*#F7E8FD*/
+
+/* return of the navbar */
+/* style the navbar */
+#navbar {
+    overflow: hidden;
+    background-color: #8844D5;
+    border: 2px solid #6F04BF;
+    display: flex;
+    justify-content: center;
+
+}
+/* Navbar Links */
+#navbar a {
+    width: 15%;
+    text-align: center;
+}
+
+/* Shine */
+.Shine {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 1em;
+}
+.Shine figure {
+    position: relative;
+    overflow: hidden;
+}
+/*255,255,255,0*/
+/*243,212,0,0*/
+/*136,63,213,0*/
+
+.Shine figure::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 95%;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+.Shine figure:hover::before {
+    -webkit-animation: shine 1.5s;
+    animation: shine 1.5s;
+}
+@-webkit-keyframes shine {
+    100% {
+        left: 100%;
+    }
+}
+@keyframes shine {
+    100% {
+        left: 100%;
+    }
+}
+
+.pageContainer {
+    background-color: #6e6ec6;
+    border: #6F04BF solid 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 25px;
+    grid-template-areas:
+    ". . . . ."
+    "row1 row1 row1 row1 row1"
+    "row2 row2 row2 row2 row2"
+    "row3 row3 row3 row3 row3";
+
+    width: 98vw;
+    height: 90vh; /*83 vh old*/
+    margin: 1em;
+}
+
+#row1 {
+    text-align: center;
+    grid-area: row1;
+    margin-left: 10%;
+}
+#row1 a {
+
+
+}
+#row2 {
+    text-align: center;
+    grid-area: row2;
+    margin-left: 10%;
+}
+#row3 {
+    text-align: center;
+    grid-area: row3;
+    margin-left: 10%;
+}
+
+.seperate {
+    margin: 0 10% 0 0;
+}
+
+.image-container {
+    margin: 0 0 0 0;
+}
+
+.favStarUnchecked {
+    background: url(../img/ColoredStar.png);
+    filter: grayscale(100%);
+    border: none;
+    height: 17px;
+    width: 17px
+}
+
+.favStarChecked {
+    background: url(../img/ColoredStar.png);
+    filter: grayscale(0%);
+    border: none;
+    height: 17px;
+    width: 17px
+}

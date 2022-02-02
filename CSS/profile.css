@@ -1,0 +1,379 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #DAB9E3;
+}
+
+p, a{
+    font-family: 'Saira Stencil One', cursive;
+    font-size: 25px;
+    color: #f3d400;
+
+}
+
+/* return of the navbar */
+/* style the navbar */
+#navbar {
+    overflow: hidden;
+    background-color: #8844D5;
+    border: 2px solid #6F04BF;
+    display: flex;
+    justify-content: center;
+
+}
+/* Navbar Links */
+#navbar a {
+    width: 15%;
+    text-align: center;
+}
+
+/* Shine */
+.Shine {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 1em;
+}
+.Shine figure {
+    position: relative;
+    overflow: hidden;
+}
+/*255,255,255,0*/
+/*243,212,0,0*/
+/*136,63,213,0*/
+
+.Shine figure::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 95%;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+.Shine figure:hover::before {
+    -webkit-animation: shine 1.5s;
+    animation: shine 1.5s;
+}
+@-webkit-keyframes shine {
+    100% {
+        left: 100%;
+    }
+}
+@keyframes shine {
+    100% {
+        left: 100%;
+    }
+}
+
+.favStarUnchecked {
+    background: url(../img/ColoredStar.png);
+    filter: grayscale(100%);
+    border: none;
+    height: 17px;
+    width: 17px
+}
+
+.favStarChecked {
+    background: url(../img/ColoredStar.png);
+    filter: grayscale(0%);
+    border: none;
+    height: 17px;
+    width: 17px
+}
+
+@media all and (min-width: 500px) {
+
+    .linkButtons {
+        width: 15vw;
+        min-width: 200px;
+    }
+    #profilePictureContainer {
+        background-color: #6e6ec6;
+        border: #6F04BF solid 10px;
+        width: 120px;
+        height: 120px;
+        margin: 0 0 0 20%;
+    }
+    #name {
+        text-align: center;
+        position: relative;
+        bottom: 63px;
+    }
+
+    .profileContainer {
+        background-color: #6e6ec6;
+        border: #6F04BF solid 10px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 25px;
+        grid-template-areas:
+    ". user user edit ." /*area where main user things go */
+    "bio bio bio bio bio" /*area where misc user things go */
+    "games games games games games"; /*area where tracked games go*/
+
+
+        width: 98vw;
+        height: 90vh; /*83 vh old*/
+        margin: 1em 1em 1em 1em;
+    }
+
+    .userContainer {
+        /*display: grid;*/
+        grid-area: user;
+    }
+
+    .bioContainer {
+        grid-area: bio;
+        border: #6F04BF 15px solid;
+        background-color: #8844D5;
+        height: 18vw;
+        margin: 2.4% 1% 0 0;
+    }
+
+    .gameContainer {
+        grid-area: games;
+        border: #6F04BF 15px solid;
+        background-color: #8844D5;
+        height: 90%;
+        margin: 0 1% 2.3% 1%;
+        text-align: center;
+    }
+
+    #gameOrder {
+        display: inline-block;
+        width: 10vw;
+        margin: 5px 5px 5px 5px;
+    }
+    .editProfile {
+        grid-area: edit;
+        border: #6F04BF 15px solid;
+        width: 90%;
+        background-color: #8844D5;
+        text-align: center;
+        margin: 0 0 0 15px;
+    }
+}
+
+@media all and (min-width: 850px) {
+    #profilePictureContainer {
+        background-color: #6e6ec6;
+        border: #6F04BF solid 10px;
+        width: 120px;
+        height: 120px;
+        margin: 0 0 0 20%;
+    }
+    #name {
+        text-align: center;
+        position: relative;
+        bottom: 63px;
+        right: 40px;
+    }
+
+    .profileContainer {
+        background-color: #6e6ec6;
+        border: #6F04BF solid 10px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 25px;
+        grid-template-areas:
+    "user bio bio bio bio" /*area where main user things go */
+    "edit . . . ." /*area where misc user things go */
+    "games games games games games"; /*area where tracked games go*/
+
+
+        width: 98vw;
+        height: 90vh; /*83 vh old*/
+        margin: 1em 1em 1em 1em;
+    }
+
+    .userContainer {
+        /*display: grid;*/
+        grid-area: user;
+    }
+
+    .bioContainer {
+        grid-area: bio;
+        border: #6F04BF 15px solid;
+        background-color: #8844D5;
+        height: 18vw;
+        margin: 2.4% 1% 0 0;
+    }
+
+    .gameContainer {
+        grid-area: games;
+        border: #6F04BF 15px solid;
+        background-color: #8844D5;
+        height: 90%;
+        margin: 0 1% 2.3% 1%;
+        text-align: center;
+    }
+
+    #gameOrder {
+        display: inline-block;
+        width: 10vw;
+        margin: 5px 5px 5px 5px;
+    }
+    .editProfile {
+        grid-area: edit;
+        border: #6F04BF 15px solid;
+        width: 90%;
+        background-color: #8844D5;
+        text-align: center;
+        margin: 0 0 0 15px;
+    }
+}
+
+@media all and (min-width: 1050px) {
+    #profilePictureContainer {
+        background-color: #6e6ec6;
+        border: #6F04BF solid 10px;
+        width: 120px;
+        height: 120px;
+        margin: 0 0 0 20%;
+    }
+
+    #name {
+        text-align: center;
+        position: relative;
+        bottom: 63px;
+        right: 60px;
+    }
+
+    .profileContainer {
+        background-color: #6e6ec6;
+        border: #6F04BF solid 10px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 25px;
+        grid-template-areas:
+    "user bio bio bio bio" /*area where main user things go */
+    "edit . . . ." /*area where misc user things go */
+    "games games games games games"; /*area where tracked games go*/
+
+
+        width: 98vw;
+        height: 90vh; /*83 vh old*/
+        margin: 1em 1em 1em 1em;
+    }
+
+    .userContainer {
+        /*display: grid;*/
+        grid-area: user;
+    }
+
+    .bioContainer {
+        grid-area: bio;
+        border: #6F04BF 15px solid;
+        background-color: #8844D5;
+        height: 55%;
+        margin: 2.4% 1% 0 0;
+    }
+
+    .gameContainer {
+        grid-area: games;
+        border: #6F04BF 15px solid;
+        background-color: #8844D5;
+        height: 90%;
+        margin: 0 1% 2.3% 1%;
+        text-align: center;
+    }
+
+    #gameOrder {
+        display: inline-block;
+        width: 10vw;
+        margin: 5px 5px 5px 5px;
+    }
+    .editProfile {
+        grid-area: edit;
+        border: #6F04BF 15px solid;
+        width: 90%;
+        background-color: #8844D5;
+        text-align: center;
+        margin: 0 0 0 15px;
+    }
+}
+
+@media all and (min-width: 1290px) {
+    #profilePictureContainer {
+        background-color: #6e6ec6;
+        border: #6F04BF solid 10px;
+        width: 120px;
+        height: 120px;
+        margin: 0 0 0 0;
+    }
+
+#name {
+    text-align: center;
+    position: relative;
+    bottom: 63px;
+    right: 100px;
+}
+
+    .profileContainer {
+        background-color: #6e6ec6;
+        border: #6F04BF solid 10px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 25px;
+        grid-template-areas:
+    "user bio bio bio bio" /*area where main user things go */
+    "edit . . . ." /*area where misc user things go */
+    "games games games games games"; /*area where tracked games go*/
+
+
+        width: 98vw;
+        height: 90vh; /*83 vh old*/
+        margin: 1em 1em 1em 1em;
+    }
+
+    .userContainer {
+        /*display: grid;*/
+        grid-area: user;
+    }
+
+    .bioContainer {
+        grid-area: bio;
+        border: #6F04BF 15px solid;
+        background-color: #8844D5;
+        height: 55%;
+        margin: 2.4% 1% 0 0;
+    }
+
+    .gameContainer {
+        grid-area: games;
+        border: #6F04BF 15px solid;
+        background-color: #8844D5;
+        height: 90%;
+        margin: 0 1% 2.3% 1%;
+        text-align: center;
+    }
+
+    #gameOrder {
+        display: inline-block;
+        width: 10vw;
+        margin: 5px 5px 5px 5px;
+    }
+
+    .editProfile {
+        grid-area: edit;
+        border: #6F04BF 15px solid;
+        width: 50%;
+        background-color: #8844D5;
+        text-align: center;
+        margin: 0 0 0 15px;
+    }
+}

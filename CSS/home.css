@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Saira Stencil One', cursive;
+    color: #89BFE2;
+}
+
+html {
+    background-color: #1F1F1F;
+}/*#F7E8FD#8844D5*/
+
+.linkContainer {
+    display: flex;
+    background-color: #5C5C5C;
+    width: 500px;
+    justify-content: space-evenly;
+    float: right;
+}
+
+label {
+    padding-left: 5px;
+}
+
+input {
+    float: right;
+    width: 65%;
+    margin-right: 2%;
+}
+
+.inputContainer {
+    border-bottom: 5px solid #6F04BF;
+    margin-top: 2%;
+}
+#registerButton {
+    cursor: pointer;
+}
+#registerForm {
+    font-size: 20px;
+    padding-bottom: 7%;
+    height: 100%;
+    width: 100%;
+    border: 10px solid #6F04BF;
+    background-color: #6e6ec6;
+    grid-area: registerForm;
+}
+
+#creationButton {
+    float: left;
+    margin: 1% 35% 0 35%;
+    background-color: #f3d400;
+    align-self: center;
+    width: 28%;
+    height: 20%;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+#loginButton {
+    cursor: pointer;
+}
+#loginForm {
+    font-size: 20px;
+    padding-bottom: 5%;
+    height: 100%;
+    border: 15px solid #6F04BF;
+    background-color: #6e6ec6;
+    grid-area: loginForm;
+}
+
+#ActualLoginButton {
+    float: left;
+    margin: 2% 50% 0 35%;
+    background-color: #f3d400;
+    align-self: center;
+    width: 30%;
+    height: 30%;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+/*
+@media all and (min-width: 1300px) {
+
+    #pageLogo {
+        width: 50%;
+        height: 50%;
+    }
+}*/
