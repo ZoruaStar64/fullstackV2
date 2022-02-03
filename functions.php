@@ -351,7 +351,7 @@ function loadGames($link) {
             <div style="width: 125px; height: 175px" class="" style="position: relative">
             <a href="' . $pageLink .'">
            
-            <form style="position: absolute; margin: 10px 0 0 10px" id="favoriteGame1" name="favoriteGame1" action="includes/inc.favoriteGame.php" method="POST">
+            <form style="position: absolute; margin: 0 10px 10px 0" id="favoriteGame1" name="favoriteGame1" action="includes/inc.favoriteGame.php" method="POST">
             <input type="hidden" value="' . $gameId .'" name="hiddenId1">
             <input type="hidden" value="' . $userId .'" name="hiddenId2">
 
@@ -393,11 +393,11 @@ function loadFavoritedGames2($link) {
             <div style="width: 125px; height: 175px" class="" style="position: relative">
             <a href="' . $pageLink . '">
            
-            <form style="position: absolute; margin: 10px 0 0 10px" id="favoriteGame1" name="favoriteGame1" action="includes/inc.favoriteGame.php" method="POST">
+            <form style="position: absolute; margin: 0 10px 10px 0" id="favoriteGame1" name="favoriteGame1" action="includes/inc.favoriteGame.php" method="POST">
             <input type="hidden" value="' . $gameId . '" name="hiddenId1">
             <input type="hidden" value="' . $userId . '" name="hiddenId2">
 
-            <input type="submit" value="" class="' . $class . '" name="favoriteGame1">
+            <input type="submit" value="" class="' . $class . '" style="position: absolute; bottom: 0; right: 0" name="favoriteGame1">
             </form>
              <img class="seperate" alt="' . $gameName . '"  src="' . $gameCover . '"  width="125" height="175">
              </a>

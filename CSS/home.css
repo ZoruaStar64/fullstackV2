@@ -61,16 +61,22 @@ h1 {
     background: url(../img/FavStar.png);
     filter: grayscale(100%);
     border: none;
-    height: 17px;
-    width: 17px
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 130px;
+    left: 80px;
 }
 
 .favStarChecked {
     background: url(../img/FavStar.png);
     filter: grayscale(0%);
     border: none;
-    height: 17px;
-    width: 17px
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 130px;
+    left: 80px;
 }
 
 .Games {

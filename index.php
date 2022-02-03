@@ -21,6 +21,7 @@ if (isset($_GET["logout"])) {
     $userId = 0;
     $bio = "";
     session_destroy();
+    $showloggedin = false;
 }
 
 ?>
@@ -43,7 +44,7 @@ if ($showloggedin == false) {
 
     ?>
     <header>
-    <div class="linkContainer"><a href="index.php">Home</a> <p id="loginButton">Login</p> <p id="registerButton">Register</p> <a href="?about">About</a></div>
+    <div class="linkContainer"><a href="index.php">Home</a> <p id="loginButton">Login</p> <p id="registerButton">Register</p> <a href="about.php">About</a></div>
     </header>
     <div class="mainBody">
     <h1>Startracker</h1>
@@ -52,12 +53,12 @@ if ($showloggedin == false) {
         You can use this website to keep track various games' progress that i plan to implement!<br>
         Currently the only game available is Terraria,<br>
         in which you can see the recipes on how to craft the more difficult items.<br>
-        You will infortunately need to make an account to access the rest of the website.<br>
+        You will unfortunately need to make an account to access the rest of the website.<br>
         This is so checked items can stay tracked within the database.<br>
         Other than that i hope you will enjoy the website and that it's helpfull!</p>
 </div>
     <footer>
-        <p>&copy; 2022 SB-DEV</p>
+        <p style="margin: 15px 0 0 15px; position: relative">&copy; 2022 SB-DEV</p>
     </footer>
     <?php
 }
@@ -66,7 +67,7 @@ if ($showloggedin == true) {
 
     ?>
     <header>
-    <div class="linkContainer"><a href="index.php">Home</a> <a href="profile.php?id=<?php echo $userId ?>">Profile</a> <a href="?about">About</a></div>
+    <div class="linkContainer"><a href="index.php">Home</a> <a href="profile.php?id=<?php echo $userId ?>">Profile</a> <a href='?logout'>Logout</a> <a href="?about">About</a></div>
     </header>
     <div class="mainBody">
         <h1>Startracker</h1>
@@ -88,7 +89,7 @@ if ($showloggedin == true) {
         </div>
     </div>
     <footer>
-        <p>&copy; 2022 SB-DEV</p>
+        <p style="margin: 15px 0 0 15px; position: relative">&copy; 2022 SB-DEV</p>
     </footer>
     <!--<div><a href='mainMenu.php'><figure><img src='img/MainMenuButton.png' alt='main menu button'></figure></a></div>
     <div><a href='profile.php?id=<?php /*echo $userId */?>'><figure><img src='img/ProfileButton.png' alt='Profile button'></figure></a></div>
