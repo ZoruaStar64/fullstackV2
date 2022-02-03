@@ -67,7 +67,7 @@ if ($showloggedin == true) {
 
     ?>
     <header>
-    <div class="linkContainer"><a href="index.php">Home</a> <a href="profile.php?id=<?php echo $userId ?>">Profile</a> <a href='?logout'>Logout</a> <a href="?about">About</a></div>
+    <div class="linkContainer"><a href="index.php">Home</a> <a href="profile.php?id=<?php echo $userId ?>">Profile</a> <a href='?logout'>Logout</a> <a href="about.php">About</a></div>
     </header>
     <div class="mainBody">
         <h1>Startracker</h1>
