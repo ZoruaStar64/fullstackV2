@@ -70,7 +70,7 @@ function createAccount ($link, $emailReg, $nickname, $passwordReg, $gender)
 {
 
     $hashedPassword = password_hash($passwordReg, PASSWORD_DEFAULT);
-    $query = "INSERT INTO u3651p69583_tracker.Users(`e-mail`, nickname, password, gender) VALUE (?, ?, ?, ?)";
+    $query = "INSERT INTO sborgman_startracker.Users(`e-mail`, nickname, password, gender) VALUE (?, ?, ?, ?)";
     $stmt1 = mysqli_prepare($link, $query);
     $stmt1->bind_param("ssss", $emailReg, $nickname, $hashedPassword, $gender);
     if (!$stmt1) {
@@ -95,14 +95,14 @@ function inLogFormulier($link) {
     $email = $_POST['emailLogin'];
     $wachtwoord = $_POST['passwordLogin'];
 
-    $queryPasswordCheck = "SELECT password FROM u3651p69583_tracker.Users WHERE `e-mail` = '$email' ";
+    $queryPasswordCheck = "SELECT password FROM sborgman_startracker.Users WHERE `e-mail` = '$email' ";
     $checkResult = $link->query($queryPasswordCheck);
     while ($checkedResult = $checkResult->fetch_assoc()) {
         $DBpwd = $checkedResult['password'];
     }
 
     if (password_verify($wachtwoord, $DBpwd)) {
-        $query = "SELECT * FROM u3651p69583_tracker.Users WHERE `e-mail` = '$email'";
+        $query = "SELECT * FROM sborgman_startracker.Users WHERE `e-mail` = '$email'";
         $result = $link->query($query);
         /*   $statement = mysqli_prepare($link, $query);
            $statement->bind_param("isssss", $userId, $trueEmail, $nick, $trueWachtwoord, $gender, $profilePicture);*/
@@ -152,7 +152,7 @@ function inLogFormulier($link) {
 
         if ($missingFavorites > 0 && $missingFavorites <= $gameTotal) {
             for ($favoriteStartPoint = ($existingFavoriteRows + 1); $favoriteStartPoint <= $gameTotal; $favoriteStartPoint++) {
-                $queryFav = "INSERT INTO u3651p69583_tracker.Favorites(Games_idGame, Users_userId) VALUE (?, ?)";
+                $queryFav = "INSERT INTO sborgman_startracker.Favorites(Games_idGame, Users_userId) VALUE (?, ?)";
                 $stmt1 = mysqli_prepare($link, $queryFav);
                 $stmt1->bind_param("ii", $favoriteStartPoint, $userId);
                 if (!$stmt1) {
@@ -180,7 +180,7 @@ function inLogFormulier($link) {
 
         if ($missingTrackers > 0 && $missingTrackers <= $trackerTotal) {
             for ($trackerStartPoint = ($existingTrackerRows + 1); $trackerStartPoint <= $trackerTotal; $trackerStartPoint++) {
-                $queryTrack = "INSERT INTO u3651p69583_tracker.Trackers_has_Users(Trackers_idTrackers, Users_userId) VALUE (?, ?)";
+                $queryTrack = "INSERT INTO sborgman_startracker.Trackers_has_Users(Trackers_idTrackers, Users_userId) VALUE (?, ?)";
                 $stmt2 = mysqli_prepare($link, $queryTrack);
                 $stmt2->bind_param("ii", $trackerStartPoint, $userId);
                 if (!$stmt2) {
@@ -210,7 +210,7 @@ if (isset($_POST["changeBio"])) {
 
 function editBio ($link, $bio, $userId) {
 
-    $queryBio = "UPDATE u3651p69583_tracker.Users SET bio='$bio' WHERE userId='$userId'";
+    $queryBio = "UPDATE sborgman_startracker.Users SET bio='$bio' WHERE userId='$userId'";
     $stmt1 = $link->prepare($queryBio);
     $stmt1->bind_param("s", $bio);
     if (!$stmt1) {
@@ -234,7 +234,7 @@ function editBio ($link, $bio, $userId) {
 
 function editPFP ($link, $PFP, $userId) {
 
-    $queryPFP = "UPDATE u3651p69583_tracker.Users SET profilePicture='$PFP' WHERE userId='$userId'";
+    $queryPFP = "UPDATE sborgman_startracker.Users SET profilePicture='$PFP' WHERE userId='$userId'";
     $stmt1 = $link->prepare($queryPFP);
     $stmt1->bind_param("s", $PFP);
     if (!$stmt1) {
@@ -249,11 +249,10 @@ function editPFP ($link, $PFP, $userId) {
     }
 }
 
-function loadFavoritedGames($link) {
+function loadFavoritedGames1($link) {
     $userId = $_SESSION['user']['userId'];
     $query = "SELECT * FROM Games INNER JOIN Favorites ON Games.idGame = Favorites.Games_idGame WHERE Favorites.Users_userId = '$userId' AND Favorites.favorited = '1'";
     $result = $link->query($query);
-    $defaultRows = 5 - $result->num_rows;
 
     while ($arraytable = $result->fetch_assoc()) {
 
@@ -271,7 +270,7 @@ function loadFavoritedGames($link) {
         }
 
         echo '
-            <div style="width: 125px; height: 175px" class="gameOrder" style="position: relative">
+            <div style="width: 125px; height: 175px" class="" style="position: relative">
             <a href="' . $pageLink .'">
            
             <form style="position: absolute; margin: 10px 0 0 10px" id="favoriteGame2" name="favoriteGame2" action="includes/inc.favoriteGame.php" method="POST">
@@ -284,14 +283,7 @@ function loadFavoritedGames($link) {
              </a>
             </div>
           ';
-
-
     }
-    for($i = 0; $i < $defaultRows; $i++){
-        //here placeholder
-        echo '<img alt="Placeholder" class="seperate" src="img/emptyTracker.png" width="125" height="175">';
-    }
-
 }
 
 //end of profile functions
@@ -300,7 +292,7 @@ function loadFavoritedGames($link) {
 function createGame($link, $gameName, $gameCover, $pageLink) {
     {
 
-        $query = "INSERT INTO u3651p69583_tracker.Games(`gameName`, gameCover, pageLink) VALUE (?, ?, ?)";
+        $query = "INSERT INTO sborgman_startracker.Games(`gameName`, gameCover, pageLink) VALUE (?, ?, ?)";
         $stmt1 = mysqli_prepare($link, $query);
         $stmt1->bind_param("sss", $gameName, $gameCover, $pageLink);
         if (!$stmt1) {
@@ -339,7 +331,6 @@ function loadGames($link) {
     $userId = $_SESSION['user']['userId'];
         $query = "SELECT * FROM Games INNER JOIN Favorites ON Games.idGame = Favorites.Games_idGame WHERE Favorites.Users_userId = '$userId'";
     $result = $link->query($query);
-    $defaultRows = 15 - $result->num_rows;
 
     while ($arraytable = $result->fetch_assoc()) {
 
@@ -357,7 +348,7 @@ function loadGames($link) {
         }
 
         echo '
-            <div style="width: 125px; height: 175px" class="seperate image-container" style="position: relative">
+            <div style="width: 125px; height: 175px" class="" style="position: relative">
             <a href="' . $pageLink .'">
            
             <form style="position: absolute; margin: 10px 0 0 10px" id="favoriteGame1" name="favoriteGame1" action="includes/inc.favoriteGame.php" method="POST">
@@ -370,14 +361,53 @@ function loadGames($link) {
              </a>
             </div>
           ';
-
-
     }
-    for($i = 0; $i < $defaultRows; $i++){
-        //here placeholder
-        echo '<img alt="Placeholder" class="seperate" src="img/emptyTracker.png" width="125" height="175">';
-    }
+}
+function loadFavoritedGames2($link) {
+    $userId = $_SESSION['user']['userId'];
 
+    $queryFavCount = "SELECT COUNT(*) as existingFavoriteRows FROM Favorites WHERE Users_userId = '$userId' AND favorited = '1'";
+    $resultFav = $link->query($queryFavCount);
+    while ($arraytableFav = $resultFav->fetch_assoc()) {
+        $existingFavoriteRows = $arraytableFav['existingFavoriteRows'];
+    }
+    if ($existingFavoriteRows > 0) {
+        $query = "SELECT * FROM Games INNER JOIN Favorites ON Games.idGame = Favorites.Games_idGame WHERE Favorites.Users_userId = '$userId' AND Favorites.favorited = '1'";
+        $result = $link->query($query);
+
+        while ($arraytable = $result->fetch_assoc()) {
+
+            $gameId = $arraytable['idGame'];
+            $gameName = $arraytable['gameName'];
+            $gameCover = $arraytable['gameCover'];
+            $pageLink = $arraytable['pageLink'];
+            $favorited = $arraytable['favorited'];
+
+            if ($favorited == 0) {
+                $class = 'favStarUnchecked';
+            } elseif ($favorited == 1) {
+                $class = 'favStarChecked';
+            }
+
+            echo '
+            <div style="width: 125px; height: 175px" class="" style="position: relative">
+            <a href="' . $pageLink . '">
+           
+            <form style="position: absolute; margin: 10px 0 0 10px" id="favoriteGame1" name="favoriteGame1" action="includes/inc.favoriteGame.php" method="POST">
+            <input type="hidden" value="' . $gameId . '" name="hiddenId1">
+            <input type="hidden" value="' . $userId . '" name="hiddenId2">
+
+            <input type="submit" value="" class="' . $class . '" name="favoriteGame1">
+            </form>
+             <img class="seperate" alt="' . $gameName . '"  src="' . $gameCover . '"  width="125" height="175">
+             </a>
+            </div>
+          ';
+        }
+    }
+    else {
+        echo '<div style="width: 100%; font-size: 30px; text-align: center; color: #89BFE2">There are no favorites yet!<br> click on one of the favorite stars at the Games area below!</div>';
+    }
 }
 
 //end of Main Menu functions

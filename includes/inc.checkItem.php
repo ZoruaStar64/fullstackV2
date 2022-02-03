@@ -20,7 +20,7 @@ function checkTerrariaItem($link, $trackerId, $userId) {
         $updatedCheck = 0;
     }
 
-    $updateCheck = "UPDATE u3651p69583_tracker.Trackers_has_Users SET checked='$updatedCheck' WHERE Trackers_idTrackers='$trackerId' AND Users_userId='$userId'";
+    $updateCheck = "UPDATE sborgman_startracker.Trackers_has_Users SET checked='$updatedCheck' WHERE Trackers_idTrackers='$trackerId' AND Users_userId='$userId'";
     $stmt1 = $link->prepare($updateCheck);
     $stmt1->bind_param("i", $updatedCheck);
     if (!$stmt1) {
@@ -42,7 +42,7 @@ function checkTerrariaItem($link, $trackerId, $userId) {
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../CSS/mainMenu.css">
-    <link rel="shortcut icon" href="../img/ColoredStar.png">
+    <link rel="shortcut icon" href="../img/FavStar.png">
     <title>Star Game Tracker</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

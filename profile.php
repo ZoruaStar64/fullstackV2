@@ -59,7 +59,7 @@ echo $bio;*/
 
         <div class="gameContainer">
             <?php
-            loadFavoritedGames($link);
+            loadFavoritedGames1($link);
             ?>
 <!--            <img id="gameOrder" src="img/emptyTracker.png">
             <img id="gameOrder" src="img/emptyTracker.png">

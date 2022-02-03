@@ -19,7 +19,7 @@ function favOrUnFavGame1($link, $gameId, $userId) {
         $updatedFav = 0;
     }
 
-    $updateFav = "UPDATE u3651p69583_tracker.Favorites SET favorited='$updatedFav' WHERE Games_idGame='$gameId' AND Users_userId='$userId'";
+    $updateFav = "UPDATE sborgman_startracker.Favorites SET favorited='$updatedFav' WHERE Games_idGame='$gameId' AND Users_userId='$userId'";
     $stmt1 = $link->prepare($updateFav);
     $stmt1->bind_param("i", $updatedFav);
     if (!$stmt1) {
@@ -28,7 +28,7 @@ function favOrUnFavGame1($link, $gameId, $userId) {
         mysqli_stmt_execute($stmt1);
 
         mysqli_stmt_close($stmt1);
-        header("Location: ../mainMenu.php");
+        header("Location: ../index.php");
     }
 
 }
@@ -47,7 +47,7 @@ function favOrUnFavGame2($link, $gameId, $userId) {
         $updatedFav = 0;
     }
 
-    $updateFav = "UPDATE u3651p69583_tracker.Favorites SET favorited='$updatedFav' WHERE Games_idGame='$gameId' AND Users_userId='$userId'";
+    $updateFav = "UPDATE sborgman_startracker.Favorites SET favorited='$updatedFav' WHERE Games_idGame='$gameId' AND Users_userId='$userId'";
     $stmt1 = $link->prepare($updateFav);
     $stmt1->bind_param("i", $updatedFav);
     if (!$stmt1) {
@@ -67,7 +67,7 @@ function favOrUnFavGame2($link, $gameId, $userId) {
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../CSS/mainMenu.css">
-    <link rel="shortcut icon" href="../img/ColoredStar.png">
+    <link rel="shortcut icon" href="../img/FavStar.png">
     <title>Star Game Tracker</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
