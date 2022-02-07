@@ -5,6 +5,8 @@ require_once('../creds.php');
 JSC($_FILES);
 JSC($_POST);
 
+
+
 $target_dir = "../uploads/";
 $target_file = $target_dir . basename($_FILES["changedPFP"]["name"]);
 $uploadOk = 1;
@@ -62,7 +64,35 @@ function JSC($input){
 //FILE STAAT OP DE SERVER
 //------ LINK NAAR DE FILE in DE DB
 
+if (isset($_POST["changePFP"])) {
+    $userId = $_POST['hiddenId'];
+    editPFP($link, $target_file, $userId);
+}
 
-$userId = $_POST['hiddenId'];
-editPFP($link, $target_file, $userId);
+if (isset($_POST["changeBio"])) {
+
+    $bio = $_POST["changedBio"];
+    $userId = $_POST["hiddenId"];
+    editBio($link, $bio, $userId);
+}
+
+if (isset($_POST["changeGender"])) {
+
+        foreach ($_POST["gender"] as $theGender) {
+            $gender = $theGender;
+        }
+
+    $userId = $_POST["hiddenId"];
+    editGender($link, $gender, $userId);
+}
+
+if (isset($_POST["changeNickname"])) {
+
+    $username = $_POST["changedName"];
+    $userId = $_POST["hiddenId"];
+    editUsername($link, $username, $userId);
+}
+
+
+
 

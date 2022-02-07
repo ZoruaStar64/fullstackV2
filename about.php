@@ -38,11 +38,11 @@ if (isset($_GET["logout"])) {
 <body>
 <div class="pageContainer">
     <header>
-        <div class="linkContainer"><a href="index.php">Home</a></div>
+        <div class="linkContainer"><a href="index.php">Home</a><a href="profile.php?id=<?php echo $userId ?>">Profile</a></div>
     </header>
     <div class="mainBody">
         <h1>Startracker</h1>
-        <p style="margin: 15px 0 20px 0">About</p>
+        <p style="margin: 15px 0 20px 0; text-align: center">About</p>
         <p>What was the reason to build this project?
             <br>
             This website was made for a fullstack project as a school assignment,<br> which uses all coding languages i've learned up until now.
@@ -57,12 +57,12 @@ if (isset($_GET["logout"])) {
 
             What have i learned? <br><br>
 
-            Making a login/register system in php/mysql.<br>
-            Hashing / salting passwords.<br>
-            Using Figma / Adobe XD.<br>
-            Making a favorite system and storing this to a userprofile.<br>
-            Filtering items in a database.<br>
-            Sketch and design before building.
+            &#9734; Making a login/register system in php/mysql.<br>
+            &#9734; Hashing / salting passwords.<br>
+            &#9734; Using Figma / Adobe XD.<br>
+            &#9734; Making a favorite system and storing this to a userprofile.<br>
+            &#9734; Filtering items in a database.<br>
+            &#9734; Sketch and design before building.
 
         </p>
     </div>

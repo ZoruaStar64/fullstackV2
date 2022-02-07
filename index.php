@@ -48,7 +48,7 @@ if ($showloggedin == false) {
     </header>
     <div class="mainBody">
     <h1>Startracker</h1>
-    <p style="margin: 15px 0 30px 0">Welcome</p>
+    <p style="margin: 15px 0 30px 0; text-align: center">Welcome</p>
         <p>Welcome to the Startracker website!<br>
         You can use this website to keep track various games' progress that i plan to implement!<br>
         Currently the only game available is Terraria,<br>
@@ -71,7 +71,7 @@ if ($showloggedin == true) {
     </header>
     <div class="mainBody">
         <h1>Startracker</h1>
-        <p style="margin: 15px 0 30px 0">Select game</p>
+        <p style="margin: 15px 0 30px 0; text-align: center">Select game</p>
     </div>
     <div class="mainBodyLoggedIn">
 

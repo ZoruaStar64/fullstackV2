@@ -200,12 +200,34 @@ function inLogFormulier($link) {
     }
 }
 
+function editGender($link, $gender, $userId) {
+    $queryGender = "UPDATE sborgman_startracker.Users SET gender='$gender' WHERE userId='$userId'";
+    $stmt1 = $link->prepare($queryGender);
+    $stmt1->bind_param("s", $gender);
+    if (!$stmt1) {
+        die("mysqli error:" . mysqli_error($link));
+    } else {
+        mysqli_stmt_execute($stmt1);
 
-if (isset($_POST["changeBio"])) {
+        mysqli_stmt_close($stmt1);
+        refreshDetails($link);
+        header("Location: ../editProfile.php");
+    }
+}
 
-    $bio = $_POST["changedBio"];
-    $userId = $_POST["hiddenId"];
-    editBio($link, $bio, $userId);
+function editUsername($link, $username, $userId) {
+    $queryUser = "UPDATE sborgman_startracker.Users SET nickname='$username' WHERE userId='$userId'";
+    $stmt1 = $link->prepare($queryUser);
+    $stmt1->bind_param("s", $username);
+    if (!$stmt1) {
+        die("mysqli error:" . mysqli_error($link));
+    } else {
+        mysqli_stmt_execute($stmt1);
+
+        mysqli_stmt_close($stmt1);
+        refreshDetails($link);
+        header("Location: ../editProfile.php");
+    }
 }
 
 function editBio ($link, $bio, $userId) {
@@ -221,16 +243,10 @@ function editBio ($link, $bio, $userId) {
         echo "Your bio has been changed!";
         /*echo mysqli_stmt_error($stmt1);*/
         mysqli_stmt_close($stmt1);
-        header("Location: profile.php?id=$userId");
+        refreshDetails($link);
+        header("Location: ../editProfile.php");
     }
 }
-
-/*if (isset($_POST["changePFP"])) {
-
-    $PFP = $_POST["changedPFP"];
-    $userId = $_POST["hiddenId"];
-    editPFP($link, $PFP, $userId);
-}*/
 
 function editPFP ($link, $PFP, $userId) {
 
@@ -242,40 +258,46 @@ function editPFP ($link, $PFP, $userId) {
     } else {
         mysqli_stmt_execute($stmt1);
 
-        echo "Your bio has been changed!";
+        echo "Your pfp has been changed!";
         /*echo mysqli_stmt_error($stmt1);*/
         mysqli_stmt_close($stmt1);
-        header("Location: profile.php?id=$userId");
+        refreshDetails($link);
+        header("Location: ../editProfile.php");
     }
 }
 
 function loadFavoritedGames1($link) {
     $userId = $_SESSION['user']['userId'];
-    $query = "SELECT * FROM Games INNER JOIN Favorites ON Games.idGame = Favorites.Games_idGame WHERE Favorites.Users_userId = '$userId' AND Favorites.favorited = '1'";
-    $result = $link->query($query);
+    $queryFavCount = "SELECT COUNT(*) as existingFavoriteRows FROM Favorites WHERE Users_userId = '$userId' AND favorited = '1'";
+    $resultFav = $link->query($queryFavCount);
+    while ($arraytableFav = $resultFav->fetch_assoc()) {
+        $existingFavoriteRows = $arraytableFav['existingFavoriteRows'];
+    }
+    if ($existingFavoriteRows > 0) {
+        $query = "SELECT * FROM Games INNER JOIN Favorites ON Games.idGame = Favorites.Games_idGame WHERE Favorites.Users_userId = '$userId' AND Favorites.favorited = '1'";
+        $result = $link->query($query);
 
-    while ($arraytable = $result->fetch_assoc()) {
+        while ($arraytable = $result->fetch_assoc()) {
 
-        $gameId = $arraytable['idGame'];
-        $gameName = $arraytable['gameName'];
-        $gameCover = $arraytable['gameCover'];
-        $pageLink = $arraytable['pageLink'];
-        $favorited = $arraytable['favorited'];
+            $gameId = $arraytable['idGame'];
+            $gameName = $arraytable['gameName'];
+            $gameCover = $arraytable['gameCover'];
+            $pageLink = $arraytable['pageLink'];
+            $favorited = $arraytable['favorited'];
 
-        if ($favorited == 0) {
-            $class = 'favStarUnchecked';
-        }
-        elseif ($favorited == 1) {
-            $class = 'favStarChecked';
-        }
+            if ($favorited == 0) {
+                $class = 'favStarUnchecked';
+            } elseif ($favorited == 1) {
+                $class = 'favStarChecked';
+            }
 
-        echo '
+            echo '
             <div style="width: 125px; height: 175px" class="" style="position: relative">
-            <a href="' . $pageLink .'">
+            <a href="' . $pageLink . '">
            
             <form style="position: absolute; margin: 10px 0 0 10px" id="favoriteGame2" name="favoriteGame2" action="includes/inc.favoriteGame.php" method="POST">
-            <input type="hidden" value="' . $gameId .'" name="hiddenId1">
-            <input type="hidden" value="' . $userId .'" name="hiddenId2">
+            <input type="hidden" value="' . $gameId . '" name="hiddenId1">
+            <input type="hidden" value="' . $userId . '" name="hiddenId2">
 
             <input type="submit" value="" class="' . $class . '" name="favoriteGame2">
             </form>
@@ -283,6 +305,10 @@ function loadFavoritedGames1($link) {
              </a>
             </div>
           ';
+        }
+    }
+else {
+        echo '<div style="width: 100%; font-size: 30px; text-align: center; color: #89BFE2">There are no favorites yet!<br> click on one of the favorite stars at the Games area below!</div>';
     }
 }
 
@@ -416,6 +442,34 @@ function loadFavoritedGames2($link) {
 
 //start of misc functions
 
+function refreshDetails($link) {
+
+    $userId = $_SESSION['user']['userId'];
+    $query = "SELECT * FROM sborgman_startracker.Users WHERE userId = '$userId'";
+    $result = $link->query($query);
+    /*   $statement = mysqli_prepare($link, $query);
+       $statement->bind_param("isssss", $userId, $trueEmail, $nick, $trueWachtwoord, $gender, $profilePicture);*/
+
+    while ($arraytable = $result->fetch_assoc()) {
+
+        $profileId = $arraytable['userId'];
+        $trueEmail = $arraytable['e-mail'];
+        $nick = $arraytable['nickname'];
+        $trueWachtwoord = $arraytable['password'];
+        $gender = $arraytable['gender'];
+        $bio = $arraytable['bio'];
+        $profilePicture = $arraytable['profilePicture'];
+    }
+    $_SESSION["user"] = array("userId" => $profileId,
+        "email" => $trueEmail,
+        "name" => $nick,
+        "wachtwoord" => $trueWachtwoord,
+        "gender" => $gender,
+        "bio" => $bio,
+        "PFP" => $profilePicture);
+
+    userCreds();
+}
 
 function userCreds() {
 
@@ -443,7 +497,8 @@ function userCreds() {
         }
     }
 
-
+    $usercreds['gender'] = $_SESSION["user"]["gender"];
+    $usercreds['email'] = $_SESSION["user"]["email"];
     $usercreds['userName'] = $_SESSION["user"]["name"];
     $usercreds['userId'] = $_SESSION["user"]["userId"];
     $usercreds['bio'] = $_SESSION["user"]["bio"];

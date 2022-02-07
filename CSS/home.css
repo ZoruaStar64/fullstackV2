@@ -13,8 +13,16 @@ h1 {
     color: #A439D7;
 }
 
-.mainBody, .mainBody p {
+.mainBody {
+    margin-left: 25%;
     text-align: center;
+    font-size: 20px;
+    grid-area: main;
+    width: 720px;
+}
+
+.mainBody p {
+    text-align: left;
     font-size: 20px;
     grid-area: main;
 }
@@ -78,6 +86,8 @@ h1 {
     top: 130px;
     left: 80px;
 }
+
+
 
 .Games {
     grid-area: Games;
