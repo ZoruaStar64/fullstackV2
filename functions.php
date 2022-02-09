@@ -292,7 +292,7 @@ function loadFavoritedGames1($link) {
             }
 
             echo '
-            <div style="width: 125px; height: 175px" class="" style="position: relative">
+            <div class="gamePanel">
             <a href="' . $pageLink . '">
            
             <form style="position: absolute; margin: 10px 0 0 10px" id="favoriteGame2" name="favoriteGame2" action="includes/inc.favoriteGame.php" method="POST">
@@ -301,7 +301,7 @@ function loadFavoritedGames1($link) {
 
             <input type="submit" value="" class="' . $class . '" name="favoriteGame2">
             </form>
-             <img class="seperate" alt="' . $gameName . '"  src="' . $gameCover . '"  width="125" height="175">
+             <img class="cover" alt="' . $gameName . '"  src="' . $gameCover . '"  width="125" height="175">
              </a>
             </div>
           ';

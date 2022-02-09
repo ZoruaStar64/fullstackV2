@@ -17,6 +17,7 @@ $gender = $details["gender"];
 $email = $details["email"];
 ?>
 
+<!--<meta content="width=device-width, initial-scale=1" name="viewport" />-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -26,6 +27,7 @@ $email = $details["email"];
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
 </head>
 <body>
 
@@ -41,7 +43,7 @@ $email = $details["email"];
 
     <div class="mainBody">
         <div class="iconArea">
-            <img style="margin: 0 0 10px 35px" id="profilePicture" src="<?php echo $profilePicture ?>" width="100px" height="100px" alt="Profile Picture">
+            <img style="margin: 0 0 10px 35px" id="profilePicture" src="<?php echo $profilePicture ?>" alt="Profile Picture">
 
             <a class="changeDetails" href="editProfile.php">Change Details</a>
         </div>
