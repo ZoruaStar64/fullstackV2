@@ -308,7 +308,7 @@ function loadFavoritedGames1($link) {
         }
     }
 else {
-        echo '<div style="width: 100%; font-size: 30px; text-align: center; color: #89BFE2">There are no favorites yet!<br> click on one of the favorite stars at the Games area below!</div>';
+        echo '<div class="noFavs">There are no favorites yet!<br> click on one of the favorite stars at the Games area below!</div>';
     }
 }
 
@@ -374,7 +374,7 @@ function loadGames($link) {
         }
 
         echo '
-            <div style="width: 125px; height: 175px" class="" style="position: relative">
+            <div class="gamePanel">
             <a href="' . $pageLink .'">
            
             <form style="position: absolute; margin: 0 10px 10px 0" id="favoriteGame1" name="favoriteGame1" action="includes/inc.favoriteGame.php" method="POST">
@@ -383,7 +383,7 @@ function loadGames($link) {
 
             <input type="submit" value="" class="' . $class . '" name="favoriteGame1">
             </form>
-             <img class="seperate" alt="' . $gameName . '"  src="' . $gameCover . '"  width="125" height="175">
+             <img class="cover" alt="' . $gameName . '"  src="' . $gameCover . '">
              </a>
             </div>
           ';
@@ -416,16 +416,16 @@ function loadFavoritedGames2($link) {
             }
 
             echo '
-            <div style="width: 125px; height: 175px" class="" style="position: relative">
+            <div class="gamePanel">
             <a href="' . $pageLink . '">
            
             <form style="position: absolute; margin: 0 10px 10px 0" id="favoriteGame1" name="favoriteGame1" action="includes/inc.favoriteGame.php" method="POST">
             <input type="hidden" value="' . $gameId . '" name="hiddenId1">
             <input type="hidden" value="' . $userId . '" name="hiddenId2">
 
-            <input type="submit" value="" class="' . $class . '" style="position: absolute; bottom: 0; right: 0" name="favoriteGame1">
+            <input type="submit" value="" class="' . $class . '" name="favoriteGame1">
             </form>
-             <img class="seperate" alt="' . $gameName . '"  src="' . $gameCover . '"  width="125" height="175">
+             <img class="cover" alt="' . $gameName . '"  src="' . $gameCover . '">
              </a>
             </div>
           ';

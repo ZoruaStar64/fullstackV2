@@ -11,11 +11,13 @@ html {
 p, label, a {
     font-family: 'VT323', monospace;
     color: #89BFE2;
-    font-size: 20px;
+}
+
+.gamePanel:last-child {
+    margin-bottom: 50px;
 }
 
 h1 {
-    font-size: 4em;
     font-family: 'VT323', monospace;
     color: #A439D7;
     text-align: center;
@@ -96,7 +98,6 @@ h1 {
     height: 60px;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 24px;
     float: right;
     margin: 50px 70px 0 0;
 }
@@ -126,6 +127,7 @@ footer, footer p {
     background: #5C5C5C;
     color: white;
     grid-area: footer;
+    margin-top: 50px;
 }
 
 .favStarUnchecked {
@@ -157,17 +159,24 @@ footer, footer p {
     }
 
     h1 {
-        font-size: 8em;
+        font-size: 4em;
         font-family: 'VT323', monospace;
         color: #A439D7;
         text-align: center;
+    }
+
+    .noFavs {
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+        color: #89BFE2;
     }
 
     .mainBody {
         width: 320px;
         grid-area: main;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 40% 50%;
         grid-template-rows: auto;
         grid-gap: 25px;
         grid-template-areas:
@@ -180,18 +189,19 @@ footer, footer p {
         width: 100%;
         height: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr;
         grid-gap: 25px;
         grid-template-areas:
-    "favoriteLabel favoriteLabel favoriteLabel"
-    "favorited favorited favorited";
+    "favoriteLabel favoriteLabel"
+    "favorited favorited";
+
     }
     .favoriteLabel {
         display: flex;
-        width: 175px;
+        width: 100vw;
         height: 75px;
-        margin-left: 15px;
+        margin-left: 0;
         background-color: #5C5C5C;
         grid-area: favoriteLabel;
     }
@@ -199,12 +209,13 @@ footer, footer p {
     .labelText {
         transform: rotate(0deg);
         position: absolute;
-        margin-left: 25px;
+        margin-left: 80px;
         margin-top: 15px;
+        font-size: 40px;
     }
 
     .iconArea {
-        margin-left: 250px;
+        margin-left: 0;
         display: grid;
         grid-area: icon;
         align-content: center;
@@ -215,18 +226,36 @@ footer, footer p {
     }
 
     .changeDetails {
-        margin-left: 35px;
+        margin-left: 25px;
         background-color: #5C5C5C;
         color: #89BFE2;
         text-align: center;
         align-self: center;
-        width: 30%;
+        width: 60%;
         height: 100%;
     }
 
+    #profilePicture {
+        margin: 0 0 10px 25px;
+        width: 75px;
+        height: 75px;
+    }
+
     .linkContainer {
+        margin: 0 0 0 0;
         width: 100%;
-        margin: 0 0 20px 0;
+    }
+
+    .gamePanel {
+        width: 100px;
+        height: 150px;
+        position: relative;
+        margin-left: 35px;
+    }
+
+    .cover {
+        width: 100px;
+        height: 150px;
     }
 
     .favStarChecked {
@@ -236,8 +265,8 @@ footer, footer p {
         width: 40px;
         height: 40px;
         position: absolute;
-        top: 120px;
-        left: 70px;
+        top: 98px;
+        left: 48px;
     }
 
 }
@@ -251,6 +280,13 @@ footer, footer p {
     .linkContainer {
         margin: 0 0 0 0;
         width: 100%;
+    }
+
+    .noFavs {
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+        color: #89BFE2;
     }
 
     .mainBody {
@@ -270,6 +306,7 @@ footer, footer p {
     }
 
     #profilePicture {
+        margin: 0 0 10px 35px;
         width: 150px;
         height: 150px;
     }
@@ -370,6 +407,7 @@ footer, footer p {
     }
 
     #profilePicture {
+        margin: 0 0 10px 35px;
         width: 150px;
         height: 150px;
     }
@@ -384,6 +422,18 @@ footer, footer p {
         height: 100%;
     }
 
+    .Favorites {
+        /*grid-area: Favorites;*/
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-gap: 25px;
+        grid-template-areas:
+    "favoriteLabel favorited favorited favorited";
+    }
+
     .favoriteLabel {
         display: flex;
         width: 75px;
@@ -396,8 +446,8 @@ footer, footer p {
     .labelText {
         transform: rotate(-90deg);
         position: absolute;
-        margin-top: 75px;
-        margin-left: -15px;
+        margin-top: 70px;
+        margin-left: -35px;
     }
 
     .cover {
@@ -426,11 +476,11 @@ footer, footer p {
 @media all and (min-width: 1440px) {
 
     p, label, a {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     h1 {
-        font-size: 4em;
+        font-size: 6em;
     }
 
     .linkContainer {
@@ -451,8 +501,9 @@ footer, footer p {
     }
 
     #profilePicture {
-        width: 100px;
-        height: 100px;
+        margin: 0 0 10px 35px;
+        width: 150px;
+        height: 150px;
     }
 
     .changeDetails {
@@ -461,7 +512,7 @@ footer, footer p {
         color: #89BFE2;
         text-align: center;
         align-self: center;
-        width: 23%;
+        width: 34%;
         height: 100%;
     }
 
@@ -477,8 +528,8 @@ footer, footer p {
     .labelText {
         transform: rotate(-90deg);
         position: absolute;
-        margin-top: 75px;
-        margin-left: 0;
+        margin-top: 70px;
+        margin-left: -35px;
     }
 
     .cover {

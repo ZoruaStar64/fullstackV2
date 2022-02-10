@@ -43,7 +43,7 @@ $email = $details["email"];
 
     <div class="mainBody">
         <div class="iconArea">
-            <img style="margin: 0 0 10px 35px" id="profilePicture" src="<?php echo $profilePicture ?>" alt="Profile Picture">
+            <img id="profilePicture" src="<?php echo $profilePicture ?>" alt="Profile Picture">
 
             <a class="changeDetails" href="editProfile.php">Change Details</a>
         </div>
