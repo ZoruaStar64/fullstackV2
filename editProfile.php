@@ -55,16 +55,15 @@ $bio = $details["bio"];
 
 <br>
     <div id="pfpBox">
-<p>You can only submit jpg, jpeg, png and gif files<br>
-make sure there aren't any spaces in the file name<br>
-Instead of space use either - or _<br>
-submitting is done by inputting a valid image/gif file<br>
+<p>You can only submit jpg, jpeg and png files<br>
+Instead of space use either - or _ as filename<br>
+submitting is done by inputting a valid image<br>
 and then clicking on the change pfp button</p>
 
     <form id="changePFP" action='includes/inc.changeDetails.php' method='POST' enctype="multipart/form-data">
 
         <div>
-            <input style="margin: 15px 0 0 25%" type='file' name='changedPFP' value='' required>
+            <input class="pictureSelector" type='file' name='changedPFP' value='' required>
         </div>
         <input type="hidden" name="hiddenId" value="<?php echo $userId ?>">
         <input id="creationButton" type='submit' name='changePFP' value='change PFP'>
@@ -92,7 +91,7 @@ and then clicking on the change pfp button</p>
                 <label>Gender</label> : <select style="float: right; width: 65%; margin-right: 10px" name="gender[]" multiple="multiple" required>
                     <option value="male" >Male</option>
                     <option value="female">Female</option>
-                    <option value="secret">keep secret</option>
+                    <option value="secret">secret</option>
                 </select>
                 <input type="hidden" name="hiddenId" value="<?php echo $userId ?>">
                 <input id="creationButton" type='submit' name='changeGender' value='change Gender'>
