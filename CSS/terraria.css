@@ -24,8 +24,8 @@ p, label {
     background-color: darkgray;
     color: black;
     width: 60px;
-    font-size: 10px;
-    margin: 0 40% 5% 40%;
+    font-size: 15px;
+    margin: 0 48%;
     cursor: zoom-in;
 }
 
@@ -56,12 +56,25 @@ html {
     margin: 50px 70px 0 0;
 }
 
-.craftGuideStyle {
-    background-color: #1F1F1F;
-    border: #89BFE2 5px solid;
+.craftGuideStyleModal {
     margin: 0;
     text-align: start;
+    position: fixed;
+    background-color: #1F1F1F;
+    border: 1px solid #89BFE2;
+    box-sizing: border-box;
     box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
+    width: 500px;
+    height: 500px;
+    top: 36%;
+    left: 35%;
+}
+
+#closeBox {
+    float: right;
+    font-size: 20px;
+    margin: 5px 10px 0 0;
+    cursor: zoom-out;
 }
 
 .grayscale {
@@ -74,11 +87,12 @@ html {
 
 .mainItem {
     color: #89BFE2;
+    font-family: 'VT323', monospace;
 }
 
 .itemContainer {
     background-color: #1F1F1F;
-    border: #89BFE2 solid 10px;
+    border: #89BFE2 solid 3px;
     box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
     text-align: center;
     display: grid;
@@ -89,11 +103,10 @@ html {
     "TS"
     "CP"
     "AS"
-    "Z";
+    "Zen";
 
     width: 100vw;
     height: auto;
-    margin: 1em;
 }
 
 .Terraspark {
@@ -107,15 +120,15 @@ html {
     ". TSB ."
     "FS .  LW"
     "LB . MC"
-    "SB . OS";
+    "SB . OSK1";
 
 
     width: 100vw;
     height: auto; /*83 vh old*/
 }
 
-#ObsidianShield {
-    grid-area: OS;
+#ObsidianSkull1 {
+    grid-area: OSK1;
 }
 
 #SpectreBoots {
@@ -180,14 +193,14 @@ html {
     display: grid;
     grid-area: CP;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-gap: 10px;
     grid-template-areas:
     ". P P ."
     ". PDA PDA ."
     "GPS REK GT FF";
 
-
+    width: 100vw;
     height: auto;
 
 }
@@ -214,4 +227,80 @@ html {
 
 #Phone {
     grid-area: P;
+}
+
+.AnkhShield {
+    display: grid;
+    grid-area: AS;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 10px;
+    grid-template-areas:
+    ". OS AC ."
+    ".OSK2 B ."
+    "AB MB CCM TP";
+
+    width: 100vw;
+    height: auto;
+}
+
+#AnkhCharm {
+    grid-area: AC;
+}
+
+#ObsidianShield {
+    grid-area: OS;
+}
+
+#Blindfold {
+    grid-area: B;
+}
+
+#ObsidianSkull2 {
+    grid-area: OSK2;
+}
+
+#ArmorBracing {
+    grid-area: AB;
+}
+#MedicatedBandage {
+    grid-area: MB;
+}
+#CounterCurse {
+    grid-area: CCM;
+}
+#ThePlan {
+    grid-area: TP;
+}
+#AnkhShield {
+    grid-area: CAS;
+}
+
+.Zenith {
+
+    display: grid;
+    grid-area: Zen;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+    grid-template-areas:
+    "NE NE NE"
+    "TerB TerB TerB"
+    "Z Z Z"
+    "Z Z Z";
+
+    width: 100vw;
+    height: auto;
+}
+
+#createNightsEdge {
+    grid-area: NE;
+}
+
+#createTerrablade {
+    grid-area: TerB;
+}
+
+#createZenith {
+    grid-area: Z;
 }

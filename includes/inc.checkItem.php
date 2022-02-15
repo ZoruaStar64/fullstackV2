@@ -30,7 +30,7 @@ function checkTerrariaItem($link, $trackerId, $userId) {
 
 
         mysqli_stmt_close($stmt1);
-        header("Location: ../oldterrariaChecklist.php");
+        header("Location: ../terrariaChecklist.php");
     }
 
 }
