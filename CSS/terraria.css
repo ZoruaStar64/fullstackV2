@@ -9,16 +9,14 @@ img {
     padding: 10px;
 }
 
-.linkButtons {
-    transform: scale(1);
-    padding: 0;
+a {
+    font-family: 'VT323', monospace;
+    color: #89BFE2;
 }
 
-p {
-    font-family: 'Saira Stencil One', cursive;
-    font-size: 15px;
-    color: #0007a1;
-
+p, label {
+    font-family: 'VT323', monospace;
+    color: #FFFFFF;
 }
 
 .recipeButton {
@@ -32,83 +30,38 @@ p {
 }
 
 h1 {
-    border: #0007a1 5px solid;
+    border: #89BFE2 5px solid;
     height: 50px;
-    font-family: 'Saira Stencil One', cursive;
-    color: #0007a1;
-    background-color: #00cbff;
+    font-family: 'VT323', monospace;
+    color: #A439D7;
+    background-color: #1F1F1F;
+    box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
 }
 
 html {
-    background-color: #ac1616;
-    text-align: center;
-}/*#F7E8FD*/
-
-/* return of the navbar */
-/* style the navbar */
-#navbar {
-    overflow: hidden;
-    background-color: #8844D5;
-    border: 2px solid #6F04BF;
-    display: flex;
-    justify-content: center;
-
-}
-/* Navbar Links */
-#navbar a {
-    width: 15%;
+    background-color: #1F1F1F;
     text-align: center;
 }
 
-/* Shine */
-.Shine {
+.linkContainer {
+    grid-area: header;
     display: flex;
-    justify-content: space-between;
-    gap: 1em;
-    padding: 1em;
-}
-.Shine figure {
-    position: relative;
-    overflow: hidden;
-}
-/*255,255,255,0*/
-/*243,212,0,0*/
-/*136,63,213,0*/
-
-.Shine figure::before {
-    position: absolute;
-    top: 0;
-    left: -75%;
-    z-index: 2;
-    display: block;
-    content: '';
-    width: 50%;
-    height: 95%;
-    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
-    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
-    -webkit-transform: skewX(-25deg);
-    transform: skewX(-25deg);
-}
-.Shine figure:hover::before {
-    -webkit-animation: shine 1.5s;
-    animation: shine 1.5s;
-}
-@-webkit-keyframes shine {
-    100% {
-        left: 100%;
-    }
-}
-@keyframes shine {
-    100% {
-        left: 100%;
-    }
+    background-color: #5C5C5C;
+    width: 500px;
+    height: 60px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 24px;
+    float: right;
+    margin: 50px 70px 0 0;
 }
 
 .craftGuideStyle {
-    background-color: #00cbff;
-    border: #005d7a 5px solid;
+    background-color: #1F1F1F;
+    border: #89BFE2 5px solid;
     margin: 0;
     text-align: start;
+    box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
 }
 
 .grayscale {
@@ -119,48 +72,74 @@ html {
     filter: grayscale(0%);
 }
 
-.pageContainer1 {
-    background-color: #0E5F07;
-    border: #268b00 solid 10px;
+.mainItem {
+    color: #89BFE2;
+}
+
+.itemContainer {
+    background-color: #1F1F1F;
+    border: #89BFE2 solid 10px;
+    box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
     text-align: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 
     grid-template-areas:
-    "TS TS TS TS TS";
+    "TS"
+    "CP"
+    "AS"
+    "Z";
 
-    width: 98vw;
-    height: auto; /*83, 90 vh old*/
+    width: 100vw;
+    height: auto;
     margin: 1em;
 }
 
-
 .Terraspark {
-    float: left;
     text-align: center;
     display: grid;
     grid-area: TS;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: /*50px*/auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
     grid-gap: 10px;
     grid-template-areas:
-    "CraftGuide1 TST TST TST"
-    "CraftGuide1 FS .  LW"
-    "CraftGuide1 FS TS LW";
+    ". TSB ."
+    "FS .  LW"
+    "LB . MC"
+    "SB . OS";
 
 
-    width: 94vw;
-    height: 80vh; /*83 vh old*/
-    margin: 1em 0 1em 0;
+    width: 100vw;
+    height: auto; /*83 vh old*/
 }
 
-#terraSparkTitle {
-    grid-area: TST;
+#ObsidianShield {
+    grid-area: OS;
 }
 
-#itemCraftGuideBar1 {
-    grid-area: CraftGuide1;
+#SpectreBoots {
+    grid-area: SB;
+}
+
+#MoltenCharm {
+    grid-area: MC;
+}
+
+#LightningBoots {
+    grid-area: LB;
+}
+
+#Frostspark {
+    grid-area: FS;
+}
+
+#LavaWaders {
+    grid-area: LW;
+}
+
+#TerraSparkBoots {
+    grid-area: TSB;
 }
 
 .alignTriangle {
@@ -196,192 +175,43 @@ html {
     grid-area: SquareP2;
 }
 
-
-#createFrostspark {
-    grid-area: FS;
-}
-
-#createLavaWaders {
-    grid-area: LW;
-}
-
-#createTerraSpark {
-    grid-area: TS;
-}
-
-.pageContainer2 {
-    background-color: #0E5F07;
-    border: #268b00 solid 10px;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-
-    grid-template-areas:
-    "CP CP CP CP CP CP";
-
-    width: 98vw;
-    height: auto; /*83, 90 vh old*/
-    margin: 1em;
-}
-
 .Cellphone {
 
     display: grid;
     grid-area: CP;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
     grid-gap: 10px;
     grid-template-areas:
-    "CraftGuide2 CT CT CT CT"
-    "CraftGuide2 GPS REK GT FF"
-    "CraftGuide2 GPS REK GT FF"
-    "CraftGuide2 . P P .";
+    ". P P ."
+    ". PDA PDA ."
+    "GPS REK GT FF";
 
 
+    height: auto;
 
-    height: 80vh; /*83 vh old*/
-    margin: 1em 0 1em 0;
 }
 
-#cellphoneTitle {
-    grid-area: CT;
-}
-
-#itemCraftGuideBar2 {
-    grid-area: CraftGuide2;
-}
-
-#createGPS {
+#GPS {
     grid-area: GPS;
 }
 
-#createREK3K {
+#REK3K {
     grid-area: REK;
 }
 
-#createGoblinTech {
+#GoblinTech {
     grid-area: GT;
 }
 
-#createFishFinder {
+#FishFinder {
     grid-area: FF;
 }
 
-#createPhone {
+#PDA {
+    grid-area: PDA;
+}
+
+#Phone {
     grid-area: P;
 }
-
-.pageContainer3 {
-    background-color: #0E5F07;
-    border: #268b00 solid 10px;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-
-    grid-template-areas:
-    "AS AS AS AS AS AS";
-
-    width: 98vw;
-    height: auto; /*83, 90 vh old*/
-    margin: 1em;
-}
-
-
-.AnkhShield {
-    display: grid;
-    grid-area: AS;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px auto auto auto;
-    grid-gap: 10px;
-    grid-template-areas:
-    "CraftGuide3 AST AST AST AST"
-    "CraftGuide3 AB MB CCM TP"
-    "CraftGuide3 AB MB CCM TP"
-    "CraftGuide3 CAS CAS CAS CAS";
-
-    height: 80vh; /*83 vh old*/
-    margin: 1em 0 1em 0;
-}
-
-#ankhShieldTitle {
-    grid-area: AST;
-}
-#itemCraftGuideBar3 {
-    grid-area: CraftGuide3;
-}
-
-#createArmorBracing {
-    grid-area: AB;
-}
-#createMedicatedBandage {
-    grid-area: MB;
-}
-#createCounterCurse {
-    grid-area: CCM;
-}
-#createThePlan {
-    grid-area: TP;
-}
-#createAnkhShield {
-    grid-area: CAS;
-}
-
-.pageContainer4 {
-    background-color: #0E5F07;
-    border: #268b00 solid 10px;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-
-    grid-template-areas:
-    "Zen Zen Zen Zen Zen Zen";
-
-    width: 98vw;
-    height: auto; /*83, 90 vh old*/
-    margin: 1em;
-}
-
-.Zenith {
-
-    display: grid;
-    grid-area: Zen;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px auto auto auto;
-    grid-gap: 10px;
-    grid-template-areas:
-    "CraftGuide4 ZT ZT ZT"
-    "CraftGuide4 NE NE NE"
-    "CraftGuide4 TerB TerB TerB"
-    "CraftGuide4 Z Z Z"
-    "CraftGuide4 Z Z Z";
-
-    height: 80vh; /*83 vh old*/
-    margin: 1em 0 1em 0;
-}
-
-#zenithTitle {
-    grid-area: ZT;
-}
-
-#itemCraftGuideBar4 {
-    grid-area: CraftGuide4;
-}
-
-#createNightsEdge {
-    grid-area: NE;
-}
-
-#createTerrablade {
-    grid-area: TerB;
-}
-
-#createZenith {
-    grid-area: Z;
-}
-
-#createNightsEdge img, #createTerrablade img, #createZenith img  {
-     transform: scale(1);
- }

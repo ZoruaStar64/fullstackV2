@@ -1,0 +1,339 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    transform: scale(1.5);
+    padding: 10px;
+}
+
+p, label, a {
+    font-family: 'VT323', monospace;
+    color: #89BFE2;
+}
+
+.recipeButton {
+    border: black 1px solid;
+    background-color: darkgray;
+    color: black;
+    width: 60px;
+    font-size: 10px;
+    margin: 0 40% 5% 40%;
+    cursor: zoom-in;
+}
+
+h1 {
+    border: #89BFE2 5px solid;
+    height: 50px;
+    font-family: 'VT323', monospace;
+    color: #A439D7;
+    background-color: #1F1F1F;
+    box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
+}
+
+html {
+    background-color: #1F1F1F;
+    text-align: center;
+}
+
+.linkContainer {
+    grid-area: header;
+    display: flex;
+    background-color: #5C5C5C;
+    width: 500px;
+    height: 60px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 24px;
+    float: right;
+    margin: 50px 70px 0 0;
+}
+
+.craftGuideStyle {
+    background-color: #1F1F1F;
+    border: #89BFE2 5px solid;
+    margin: 0;
+    text-align: start;
+    box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+.ungrayscale {
+    filter: grayscale(0%);
+}
+
+.pageContainer1 {
+    background-color: #1F1F1F;
+    border: #89BFE2 solid 10px;
+    box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    grid-template-areas:
+    "TS TS TS TS TS";
+
+    width: 98vw;
+    height: auto; /*83, 90 vh old*/
+    margin: 1em;
+}
+
+
+.Terraspark {
+    float: left;
+    text-align: center;
+    display: grid;
+    grid-area: TS;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: /*50px*/auto auto auto;
+    grid-gap: 10px;
+    grid-template-areas:
+    "CraftGuide1 TST TST TST"
+    "CraftGuide1 FS .  LW"
+    "CraftGuide1 FS TS LW";
+
+
+    width: 94vw;
+    height: 80vh; /*83 vh old*/
+    margin: 1em 0 1em 0;
+}
+
+#terraSparkTitle {
+    grid-area: TST;
+}
+
+#itemCraftGuideBar1 {
+    grid-area: CraftGuide1;
+}
+
+.alignTriangle {
+    display: grid;
+    width: 70px;
+    grid-template-columns: 35px 35px;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "TriangleP1 TriangleP2"
+            "TriangleP1 TriangleP2";
+}
+#triangleP1 {
+    grid-area: TriangleP1;
+}
+#triangleP2 {
+    grid-area: TriangleP2;
+    align-self: center;
+}
+
+.alignSquare {
+    display: grid;
+    width: 70px;
+    grid-template-columns: 35px 35px;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "SquareP1 SquareP2"
+            "SquareP1 SquareP2";
+}
+#squareP1 {
+    grid-area: SquareP1;
+}
+#squareP2 {
+    grid-area: SquareP2;
+}
+
+
+#createFrostspark {
+    grid-area: FS;
+}
+
+#createLavaWaders {
+    grid-area: LW;
+}
+
+#createTerraSpark {
+    grid-area: TS;
+}
+
+.pageContainer2 {
+    background-color: #1F1F1F;
+    border: #89BFE2 solid 10px;
+    box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    grid-template-areas:
+    "CP CP CP CP CP CP";
+
+    width: 98vw;
+    height: auto; /*83, 90 vh old*/
+    margin: 1em;
+}
+
+.Cellphone {
+
+    display: grid;
+    grid-area: CP;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px auto auto auto;
+    grid-gap: 10px;
+    grid-template-areas:
+    "CraftGuide2 CT CT CT CT"
+    "CraftGuide2 GPS REK GT FF"
+    "CraftGuide2 GPS REK GT FF"
+    "CraftGuide2 . P P .";
+
+
+
+    height: 80vh; /*83 vh old*/
+    margin: 1em 0 1em 0;
+}
+
+#cellphoneTitle {
+    grid-area: CT;
+}
+
+#itemCraftGuideBar2 {
+    grid-area: CraftGuide2;
+}
+
+#createGPS {
+    grid-area: GPS;
+}
+
+#createREK3K {
+    grid-area: REK;
+}
+
+#createGoblinTech {
+    grid-area: GT;
+}
+
+#createFishFinder {
+    grid-area: FF;
+}
+
+#createPhone {
+    grid-area: P;
+}
+
+.pageContainer3 {
+    background-color: #1F1F1F;
+    border: #89BFE2 solid 10px;
+    box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    grid-template-areas:
+    "AS AS AS AS AS AS";
+
+    width: 98vw;
+    height: auto; /*83, 90 vh old*/
+    margin: 1em;
+}
+
+
+.AnkhShield {
+    display: grid;
+    grid-area: AS;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px auto auto auto;
+    grid-gap: 10px;
+    grid-template-areas:
+    "CraftGuide3 AST AST AST AST"
+    "CraftGuide3 AB MB CCM TP"
+    "CraftGuide3 AB MB CCM TP"
+    "CraftGuide3 CAS CAS CAS CAS";
+
+    height: 80vh; /*83 vh old*/
+    margin: 1em 0 1em 0;
+}
+
+#ankhShieldTitle {
+    grid-area: AST;
+}
+#itemCraftGuideBar3 {
+    grid-area: CraftGuide3;
+}
+
+#createArmorBracing {
+    grid-area: AB;
+}
+#createMedicatedBandage {
+    grid-area: MB;
+}
+#createCounterCurse {
+    grid-area: CCM;
+}
+#createThePlan {
+    grid-area: TP;
+}
+#createAnkhShield {
+    grid-area: CAS;
+}
+
+.pageContainer4 {
+    background-color: #1F1F1F;
+    border: #89BFE2 solid 10px;
+    box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    grid-template-areas:
+    "Zen Zen Zen Zen Zen Zen";
+
+    width: 98vw;
+    height: auto; /*83, 90 vh old*/
+    margin: 1em;
+}
+
+.Zenith {
+
+    display: grid;
+    grid-area: Zen;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px auto auto auto;
+    grid-gap: 10px;
+    grid-template-areas:
+    "CraftGuide4 ZT ZT ZT"
+    "CraftGuide4 NE NE NE"
+    "CraftGuide4 TerB TerB TerB"
+    "CraftGuide4 Z Z Z"
+    "CraftGuide4 Z Z Z";
+
+    height: 80vh; /*83 vh old*/
+    margin: 1em 0 1em 0;
+}
+
+#zenithTitle {
+    grid-area: ZT;
+}
+
+#itemCraftGuideBar4 {
+    grid-area: CraftGuide4;
+}
+
+#createNightsEdge {
+    grid-area: NE;
+}
+
+#createTerrablade {
+    grid-area: TerB;
+}
+
+#createZenith {
+    grid-area: Z;
+}
+
+#createNightsEdge img, #createTerrablade img, #createZenith img  {
+     transform: scale(1);
+ }
