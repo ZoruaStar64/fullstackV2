@@ -184,9 +184,9 @@ function showLavawadersRecipe() {
 function showTerrasparkRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Terraspark_Boots.png' alt='Terraspark Boots'><p style='float: right; margin: 10px 35% 0 0; font-size: 20px'>Made with</p><br><br>" +
-        "<img style='float: left' src='../terrariaImg/Frostspark_Boots.png' alt='Frostspark Boots'><br><br><br><p style='margin-left: 15px;'>Combined with</p>" +
-        "<img style='float: left' src='../terrariaImg/Lava_Waders.png' alt='Lava Waders'><br><br><br>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Terraspark_Boots.png' alt='Terraspark Boots'><h2 class='mainItem'>Terraspark Boots</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+        "<img style='float: left' src='../terrariaImg/Frostspark_Boots.png' alt='Frostspark Boots'><br><p style='margin-left: 15px;'>with</p>" +
+        "<img style='margin: 0 0 0 30px; position: absolute; top: 125px' src='../terrariaImg/Lava_Waders.png' alt='Lava Waders'><br><br>" +
         "<p>At <img src='../terrariaImg/Tinkerers_Workshop.png' alt='Tinkerers Workshop'>Bought from <img src='../terrariaImg/Goblin_Tinkerer.png' alt='Goblin Tinkerer Map icon'></p></div>"
     const closeBox = document.getElementById('closeBox');
     closeBox.addEventListener('click', closeCraftGuide);
@@ -262,9 +262,9 @@ function showPDARecipe() {
 function showCellphoneRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Cell_Phone.png' alt='Cell Phone'><p style='float: right; margin: 10px 35% 0 0; font-size: 20px'>Made with</p><br><br> " +
-        "<img style='float: left' src='../terrariaImg/PDA.png' alt='PDA'><br><br><br><p style='margin-left: 15px;'>Combined with</p>" +
-        "<img style='float: left' src='../terrariaImg/Magic_Mirror.png' alt='Magic Mirror'><br><br><br><p style='margin-left: 15px;'>or</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Cell_Phone.png' alt='Cell Phone'><h2 class='mainItem'>Cellphone</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+        "<img style='float: left' src='../terrariaImg/PDA.png' alt='PDA'><br><p style='margin-left: 20px;'>with</p>" +
+        "<img style='margin: 0 0 0 30px; position: absolute; top: 125px;' src='../terrariaImg/Magic_Mirror.png' alt='Magic Mirror'><br><p style='margin-left: 15px;'>or</p>" +
         "<img style='float: left' src='../terrariaImg/Ice_Mirror.png' alt='Ice Mirror'><br><br><br><p style='margin-left: 15px;'></p>" +
         "<p>At <img src='../terrariaImg/Tinkerers_Workshop.png' alt='Tinkerers Workshop'>Bought from <img src='../terrariaImg/Goblin_Tinkerer.png' alt='Goblin Tinkerer Map icon'></p</div>"
     const closeBox = document.getElementById('closeBox');
@@ -350,9 +350,9 @@ function showACRecipe() {
 function showASRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Ankh_Shield.png' alt='Ankh Shield'><p style='float: right; margin: 10px 35% 0 0; font-size: 20px'>Made with</p><br><br>" +
-        "<img style='float: left' src='../terrariaImg/Obsidian_Shield.png' alt='Obidian Shield'><br><br><br><p style='margin-left: 15px;'>Combined with</p>" +
-        "<img style='float: left' src='../terrariaImg/Ankh_Charm.png' alt='Ankh Charm'><br><br><br>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Ankh_Shield.png' alt='Ankh Shield'><h2 class='mainItem'>Ankh Shield</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+        "<img style='float: left' src='../terrariaImg/Obsidian_Shield.png' alt='Obidian Shield'><br><p style='margin-left: 15px;'>with</p>" +
+        "<img style='margin: 0 0 0 30px; position: absolute; top: 125px;' src='../terrariaImg/Ankh_Charm.png' alt='Ankh Charm'><br><br>" +
         "<p>At <img src='../terrariaImg/Tinkerers_Workshop.png' alt='Tinkerers Workshop'>Bought from <img src='../terrariaImg/Goblin_Tinkerer.png' alt='Goblin Tinkerer Map icon'></p></div>"
     const closeBox = document.getElementById('closeBox');
     closeBox.addEventListener('click', closeCraftGuide);
@@ -554,8 +554,8 @@ function showMeowmereRecipe() {
 function showZenithRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Zenith.png' alt='Zenith'><p style='float: right; margin: 10px 15% 0 0; font-size: 20px'>Made by</p><br><br>" +
-        "<p style='float: left; font-size: 15px'>Combining all swords below</p><br><br><p><img style='transform: scale(1)' src='../terrariaImg/Copper_Shortsword.png' alt='Copper ShortSword'><img style='transform: scale(1)' src='../terrariaImg/Starfury.png' alt='Starfury'>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Zenith.png' alt='Zenith'><h2 class='mainItem'>Zenith</h2><p style=' margin: 10px 5% 0 0; font-size: 20px'>Made by combining all swords below</p>" +
+        "<p><img style='transform: scale(1)' src='../terrariaImg/Copper_Shortsword.png' alt='Copper ShortSword'><img style='transform: scale(1)' src='../terrariaImg/Starfury.png' alt='Starfury'>" +
         "<img style='transform: scale(1)' src='../terrariaImg/Enchanted_Sword.png' alt='Enchanted Sword'><img style='transform: scale(1)' src='../terrariaImg/Bee_Keeper.png' alt='Bee keeper'>" +
         "<img style='transform: scale(0.8)' src='../terrariaImg/Seedler.png' alt='Seedler'><img style='transform: scale(1)' src='../terrariaImg/Terra_Blade.png' alt='Terra Blade'>" +
         "<img style='transform: scale(1)' src='../terrariaImg/The_Horsemans_Blade.png' alt='The Horsemans Blade'><img style='transform: scale(1)' src='../terrariaImg/Influx_Waver.png' alt='Influx Waver'>" +
