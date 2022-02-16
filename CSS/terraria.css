@@ -29,7 +29,7 @@ p, label {
     cursor: zoom-in;
 }
 
-#mainItemTree1, #mainItemTree2, #mainItemTree3, #mainItemTree4 {
+.mainItemTree {
     border: black 1px solid;
     background-color: #89BFE2;
     color: black;
@@ -38,6 +38,19 @@ p, label {
     margin: 0 48%;
     margin-bottom: 15px;
     cursor: zoom-in;
+    transition: 0.4s;
+}
+
+.active, .mainItemTree:hover {
+    background-color: #68a6c6;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 h1 {

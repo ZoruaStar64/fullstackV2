@@ -28,11 +28,14 @@ function loadMainItems($link) {
             <input type="hidden" value="' . $userId .'" name="hiddenId2">
 
             <input type="image" value="" class="' . $class . '" src="terrariaImg/'. $trackerName .'.png" alt="'. $trackerName .'" name="checkItemT">
-            </form><p class="recipeButton" id="tracker'. $trackerId .'">View Recipe</p><p id="mainItemTree'. $currentMainItem .'">Show crafting tree</p></div>';
+            </form><p class="recipeButton" id="tracker'. $trackerId .'">View Recipe</p></div><p class="mainItemTree" id="tree'. $currentMainItem .'">Show crafting tree</p>';
 
         if ($trackerId == 7 || $trackerId == 15 || $trackerId == 24 || $trackerId == 45) {
             $currentMainItem++;
             echo $item;
+            echo '<div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  </div>';
 
         }
 
