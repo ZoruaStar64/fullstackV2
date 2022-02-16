@@ -62,8 +62,8 @@ function loadMainItems($link) {
 
 </div>
 
-<div class="craftGuideStyleModal" id="itemCraftGuideModal" style="display: none;">
-    <p id="closeBox">&times;</p>
+<div id="itemCraftGuideModal" class="craftGuideStyleModal" style="display: none">
+    <p id='closeBox'>&times;</p>
 
 </div>
 
