@@ -4,6 +4,7 @@ include_once('creds.php');
 
 function loadMainItems($link) {
     $userId = $_SESSION['user']['userId'];
+    $currentMainItem = 1;
     $currentItem = 0;
     $query = "SELECT * FROM Trackers INNER JOIN Trackers_has_Users ON Trackers.idTrackers = Trackers_has_Users.Trackers_idTrackers WHERE Trackers_has_Users.Users_userId = '$userId'";
     $result = $link->query($query);
@@ -27,10 +28,10 @@ function loadMainItems($link) {
             <input type="hidden" value="' . $userId .'" name="hiddenId2">
 
             <input type="image" value="" class="' . $class . '" src="terrariaImg/'. $trackerName .'.png" alt="'. $trackerName .'" name="checkItemT">
-            </form><p class="recipeButton" id="tracker'. $trackerId .'">View Recipe</p></div>';
+            </form><p class="recipeButton" id="tracker'. $trackerId .'">View Recipe</p><p id="mainItemTree'. $currentMainItem .'">Show crafting tree</p></div>';
 
         if ($trackerId == 7 || $trackerId == 15 || $trackerId == 24 || $trackerId == 45) {
-
+            $currentMainItem++;
             echo $item;
 
         }
