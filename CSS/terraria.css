@@ -14,8 +14,9 @@ a {
     color: #89BFE2;
 }
 
-p, label {
+p, label, h2 {
     font-family: 'VT323', monospace;
+    font-weight: normal;
     color: #FFFFFF;
 }
 
@@ -29,28 +30,28 @@ p, label {
     cursor: zoom-in;
 }
 
-.mainItemTree {
+#mainItemTree1, #mainItemTree2, #mainItemTree3, #mainItemTree4 {
     border: black 1px solid;
     background-color: #89BFE2;
     color: black;
     width: 60px;
     font-size: 15px;
-    margin: 0 48%;
-    margin-bottom: 15px;
+    margin: 0 48% 0 48%;
     cursor: zoom-in;
     transition: 0.4s;
 }
 
-.active, .mainItemTree:hover {
+.active, #mainItemTree1:hover, #mainItemTree2:hover, #mainItemTree3:hover, #mainItemTree4:hover {
     background-color: #68a6c6;
 }
 
-.panel {
+.panel1, .panel2, .panel3, .panel4 {
     padding: 0 18px;
-    background-color: white;
+    /*background-color: white;*/
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    margin-bottom: 15px;
 }
 
 h1 {
@@ -77,7 +78,7 @@ html {
     align-items: center;
     font-size: 24px;
     float: right;
-    margin: 50px 70px 0 0;
+    margin: 40px 50px 10px 0;
 }
 
 .craftGuideStyleModal {
@@ -124,13 +125,17 @@ html {
     grid-template-rows: 1fr 1fr 1fr 1fr;
 
     grid-template-areas:
-    "TS"
-    "CP"
-    "AS"
-    "Zen";
+    "TSB"
+    "Cell"
+    "AnkhS"
+    "Zenith";
 
     width: 100vw;
     height: auto;
+}
+
+#Terraspark_Boots {
+    grid-area: TSB;
 }
 
 .Terraspark {
@@ -145,8 +150,8 @@ html {
     "LB . MC"
     "SB . OSK1";
 
-
-    width: 100vw;
+    margin: 0 24%;
+    width: 50vw;
     height: auto; /*83 vh old*/
 }
 
@@ -207,20 +212,36 @@ html {
     grid-area: SquareP2;
 }
 
+#Cell_Phone {
+    grid-area: Cell;
+}
+
 .Cellphone {
 
     display: grid;
     grid-area: CP;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     grid-gap: 10px;
     grid-template-areas:
     ". PDA PDA ."
-    "GPS REK GT FF";
+    "GPS REK GT FF"
+    "W . . .";
 
-    width: 100vw;
+    margin: 0 8.5%;
+    width: 75vw;
     height: auto;
 
+}
+
+#Platinum_Watch {
+    grid-area: W;
+    margin-left: 125px;
+}
+
+#Gold_Watch {
+    grid-area: W;
+    margin-right: 125px;
 }
 
 #GPS {
@@ -243,19 +264,23 @@ html {
     grid-area: PDA;
 }
 
+#Ankh_Shield {
+    grid-area: AnkhS;
+}
 
 .AnkhShield {
     display: grid;
     grid-area: AS;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto;
     grid-gap: 10px;
     grid-template-areas:
     ". OS AC ."
     ".OSK2 B ."
     "AB MB CCM TP";
 
-    width: 100vw;
+    margin: 0 10%;
+    width: 75vw;
     height: auto;
 }
 
@@ -281,11 +306,15 @@ html {
 #Medicated_Bandage {
     grid-area: MB;
 }
-#Counter_Curse {
+#Countercurse_Mantra {
     grid-area: CCM;
 }
 #The_Plan {
     grid-area: TP;
+}
+
+#Zenith {
+    grid-area: Zenith;
 }
 
 .Zenith {
@@ -293,26 +322,77 @@ html {
     display: grid;
     grid-area: Zen;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     grid-gap: 10px;
     grid-template-areas:
-    "NE NE NE"
-    "TerB TerB TerB"
-    "Z Z Z"
-    "Z Z Z";
+    ". SD THB IW SW M . . ."
+    "TerB TerB CS SF ES BK . . ."
+    "TE TNE . . . . . . ."
+    "E NE . . . . . . ."
+    "CB BoG Mur FG LB BB . . .";
 
     width: 100vw;
     height: auto;
 }
 
-#createNightsEdge {
+#Blade_of_Grass {
+    grid-area: BoG;
+}
+#Muramasa {
+    grid-area: Mur;
+}
+#Fiery_Greatsword {
+    grid-area: FG;
+}
+#Lights_Bane {
+    grid-area: LB;
+}
+#Blood_Butcherer {
+    grid-area: BB;
+}
+#Chlorophyte_Bar {
+    grid-area: CB;
+}
+#Excalibur {
+    grid-area: E;
+}
+#True_Excalibur {
+    grid-area: TE;
+}
+#Nights_Edge {
     grid-area: NE;
 }
-
-#createTerrablade {
+#True_Nights_Edge {
+    grid-area: TNE;
+}
+#Terra_Blade {
     grid-area: TerB;
 }
-
-#createZenith {
-    grid-area: Z;
+#Copper_Shortsword {
+    grid-area: CS;
 }
+#Starfury {
+    grid-area: SF;
+}
+#Enchanted_Sword {
+    grid-area: ES;
+}
+#Bee_Keeper {
+    grid-area: BK;
+}
+#Seedler {
+    grid-area: SD;
+}
+#The_Horsemans_Blade {
+    grid-area: THB;
+}
+#Influx_Waver {
+    grid-area: IW;
+}
+#Star_Wrath {
+    grid-area: SW;
+}
+#Meowmere {
+    grid-area: M;
+}
+
