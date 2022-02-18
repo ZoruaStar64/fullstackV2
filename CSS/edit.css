@@ -70,6 +70,7 @@ html {
     background-color: #5C5C5C;
     justify-content: space-evenly;
     align-items: center;
+    border-radius: 8px;
 }
 
 #bioBox, #pfpBox, #genderBox, #nickBox {

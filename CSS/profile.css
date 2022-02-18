@@ -100,6 +100,7 @@ h1 {
     align-items: center;
     float: right;
     margin: 50px 70px 0 0;
+    border-radius: 8px;
 }
 
 .titleContainer {

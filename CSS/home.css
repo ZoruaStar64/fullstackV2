@@ -164,6 +164,7 @@ html {
     font-size: 24px;
     float: right;
     margin: 50px 70px 0 0;
+    border-radius: 8px;
 }
 
 #modalBoxL, #modalBoxR {
@@ -267,6 +268,7 @@ input {
         align-items: center;
         font-size: 24px;
         margin: 0 0 0 0;
+
     }
 
     .Favorites {

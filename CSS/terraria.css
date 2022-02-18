@@ -78,7 +78,8 @@ html {
     align-items: center;
     font-size: 24px;
     float: right;
-    margin: 40px 50px 10px 0;
+    margin: 40px 50px 40px 0;
+    border-radius: 8px;
 }
 
 .craftGuideStyleModal {
@@ -89,8 +90,9 @@ html {
     border: 1px solid #89BFE2;
     box-sizing: border-box;
     box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
-    width: 500px;
-    height: 500px;
+    border-radius: 8px;
+    width: 400px;
+    height: auto;
     top: 15%;
     left: 1%;
 }
@@ -119,6 +121,7 @@ html {
     background-color: #1F1F1F;
     border: #89BFE2 solid 3px;
     box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
+    border-radius: 8px;
     text-align: center;
     display: grid;
     grid-template-columns: 100%;
@@ -130,7 +133,8 @@ html {
     "AnkhS"
     "Zenith";
 
-    width: 100vw;
+    margin: 0 1%;
+    width: 98vw;
     height: auto;
 }
 
@@ -150,8 +154,8 @@ html {
     "LB . MC"
     "SB . OSK1";
 
-    margin: 0 24%;
-    width: 50vw;
+    margin: 0 12%;
+    width: 1440px;
     height: auto; /*83 vh old*/
 }
 
@@ -228,8 +232,8 @@ html {
     "GPS REK GT FF"
     "W . . .";
 
-    margin: 0 8.5%;
-    width: 75vw;
+    margin: 0 11%;
+    width: 1440px;
     height: auto;
 
 }
@@ -279,8 +283,8 @@ html {
     ".OSK2 B ."
     "AB MB CCM TP";
 
-    margin: 0 10%;
-    width: 75vw;
+    margin: 0 12%;
+    width: 1440px;
     height: auto;
 }
 
@@ -331,7 +335,8 @@ html {
     "E NE . . . . . . ."
     "CB BoG Mur FG LB BB . . .";
 
-    width: 100vw;
+    margin: 0 10%;
+    width: 1440px;
     height: auto;
 }
 
