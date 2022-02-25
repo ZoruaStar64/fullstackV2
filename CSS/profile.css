@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+@keyframes glow {
+    to {
+        opacity: 0;
+    }
+}
+
 html {
     background-color: #1F1F1F;
 }

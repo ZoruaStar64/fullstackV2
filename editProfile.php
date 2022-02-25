@@ -100,6 +100,10 @@ and then clicking on the change pfp button</p>
         </div>
 
     </div>
+    <footer>
+        <p style="margin: 15px 0 0 15px; position: relative">&copy; 2022 SB-DEV</p>
+    </footer>
 </div>
+<script src="JS/stars.js"></script>
 </body>
 </html>

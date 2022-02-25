@@ -50,12 +50,12 @@ if ($showloggedin == false) {
     <div class="mainBody">
     <h1>Startracker</h1>
     <p style="margin: 15px 0 30px 0; text-align: center">Welcome</p>
-        <p>Welcome to the Startracker website!<br>
+        <p>Welcome to the Startracker website!<br><br>
         You can use this website to keep track various games' progress that i plan to implement!<br>
         Currently the only game available is Terraria,<br>
-        in which you can see the recipes on how to craft the more difficult items.<br>
+        in which you can see the recipes on how to craft the more difficult items.<br><br>
         You will unfortunately need to make an account to access the rest of the website.<br>
-        This is so checked items can stay tracked within the database.<br>
+        This is so checked items can stay tracked within the database.<br><br>
         Other than that i hope you will enjoy the website and that it's helpfull!</p>
 </div>
     <footer>
@@ -150,6 +150,7 @@ if ($showloggedin == true) {
     ?>
 
 <script src="JS/home.js"></script>
+    <script src="JS/stars.js"></script>
 </div>
 </body>
 </html>

@@ -71,5 +71,6 @@ if (isset($_GET["logout"])) {
         <p style="margin: 15px 0 0 15px; position: relative">&copy; 2022 SB-DEV</p>
     </footer>
 </div>
+<script src="JS/stars.js"></script>
 </body>
 </html>

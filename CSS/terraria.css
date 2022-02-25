@@ -124,8 +124,9 @@ html {
     border-radius: 8px;
     text-align: center;
     display: grid;
+    /*row-gap: 10px;*/
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
 
     grid-template-areas:
     "TSB"
@@ -136,6 +137,7 @@ html {
     margin: 0 1%;
     width: 98vw;
     height: auto;
+    padding: 20px;
 }
 
 #Terraspark_Boots {
@@ -154,7 +156,7 @@ html {
     "LB . MC"
     "SB . OSK1";
 
-    margin: 0 12%;
+    margin: 10px 12%;
     width: 1440px;
     height: auto; /*83 vh old*/
 }
@@ -232,7 +234,7 @@ html {
     "GPS REK GT FF"
     "W . . .";
 
-    margin: 0 11%;
+    margin: 10px 11%;
     width: 1440px;
     height: auto;
 
@@ -283,7 +285,7 @@ html {
     ".OSK2 B ."
     "AB MB CCM TP";
 
-    margin: 0 12%;
+    margin: 10px 12%;
     width: 1440px;
     height: auto;
 }
@@ -335,7 +337,7 @@ html {
     "E NE . . . . . . ."
     "CB BoG Mur FG LB BB . . .";
 
-    margin: 0 10%;
+    margin: 10px 10%;
     width: 1440px;
     height: auto;
 }

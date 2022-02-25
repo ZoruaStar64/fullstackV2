@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+@keyframes glow {
+    to {
+        opacity: 0;
+    }
+}
+
 p, label, a, h1 {
     font-family: 'VT323', monospace;
     color: #89BFE2;
@@ -48,6 +54,7 @@ h1 {
 .mainBody p {
     text-align: left;
     grid-area: main;
+    margin: 5px 0 5px 10px;
 }
 
 footer, footer p {
@@ -109,16 +116,13 @@ input {
 }
 
 #creationButton {
-    float: left;
-    margin: 2% 50% 0 35%;
     background-color: #5C5C5C;
     color: #89BFE2;
     align-self: center;
-    width: 30%;
-    height: 30%;
-    border: 2px solid black;
-    border-radius: 50%;
+    border-radius: 8px;
+    padding: 5px;
     cursor: pointer;
+    border-style: none;
 }
 
 @media all and (min-width: 320px) {

@@ -162,6 +162,8 @@ meowmere.addEventListener('click',showMeowmereRecipe);
 zenith.addEventListener('click',showZenithRecipe);
 
 //common functions
+
+
 function showCraftGuide() {
     if (craftGuide.style.display === 'none') {
         craftGuide.style.display = 'block';
@@ -177,7 +179,6 @@ function closeCraftGuide() {
         closeBox.removeEventListener('click', closeCraftGuide);
     }
 }
-
 
 //Terraspark Boots Functions
 function showSpectreRecipe() {

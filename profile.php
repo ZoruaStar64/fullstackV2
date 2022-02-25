@@ -67,6 +67,6 @@ $email = $details["email"];
     </footer>
 
 </div>
-<script src="JS/profile.js"></script>
+<script src="JS/stars.js"></script>
 </body>
 </html>
