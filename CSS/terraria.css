@@ -82,6 +82,11 @@ html {
     border-radius: 8px;
 }
 
+.recipeTextCenter {
+    float: left;
+    margin: 15px 5px 0 10px;
+}
+
 /* Tooltip container */
 .tooltip {
     position: relative;
