@@ -5,6 +5,7 @@ include_once('creds.php');
 function loadMainItems($link) {
     $userId = $_SESSION['user']['userId'];
     $mainMaterials = '';
+    $itemClass = '';
     $currentMainItem = 1;
     $currentItem = 0;
     $query = "SELECT * FROM Trackers INNER JOIN Trackers_has_Users ON Trackers.idTrackers = Trackers_has_Users.Trackers_idTrackers WHERE Trackers_has_Users.Users_userId = '$userId'";
@@ -32,10 +33,11 @@ function loadMainItems($link) {
             </form><p class="recipeButton" id="tracker'. $trackerId .'">View Recipe</p><p id="mainItemTree'. $currentMainItem .'">Show crafting tree</p>';
 
         if ($trackerId > 0 && $trackerId < 7) {
+            $itemClass = 'mainItemMatsT1';
             if ($trackerId == 4) {
                 $itemId = 'Obsidian_Skull1';
             }
-            $item = '<div id="'. $itemId .'"><h2 style="margin-left: 55px">'. $trackerName .'</h2><form style="margin-left: 55px" id="checkItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
+            $item = '<div id="'. $itemId .'" class="'. $itemClass .'"><h2 style="margin-left: 55px">'. $trackerName .'</h2><form style="margin-left: 55px" id="checkItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
             <input type="hidden" value="' . $trackerId .'" name="hiddenId1">
             <input type="hidden" value="' . $userId .'" name="hiddenId2">
 
@@ -55,10 +57,11 @@ function loadMainItems($link) {
         }
 
         if ($trackerId > 7 && $trackerId < 15) {
+            $itemClass = 'mainItemMatsT2';
             if ($trackerId == 11) {
                 $itemId = 'REK3K';
             }
-            $item = '<div id="'. $itemId .'"><h2 style="margin-left: 50px">'. $trackerName .'</h2><form style="margin-left: 50px" id="checkItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
+            $item = '<div id="'. $itemId .'" class="'. $itemClass .'"><h2 style="margin-left: 50px">'. $trackerName .'</h2><form style="margin-left: 50px" id="checkItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
             <input type="hidden" value="' . $trackerId .'" name="hiddenId1">
             <input type="hidden" value="' . $userId .'" name="hiddenId2">
 
@@ -78,10 +81,11 @@ function loadMainItems($link) {
         }
 
         if ($trackerId > 15 && $trackerId < 24) {
+            $itemClass = 'mainItemMatsT3';
             if ($trackerId == 20) {
                 $itemId = 'Obsidian_Skull2';
             }
-            $item = '<div id="'. $itemId .'"><h2 style="margin-left: 50px">'. $trackerName .'</h2><form style="margin-left: 50px" id="checkItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
+            $item = '<div id="'. $itemId .'" class="'. $itemClass .'"><h2 style="margin-left: 50px">'. $trackerName .'</h2><form style="margin-left: 50px" id="checkItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
             <input type="hidden" value="' . $trackerId .'" name="hiddenId1">
             <input type="hidden" value="' . $userId .'" name="hiddenId2">
 
@@ -101,7 +105,8 @@ function loadMainItems($link) {
         }
 
         if ($trackerId > 24 && $trackerId < 45) {
-            $item = '<div id="'. $itemId .'"><h2 style="margin-left: 50px">'. $trackerName .'</h2><form style="margin-left: 50px" id="checkItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
+            $itemClass = 'mainItemMatsT4';
+            $item = '<div id="'. $itemId .'" class="'. $itemClass .'"><h2 style="margin-left: 50px">'. $trackerName .'</h2><form style="margin-left: 50px" id="checkItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
             <input type="hidden" value="' . $trackerId .'" name="hiddenId1">
             <input type="hidden" value="' . $userId .'" name="hiddenId2">
 
