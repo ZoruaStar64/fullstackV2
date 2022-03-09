@@ -20,7 +20,7 @@ p, label, h2 {
     color: #FFFFFF;
 }
 
-.recipeButton {
+.recipeButton1, .recipeButton2, .recipeButton3, .recipeButton4, .mainRecipeButton {
     border: black 1px solid;
     background-color: darkgray;
     color: black;
@@ -461,15 +461,57 @@ html {
         padding: 10px;
     }
 
-    .recipeButton {
+    .mainRecipeButton {
+        margin: 0 45%;
+    }
+
+    .recipeButton1 {
         width: 60px;
         font-size: 15px;
+        margin: 0 23%;
+    }
+
+    .recipeButton2 {
+        width: 40px;
+        font-size: 10px;
+        margin: 0 0;
+    }
+
+    .itemTH2Center {
+        margin: 0;
+    }
+
+    .itemCH2Center {
+        margin: 0 100% 0 0;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .itemAH2Center {
+        margin: 0 0 0 0;
+        font-size: 9px;
+    }
+
+    .itemZH2Center {
+        margin: 0;
+    }
+
+    .recipeButton3 {
+        width: 40px;
+        font-size: 10px;
+        margin: 0 23%;
+    }
+
+    .recipeButton4 {
+        width: 40px;
+        font-size: 10px;
+        margin: 0 0;
     }
 
     #mainItemTree1, #mainItemTree2, #mainItemTree3, #mainItemTree4 {
         width: 60px;
         font-size: 15px;
-        margin: 0 48% 0 48%;
+        margin: 0 45% 0 45%;
     }
 
     .linkContainer {
@@ -480,12 +522,25 @@ html {
         border-radius: 8px;
     }
 
-    #checkItemT {
-        margin-left: 50px;
+    #checkMainItemT {
+        margin-left: 35px;
+    }
+
+    #checkTItemT {
+        margin-left: 0px;
+    }
+    #checkCItemT {
+        margin-left: 0px;
+    }
+    #checkAItemT {
+        margin-left: 0px;
+    }
+    #checkZItemT {
+        margin-left: 0px;
     }
 
     .mainItem {
-        margin-left: 50px;
+        margin-left: 35px;
         font-size: 1.5em;
     }
 
@@ -540,6 +595,10 @@ html {
 
     }
 
+    .materialFormClassT2 {
+        width: 50px;
+    }
+
     .mainItemMatsT2 {
         width: 173px;
     }
@@ -552,10 +611,18 @@ html {
         width: 300px;
     }
 
+    #Gold_Watch {
+        margin-right: 75px;
+    }
+
+    #Platinum_Watch {
+        margin-left: 75px;
+    }
+
     .AnkhShield {
         display: grid;
         grid-area: AS;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 20% 20% 20% 20%;
         grid-template-rows: auto auto auto;
         grid-gap: 10px;
         grid-template-areas:
@@ -568,8 +635,12 @@ html {
         height: auto;
     }
 
+    .materialFormClassT3 {
+        width: 83px;
+    }
+
     .mainItemMatsT3 {
-        width: 343px;
+        width: 83px;
     }
 
     .Zenith {
@@ -603,14 +674,56 @@ html {
         font-size: 1em;
     }
 
+    .itemTH2Center {
+        margin-left: 50px;
+    }
+
+    .itemCH2Center {
+        margin: 0 0 0 50px;
+        font-size: 1em;
+    }
+
+    .itemAH2Center {
+        margin-left: 40px;
+        font-size: 1em;
+    }
+
+    .itemZH2Center {
+        margin-left: 40px;
+        font-size: 1em;
+    }
+
     img {
         transform: scale(1.5);
         padding: 10px;
     }
 
-    .recipeButton {
+    .mainRecipeButton {
+        margin: 0 48%;
+    }
+
+    .recipeButton1 {
         width: 60px;
         font-size: 15px;
+        margin: 0 48%;
+    }
+
+    .recipeButton2 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
+    }
+
+    .recipeButton3 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
+    }
+
+    .recipeButton4 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
     }
 
     #mainItemTree1, #mainItemTree2, #mainItemTree3, #mainItemTree4 {
@@ -627,8 +740,21 @@ html {
         border-radius: 8px;
     }
 
-    #checkItemT {
+    #checkMainItemT {
         margin-left: 23px;
+    }
+
+    #checkTItemT {
+        margin-left: 50px;
+    }
+    #checkCItemT {
+        margin-left: 50px;
+    }
+    #checkAItemT {
+        margin-left: 50px;
+    }
+    #checkZItemT {
+        margin-left: 50px;
     }
 
     .mainItem {
@@ -687,16 +813,35 @@ html {
 
     }
 
+    .materialFormClassT2 {
+        width: 127px;
+    }
+
     .mainItemMatsT2 {
         width: 173px;
     }
 
+    .imageGPS {
+        margin-left: 112px;
+    }
+    .imagePDA {
+        margin-left: 130px;
+    }
     #GPS {
         width: 300px;
     }
 
     #PDA {
         width: 340px;
+
+    }
+
+    #Gold_Watch {
+        margin-right: 175px;
+    }
+
+    #Platinum_Watch {
+        margin-left: 175px;
     }
 
     .AnkhShield {
@@ -713,6 +858,10 @@ html {
         margin: 10px 0;
         width: 768px;
         height: auto;
+    }
+
+    .materialFormClassT3 {
+        width: 123px;
     }
 
     .mainItemMatsT3 {
@@ -755,9 +904,28 @@ html {
         padding: 10px;
     }
 
-    .recipeButton {
+    .recipeButton1 {
         width: 60px;
         font-size: 15px;
+        margin: 0 48%;
+    }
+
+    .recipeButton2 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
+    }
+
+    .recipeButton3 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
+    }
+
+    .recipeButton4 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
     }
 
     #mainItemTree1, #mainItemTree2, #mainItemTree3, #mainItemTree4 {
@@ -774,8 +942,21 @@ html {
         border-radius: 8px;
     }
 
-    #checkItemT {
+    #checkMainItemT {
         margin-left: 23px;
+    }
+
+    #checkTItemT {
+        margin-left: 40px;
+    }
+    #checkCItemT {
+        margin-left: 25px;
+    }
+    #checkAItemT {
+        margin-left: 23px;
+    }
+    #checkZItemT {
+        margin-left: 40px;
     }
 
     .mainItem {
@@ -834,8 +1015,19 @@ html {
 
     }
 
+    .materialFormClassT2 {
+        width: 180px;
+    }
+
     .mainItemMatsT2 {
         width: 173px;
+    }
+
+    .imageGPS {
+        margin-left: 125px;
+    }
+    .imagePDA {
+        margin-left: 180px;
     }
 
     #GPS {
@@ -860,6 +1052,10 @@ html {
         margin: 10px 5%;
         width: 1024px;
         height: auto;
+    }
+
+    .materialFormClassT3 {
+        width: 173px;
     }
 
     .mainItemMatsT3 {
@@ -902,9 +1098,28 @@ html {
         padding: 10px;
     }
 
-    .recipeButton {
+    .recipeButton1 {
         width: 60px;
         font-size: 15px;
+        margin: 0 48%;
+    }
+
+    .recipeButton2 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
+    }
+
+    .recipeButton3 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
+    }
+
+    .recipeButton4 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
     }
 
     #mainItemTree1, #mainItemTree2, #mainItemTree3, #mainItemTree4 {
@@ -921,8 +1136,21 @@ html {
         border-radius: 8px;
     }
 
-    #checkItemT {
+    #checkMainItemT {
         margin-left: 0;
+    }
+
+    #checkTItemT {
+        margin-left: 50px;
+    }
+    #checkCItemT {
+        margin-left: 0px;
+    }
+    #checkAItemT {
+        margin-left: 23px;
+    }
+    #checkZItemT {
+        margin-left: 50px;
     }
 
     .mainItem {
@@ -980,8 +1208,19 @@ html {
 
     }
 
+    .materialFormClassT2 {
+        width: 390px;
+    }
+
     .mainItemMatsT2 {
         width: 343px;
+    }
+
+    .imageGPS {
+        margin-left: 125px;
+    }
+    .imagePDA {
+        margin-left: 230px;
     }
 
     #GPS {
@@ -1006,6 +1245,10 @@ html {
         margin: 10px 0;
         width: 1440px;
         height: auto;
+    }
+
+    .materialFormClassT3 {
+        width: 343px;
     }
 
     .mainItemMatsT3 {

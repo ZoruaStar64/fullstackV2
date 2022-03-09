@@ -25,24 +25,24 @@ function loadMainItems($link) {
             /*echo "the check is 1";*/
         }
 
-        $mainItem = '<div id="'. $trackerName .'"><h2 class="mainItem">'. $trackerName .'</h2><form id="checkItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
+        $mainItem = '<div id="'. $trackerName .'"><h2 class="mainItem">'. $trackerName .'</h2><form id="checkMainItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
             <input type="hidden" value="' . $trackerId .'" name="hiddenId1">
             <input type="hidden" value="' . $userId .'" name="hiddenId2">
 
             <input type="image" value="" class="' . $class . '" src="terrariaImg/'. $trackerName .'.png" alt="'. $trackerName .'" name="checkItemT">
-            </form><p class="recipeButton" id="tracker'. $trackerId .'">View Recipe</p><p id="mainItemTree'. $currentMainItem .'">Show crafting tree</p>';
+            </form><p class="mainRecipeButton" id="tracker'. $trackerId .'">View Recipe</p><p id="mainItemTree'. $currentMainItem .'">Show crafting tree</p>';
 
         if ($trackerId > 0 && $trackerId < 7) {
             $itemClass = 'mainItemMatsT1';
             if ($trackerId == 4) {
                 $itemId = 'Obsidian_Skull1';
             }
-            $item = '<div id="'. $itemId .'" class="'. $itemClass .'"><h2 style="margin-left: 55px">'. $trackerName .'</h2><form style="margin-left: 55px" id="checkItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
+            $item = '<div id="'. $itemId .'" class="'. $itemClass .'"><h2 style="" class="itemTH2Center">'. $trackerName .'</h2><form style="" id="checkTItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
             <input type="hidden" value="' . $trackerId .'" name="hiddenId1">
             <input type="hidden" value="' . $userId .'" name="hiddenId2">
 
             <input type="image" value="" class="' . $class . '" src="terrariaImg/'. $trackerName .'.png" alt="'. $trackerName .'" name="checkItemT">
-            </form><p class="recipeButton" id="tracker'. $trackerId .'">View Recipe</p></div>';
+            </form><p class="recipeButton1" id="tracker'. $trackerId .'">View Recipe</p></div>';
             $mainMaterials .= $item;
         }
 
@@ -58,15 +58,23 @@ function loadMainItems($link) {
 
         if ($trackerId > 7 && $trackerId < 15) {
             $itemClass = 'mainItemMatsT2';
+            $formClass = 'materialFormClassT2';
+            $formImageClass = '';
+            if ($trackerId == 10) {
+                $formImageClass = 'imageGPS';
+            }
             if ($trackerId == 11) {
                 $itemId = 'REK3K';
             }
-            $item = '<div id="'. $itemId .'" class="'. $itemClass .'"><h2 style="margin-left: 50px">'. $trackerName .'</h2><form style="margin-left: 50px" id="checkItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
+            if ($trackerId == 14) {
+                $formImageClass = 'imagePDA';
+            }
+            $item = '<div id="'. $itemId .'" class="'. $itemClass .'"><h2 style="" class="itemCH2Center">'. $trackerName .'</h2><form style="" class="'. $formClass .'" id="checkCItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
             <input type="hidden" value="' . $trackerId .'" name="hiddenId1">
             <input type="hidden" value="' . $userId .'" name="hiddenId2">
 
-            <input type="image" value="" class="' . $class . '" src="terrariaImg/'. $trackerName .'.png" alt="'. $trackerName .'" name="checkItemT">
-            </form><p class="recipeButton" id="tracker'. $trackerId .'">View Recipe</p></div>';
+            <input type="image" value="" class="' . $class .' ' .$formImageClass .'" src="terrariaImg/'. $trackerName .'.png" alt="'. $trackerName .'" name="checkItemT">
+            </form><p class="recipeButton2" id="tracker'. $trackerId .'">View Recipe</p></div>';
             $mainMaterials .= $item;
         }
 
@@ -82,15 +90,16 @@ function loadMainItems($link) {
 
         if ($trackerId > 15 && $trackerId < 24) {
             $itemClass = 'mainItemMatsT3';
+            $formClass = 'materialFormClassT3';
             if ($trackerId == 20) {
                 $itemId = 'Obsidian_Skull2';
             }
-            $item = '<div id="'. $itemId .'" class="'. $itemClass .'"><h2 style="margin-left: 50px">'. $trackerName .'</h2><form style="margin-left: 50px" id="checkItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
+            $item = '<div id="'. $itemId .'" class="'. $itemClass .'"><h2 style="" class="itemAH2Center">'. $trackerName .'</h2><form style="" class="'. $formClass .'" id="checkAItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
             <input type="hidden" value="' . $trackerId .'" name="hiddenId1">
             <input type="hidden" value="' . $userId .'" name="hiddenId2">
 
             <input type="image" value="" class="' . $class . '" src="terrariaImg/'. $trackerName .'.png" alt="'. $trackerName .'" name="checkItemT">
-            </form><p class="recipeButton" id="tracker'. $trackerId .'">View Recipe</p></div>';
+            </form><p class="recipeButton3" id="tracker'. $trackerId .'">View Recipe</p></div>';
             $mainMaterials .= $item;
         }
 
@@ -106,12 +115,12 @@ function loadMainItems($link) {
 
         if ($trackerId > 24 && $trackerId < 45) {
             $itemClass = 'mainItemMatsT4';
-            $item = '<div id="'. $itemId .'" class="'. $itemClass .'"><h2 style="margin-left: 50px">'. $trackerName .'</h2><form style="margin-left: 50px" id="checkItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
+            $item = '<div id="'. $itemId .'" class="'. $itemClass .'"><h2 style="" class="itemZH2Center">'. $trackerName .'</h2><form style="" id="checkZItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
             <input type="hidden" value="' . $trackerId .'" name="hiddenId1">
             <input type="hidden" value="' . $userId .'" name="hiddenId2">
 
             <input type="image" value="" class="' . $class . '" src="terrariaImg/'. $trackerName .'.png" alt="'. $trackerName .'" name="checkItemT">
-            </form><p class="recipeButton" id="tracker'. $trackerId .'">View Recipe</p></div>';
+            </form><p class="recipeButton4" id="tracker'. $trackerId .'">View Recipe</p></div>';
             $mainMaterials .= $item;
         }
 
