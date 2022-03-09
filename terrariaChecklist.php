@@ -114,12 +114,13 @@ function loadMainItems($link) {
         }
 
         if ($trackerId > 24 && $trackerId < 45) {
+            $formImageClass = 'materialFormClassT4';
             $itemClass = 'mainItemMatsT4';
             $item = '<div id="'. $itemId .'" class="'. $itemClass .'"><h2 style="" class="itemZH2Center">'. $trackerName .'</h2><form style="" id="checkZItemT" name="checkItemT" action="includes/inc.checkItem.php" method="POST">
             <input type="hidden" value="' . $trackerId .'" name="hiddenId1">
             <input type="hidden" value="' . $userId .'" name="hiddenId2">
 
-            <input type="image" value="" class="' . $class . '" src="terrariaImg/'. $trackerName .'.png" alt="'. $trackerName .'" name="checkItemT">
+            <input type="image" value="" class="' . $class . ' '. $formImageClass .'" src="terrariaImg/'. $trackerName .'.png" alt="'. $trackerName .'" name="checkItemT">
             </form><p class="recipeButton4" id="tracker'. $trackerId .'">View Recipe</p></div>';
             $mainMaterials .= $item;
         }

@@ -184,7 +184,7 @@ function closeCraftGuide() {
 function showSpectreRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Spectre_Boots.png' alt='Spectre Boots'><h2 class='mainItem'>Spectre Boots</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made with</p> " +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Spectre_Boots.png' alt='Spectre Boots'><h2 class='mainRecipeItem'>Spectre Boots</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made with</p> " +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Hermes_Boots.png' alt='Hermes Boots'><span class='tooltiptext'>Hermes Boots</span></div><p class='recipeTextCenter'>Obtained from <img style='transform: scale(1.3); position: absolute; top: 125px; left: 150px' src='../terrariaImg/Gold_Chest.png' alt='Gold Chest'></div></p><br><br><br><p style='margin-left: 15px'>or</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Flurry_Boots.png' alt='Flurry Boots'><span class='tooltiptext'>Flurry Boots</span></div><p class='recipeTextCenter'>Obtained from <div style='position: absolute; top: 180px; left: 155px' class='alignTriangle'><div id='triangleP1'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Frozen_Crate.png' alt='Frozen Crate'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Boreal_Crate.png' alt='Boreal Crate'></div><div id='triangleP2'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Frozen_Chest.png' alt='Frozen Chest'></div></div></p><br><br><br><p style='margin-left: 15px;'>or</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Dunerider_Boots.png' alt='Dunerider Boots'><span class='tooltiptext'>Dunerider Boots</span></div><p class='recipeTextCenter'>Obtained from <div style='position: absolute; top: 250px; left: 155px' class='alignTriangle'><div id='triangleP1'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Mirage_Crate.png' alt='Mirage Crate'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Oasis_Crate.png' alt='Oasis Crate'></div><div id='triangleP2'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Sandstone_Chest.png' alt='Sandstone Chest'></div></div></p><br><br><br><p style='margin-left: 15px;'>or</p>" +
@@ -198,7 +198,7 @@ function showSpectreRecipe() {
 function showLightningRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Lightning_Boots.png' alt='Lightning Boots'><h2 class='mainItem'>Lightning Boots</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p><br>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Lightning_Boots.png' alt='Lightning Boots'><h2 class='mainRecipeItem'>Lightning Boots</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p><br>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Aglet.png' alt='Aglet'><span class='tooltiptext'>Aglet</span></div><p class='recipeTextCenter'>Obtained from <div style='position: absolute; top: 120px; left: 155px' class='alignTriangle'><div id='triangleP1'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Wooden_Crate.png' alt='Wooden Crate'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Pearlwood_Crate.png' alt='Pearlwood Crate'></div><div id='triangleP2'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Chest.png' alt='Regular Chest'></div></div></p><br><br><br><br>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Anklet_of_the_Wind.png' alt='Anklet of the Wind'><span class='tooltiptext'>Anklet of the Wind</span></div><p class='recipeTextCenter'>Obtained from <div style='position: absolute; top: 190px; left: 155px' class='alignTriangle'><div id='triangleP1'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Jungle_Crate.png' alt='Jungle Crate'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Bramble_Crate.png' alt='Bramble Crate'></div><div id='triangleP2'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Ivy_Chest.png' alt='Ivy Chest'></div></div></p><br><br><br><p style='margin-left: 15px;'>with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Spectre_Boots.png' alt='Spectre Boots'><span class='tooltiptext'>Spectre Boots</span></div><br><br><br>" +
@@ -209,7 +209,7 @@ function showLightningRecipe() {
 function showFrostsparkRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Frostspark_Boots.png' alt='Frostspark Boots'><h2 class='mainItem'>Frostspark Boots</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Frostspark_Boots.png' alt='Frostspark Boots'><h2 class='mainRecipeItem'>Frostspark Boots</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Ice_Skates.png' alt='Ice Skates'><span class='tooltiptext'>Ice Skates</span></div><p class='recipeTextCenter'>Obtained from <div style='position: absolute; top: 110px; left: 155px' class='alignTriangle'><div id='triangleP1'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Boreal_Crate.png' alt='Boreal Crate'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Frozen_Crate.png' alt='Frozen Crate'></div><div id='triangleP2'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Frozen_Chest.png' alt='Frozen Chest'></div></div></p><br><br><br><p style='margin-left: 15px;'>with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Lightning_Boots.png' alt='Lightning Boots'><span class='tooltiptext'>Lightning Boots</span></div><br><br><br>" +
         "<p class='recipeTextCenter'>At</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Tinkerers_Workshop.png' alt='Tinkerers Workshop'><span class='tooltiptext'>Tinkerer's Workshop</span></div><p class='recipeTextCenter'>Bought from<div class='tooltip' style=''><img src='../terrariaImg/Goblin_Tinkerer.png' alt='Goblin Tinkerer Map icon'><span class='tooltiptext'>Goblin Tinkerer</span></div></p></div>"
@@ -219,7 +219,7 @@ function showFrostsparkRecipe() {
 function showObsidianskullRecipe1() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 15px 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Obsidian_Skull.png' alt='Obsidian Skull'><h2 class='mainItem'>Obsidian Skull</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made with</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 15px 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Obsidian_Skull.png' alt='Obsidian Skull'><h2 class='mainRecipeItem'>Obsidian Skull</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Obsidian.png' alt='Obsidian'><span class='tooltiptext'>Obsidian</span></div><p class='recipeTextCenter'>Obtained from <div class='tooltip' style='float: left'><img src='../terrariaImg/Water.png' alt='Water'><span class='tooltiptext'>Water</span></div> <p class='recipeTextCenter'>+</p> <div class='tooltip' style='float: left'><img src='../terrariaImg/Lava.png' alt='Lava'><span class='tooltiptext'>Lava</span></div></p><br><br><br>" +
         "<div class='tooltip' style='float: left;'><img style='' src='../terrariaImg/Obsidian.png' alt='Obsidian'><span class='tooltiptext'>Obsidian</span></div><p class='recipeTextCenter'>X 20 at </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Furnace.png' alt='Furnace'><span class='tooltiptext'>Furnace</span></div></div>"
     const closeBox = document.getElementById('closeBox');
@@ -228,7 +228,7 @@ function showObsidianskullRecipe1() {
 function showMoltencharmRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 15px 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Molten_Charm.png' alt='Molten Charm'><h2 class='mainItem'>Molten Charm</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 15px 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Molten_Charm.png' alt='Molten Charm'><h2 class='mainRecipeItem'>Molten Charm</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Obsidian_Skull.png' alt='Obsidian Skull'><span class='tooltiptext'>Obsidian Skull</span></div><br><br><br><br><p style='margin-left: 15px;'>with</p><br>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Lava_Charm.png' alt='Lava Charm'><span class='tooltiptext'>Lava Charm</span></div><p >Obtained from <img src='../terrariaImg/Obsidian_Crate.png' alt='Obsidian Crate'> or <img src='../terrariaImg/Gold_Chest.png' alt='Golden Chest'></p><br>" +
         "<p class='recipeTextCenter'>At</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Tinkerers_Workshop.png' alt='Tinkerers Workshop'><span class='tooltiptext'>Tinkerer's Workshop</span></div><p class='recipeTextCenter'>Bought from<div class='tooltip' style=''><img src='../terrariaImg/Goblin_Tinkerer.png' alt='Goblin Tinkerer Map icon'><span class='tooltiptext'>Goblin Tinkerer</span></div></p></div>"
@@ -238,7 +238,7 @@ function showMoltencharmRecipe() {
 function showLavawadersRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Lava_Waders.png' alt='Lava Waders'><h2 class='mainItem'>Lava Waders</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Lava_Waders.png' alt='Lava Waders'><h2 class='mainRecipeItem'>Lava Waders</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Obsidian_Rose.png' alt='Obsidian Rose'><span class='tooltiptext'>Obsidian Rose</span></div><p class='recipeTextCenter'>Obtained from </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Fire_Imp.png' alt='Fire Imp'><span class='tooltiptext'>Fire Imp</span></div><br><br><br><br><p style='margin-left: 15px;'>with</p><br>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Water_Walking_Boots.png' alt='Water walking boots'><span class='tooltiptext'>Water Walking Boots</span></div><p class='recipeTextCenter'>Obtained from <div style='position: absolute; top: 210px; left: 155px' class='alignTriangle'><div id='triangleP1'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Ocean_Crate.png' alt='Ocean Crate'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Seaside_Crate.png' alt='Seaside Crate'></div><div id='triangleP2'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Water_Chest.png' alt='Water Chest'></div></div></p><br><br><br>" +
         "<p class='recipeTextCenter'>At</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Tinkerers_Workshop.png' alt='Tinkerers Workshop'><span class='tooltiptext'>Tinkerer's Workshop</span></div><p class='recipeTextCenter'>Bought from<div class='tooltip' style=''><img src='../terrariaImg/Goblin_Tinkerer.png' alt='Goblin Tinkerer Map icon'><span class='tooltiptext'>Goblin Tinkerer</span></div></p></div>"
@@ -248,7 +248,7 @@ function showLavawadersRecipe() {
 function showTerrasparkRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 15px 10px'><img style='transform: scale(2)' src='../terrariaImg/Terraspark_Boots.png' alt='Terraspark Boots'><h2 class='mainItem'>Terraspark Boots</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 15px 10px'><img style='transform: scale(2)' src='../terrariaImg/Terraspark_Boots.png' alt='Terraspark Boots'><h2 class='mainRecipeItem'>Terraspark Boots</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Frostspark_Boots.png' alt='Frostspark Boots'><span class='tooltiptext'>Frostspark Boots</span></div><br><br><br><br><p style='margin-left: 15px;'>with</p><br>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Lava_Waders.png' alt='Lava Waders'><span class='tooltiptext'>Lava Waders</span></div><br><br><br>" +
         "<p class='recipeTextCenter'>At</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Tinkerers_Workshop.png' alt='Tinkerers Workshop'><span class='tooltiptext'>Tinkerer's Workshop</span></div><p class='recipeTextCenter'>Bought from<div class='tooltip' style=''><img src='../terrariaImg/Goblin_Tinkerer.png' alt='Goblin Tinkerer Map icon'><span class='tooltiptext'>Goblin Tinkerer</span></div></p></div>"
@@ -260,7 +260,7 @@ function showTerrasparkRecipe() {
 function showplatWatchRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Platinum_Watch.png' alt='Platinum Watch'><h2 class='mainItem'>Platinum Watch</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p> " +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Platinum_Watch.png' alt='Platinum Watch'><h2 class='mainRecipeItem'>Platinum Watch</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p> " +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Platinum_Bar.png' alt='Platinum bar'><span class='tooltiptext'>Platinum Bar</span></div><p class='recipeTextCenter'>X10 + </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Chain.png' alt='Chain'><span class='tooltiptext'>Chain</span></div><p class='recipeTextCenter'>X1</p><br><br><br>" +
         "<p class='recipeTextCenter' '>At</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Wooden_Table.png' alt='Wooden Table'><span class='tooltiptext'>Wooden table</span></div><p class='recipeTextCenter'> & </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Wooden_Chair.png' alt='Wooden Chair'><span class='tooltiptext'>Wooden chair</span></div></div>";
     const closeBox = document.getElementById('closeBox');
@@ -269,7 +269,7 @@ function showplatWatchRecipe() {
 function showgoldWatchRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Gold_Watch.png' alt='Gold Watch'><h2 class='mainItem'>Gold Watch</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p> " +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Gold_Watch.png' alt='Gold Watch'><h2 class='mainRecipeItem'>Gold Watch</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p> " +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Gold_Bar.png' alt='Gold bar'><span class='tooltiptext'>Gold Bar</span></div><p class='recipeTextCenter'>X10 + </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Chain.png' alt='Chain'><span class='tooltiptext'>Chain</span></div><p class='recipeTextCenter'>X1</p><br><br><br>" +
         "<p class='recipeTextCenter'>At</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Wooden_Table.png' alt='Wooden Table'><span class='tooltiptext'>Wooden table</span></div><p class='recipeTextCenter'> & </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Wooden_Chair.png' alt='Wooden Chair'><span class='tooltiptext'>Wooden chair</span></div></div>";
     const closeBox = document.getElementById('closeBox');
@@ -278,7 +278,7 @@ function showgoldWatchRecipe() {
 function showGPSRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/GPS.png' alt='GPS'><h2 class='mainItem'>GPS</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p> " +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/GPS.png' alt='GPS'><h2 class='mainRecipeItem'>GPS</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p> " +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Platinum_Watch.png' alt='Platinum Watch'><span class='tooltiptext'>Platinum Watch</span></div><p class='recipeTextCenter'>or</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Gold_Watch.png' alt='Gold Watch'><span class='tooltiptext'>Gold Watch</span></div><br><br><br><br> <p class='recipeTextCenter'>with</p><br><br>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Depth_Meter.png' alt='Depth Meter'><span class='tooltiptext'>Depth Meter (obtained from Bats, Salamanders, Giant Shelly and Crawdad)</span></div><br><br><br><p style='margin-left: 15px'>with</p><br>" +
@@ -290,7 +290,7 @@ function showGPSRecipe() {
 function showREK3KRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/R.E.K._3000.png' alt='R.E.K 3000'><h2 class='mainItem'>R.E.K 3000</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p> " +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/R.E.K._3000.png' alt='R.E.K 3000'><h2 class='mainRecipeItem'>R.E.K 3000</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p> " +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Radar.png' alt='Radar'><span class='tooltiptext'>Radar</span></div><p class='recipeTextCenter'>Obtained from <div style='position: absolute; top: 110px; left: 155px' class='alignTriangle'><div id='triangleP1'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Wooden_Crate.png' alt='Wooden Crate'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Pearlwood_Crate.png' alt='Pearlwood Crate'></div><div id='triangleP2'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Chest.png' alt='Regular Chest'></div></div></p><br><br><br><p style='margin-left: 15px;'>with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Tally_Counter.png' alt='Tally Counter'><span class='tooltiptext'>Tally Counter</span></div><p class='recipeTextCenter'>Obtained from <div style='position: absolute; top: 180px; left: 155px' class='alignTriangle'><div id='triangleP1'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Angry_Bones_1.png' alt='Angry Bones'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Dark_Caster.png' alt='Dark Caster'></div><div id='triangleP2'><img style='transform: scale(1.2); padding: 5px' src='../terrariaImg/Cursed_Skull.png' alt='Cursed Skull'></div></div></p><br><br><br><p style='margin-left: 15px;'>with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Lifeform_Analyzer.png' alt='Lifeform Analyzer'><span class='tooltiptext'>Lifeform Analyzer (5 Gold coins)</span></div><p class='recipeTextCenter'>Bought from </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Traveling_Merchant.png' alt='Travelling Merchant Map icon'><span class='tooltiptext'>Travelling Merchant</span></div><br><br><br><br>" +
@@ -301,7 +301,7 @@ function showREK3KRecipe() {
 function showGoblinRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Goblin_Tech.png' alt='Goblin Tech'><h2 class='mainItem'>Goblin Tech</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p> " +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Goblin_Tech.png' alt='Goblin Tech'><h2 class='mainRecipeItem'>Goblin Tech</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p> " +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/DPS_Meter.png' alt='DPS Meter'><span class='tooltiptext'>DPS Meter (5 Gold coins)</span></div><p class='recipeTextCenter'>Bought from </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Traveling_Merchant.png' alt='Travelling Merchant Map icon'><span class='tooltiptext'>Travelling Merchant</span></div><br><br><br><p style='margin: 15px 0 15px 15px ;'>Combined with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Stopwatch.png' alt='Stopwatch'><span class='tooltiptext'>Stopwatch (5 Gold coins)</span></div><p class='recipeTextCenter'>Bought from </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Traveling_Merchant.png' alt='Travelling Merchant Map icon'><span class='tooltiptext'>Travelling Merchant</span></div><br><br><br><p style='margin: 15px 0 15px 15px;'>Combined with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Metal_Detector.png' alt='Metal Detector'><span class='tooltiptext'>Metal Detector (50% chance on normal mode, 100% chance on Expert or higher)</span></div><p class='recipeTextCenter'>Obtained from </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Nymph.png' alt='Nymph'><span class='tooltiptext'>Nymph</span></div><br><br><br><br>" +
@@ -313,7 +313,7 @@ function showGoblinRecipe() {
 function showFishRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Fish_Finder.png' alt='Fish Finder'><h2 class='mainItem'>Fish Finder</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p> " +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Fish_Finder.png' alt='Fish Finder'><h2 class='mainRecipeItem'>Fish Finder</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p> " +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Fishermans_Pocket_Guide.png' alt='Fishermans Pocket guide'><span class='tooltiptext'>Fisherman's Pocket Guide (3.33% chance)</span></div><p class='recipeTextCenter'>Obtained from </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Angler.png' alt='Angler Map icon'><span class='tooltiptext'>Angler</span></div><p class='recipeTextCenter'>'s quest</p><br><br><br><br><p style='margin-left: 15px;'>Combined with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Weather_Radio.png' alt='Weather Radio'><span class='tooltiptext'>Weather Radio (3.33% chance)</span></div><p class='recipeTextCenter'>Obtained from </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Angler.png' alt='Angler Map icon'><span class='tooltiptext'>Angler</span></div><p class='recipeTextCenter'>'s quest</p><br><br><br><br><p style='margin-left: 15px;'>Combined with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Sextant.png' alt='Sextant'><span class='tooltiptext'>Sextant (3.33% chance)</span></div><p class='recipeTextCenter'>Obtained from </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Angler.png' alt='Angler Map icon'><span class='tooltiptext'>Angler</span></div><p class='recipeTextCenter'>'s quest</p><br><br><br><br>" +
@@ -325,7 +325,7 @@ function showFishRecipe() {
 function showPDARecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/PDA.png' alt='PDA'><h2 class='mainItem'>PDA</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p> " +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/PDA.png' alt='PDA'><h2 class='mainRecipeItem'>PDA</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p> " +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/GPS.png' alt='GPS'><span class='tooltiptext'>GPS</span></div><br><br><br><p style='margin-left: 15px;'>with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/R.E.K._3000.png' alt='R.E.K.3000'><span class='tooltiptext'>R.E.K 3000</span></div><br><br><br><br><p style='margin-left: 15px;'>with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Goblin_Tech.png' alt='Goblin Tech'><span class='tooltiptext'>Goblin Tech</span></div><br><br><br><p style='margin-left: 15px;'>with</p>" +
@@ -338,7 +338,7 @@ function showPDARecipe() {
 function showCellphoneRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Cell_Phone.png' alt='Cell Phone'><h2 class='mainItem'>Cellphone</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Cell_Phone.png' alt='Cell Phone'><h2 class='mainRecipeItem'>Cellphone</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/PDA.png' alt='PDA'><span class='tooltiptext'>PDA</span></div><p class='recipeTextCenter'>with</p>" +
         "<div class='tooltip' ><img style='position: absolute; top: -50' src='../terrariaImg/Magic_Mirror.png' alt='Magic Mirror'><span class='tooltiptext'>Magic Mirror (from Gold chests or Gold/Titanium crates from fishing)</span></div><br><br><br><br><p style='margin-left: 15px;'>or</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Ice_Mirror.png' alt='Ice Mirror'><span class='tooltiptext'>Ice Mirror (from Ice chests and Tundra biome crates from fishing)</span></div><br><br><br><p style='margin-left: 15px;'></p>" +
@@ -351,7 +351,7 @@ function showCellphoneRecipe() {
 function showABRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Armor_Bracing.png' alt='Armor Bracing'><h2 class='mainItem'>Armor Bracing</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Armor_Bracing.png' alt='Armor Bracing'><h2 class='mainRecipeItem'>Armor Bracing</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Vitamins.png' alt='Vitamins'><span class='tooltiptext'>Vitamins (1% chance on normal, 2% chance on Expert or higher)</span></div><p class='recipeTextCenter'>Obtained from </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Corruptor.png' alt='Corruptor'><span class='tooltiptext'>Corruptor</span></div><p class='recipeTextCenter'>&</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Floaty_Gross.png' alt='Floaty Gross'><span class='tooltiptext'>Floaty Gross</span></div><br><br><br><br><p style='margin-left: 15px;'>with</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Armor_Polish.png' alt='Armor Polish'><span class='tooltiptext'>Armor Polish (1% chance on normal, 2% chance on Expert or higher)</span></div><p class='recipeTextCenter'>Obtained from </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Blue_Armored_Bones_1.png' alt='Blue Armored Bones'><span class='tooltiptext'>Blue Armored Bones</span></div><p class='recipeTextCenter'>&</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Armored_Skeleton.png' alt='Armored Skeleton'><span class='tooltiptext'>Armored Skeleton</span></div><br><br><br>" +
         "<p class='recipeTextCenter'>At</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Tinkerers_Workshop.png' alt='Tinkerers Workshop'><span class='tooltiptext'>Tinkerer's Workshop</span></div><p class='recipeTextCenter'>Bought from<div class='tooltip' style=''><img src='../terrariaImg/Goblin_Tinkerer.png' alt='Goblin Tinkerer Map icon'><span class='tooltiptext'>Goblin Tinkerer</span></div></p></div>"
@@ -361,7 +361,7 @@ function showABRecipe() {
 function showMBRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Medicated_Bandage.png' alt='Medicated Bandage'><h2 class='mainItem'>Medicated Bandage</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Medicated_Bandage.png' alt='Medicated Bandage'><h2 class='mainRecipeItem'>Medicated Bandage</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Adhesive_Bandage.png' alt='Adhesive Bandage'><span class='tooltiptext'>Adhesive Bandage (1% chance on normal, 2% chance on Expert and higher)</span></div><p class='recipeTextCenter'>Obtained from </p><br><br><div class='tooltip' style='float: left'><img src='../terrariaImg/Rusty_Armored_Bones_1.png' alt='Rusty Armored Bones'><span class='tooltiptext'>Rusty Armored Bones</span></div>" +
         "<p class='recipeTextCenter'>&</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Werewolf.png' alt='Werewolf'><span class='tooltiptext'>Werewolf</span></div><p class='recipeTextCenter'>&</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Angler_Fish.png' alt='Angler Fish'><span class='tooltiptext'>Angler Fish</span></div><br><br><br><p style='margin-left: 15px;'>with</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Bezoar.png' alt='Bezoar'><span class='tooltiptext'>Bezoar (1% chance on normal, 2% chance on Expert and higher)</span></div><p class='recipeTextCenter'>Obtained from </p><br><br><div class='tooltip' style='float: left'><img src='../terrariaImg/Hornet.png' alt='Hornet'><span class='tooltiptext'>Hornet</span></div>" +
@@ -373,7 +373,7 @@ function showMBRecipe() {
 function showCCMRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Countercurse_Mantra.png' alt='Countercurse Mantra'><h2 class='mainItem'>Countercurse Mantra</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Countercurse_Mantra.png' alt='Countercurse Mantra'><h2 class='mainRecipeItem'>Countercurse Mantra</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Nazar.png' alt='Nazar'><span class='tooltiptext'>Nazar (1% chance on normal, 2% chance on Expert and higher) from Crimson Axe, Cursed Hammer, Enchanted Sword(Enemy) and (Giant)Cursed Skull</span></div><br><br><br><br><p style='margin-left: 15px;'>with</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Megaphone.png' alt='Megaphone'><span class='tooltiptext'>Megaphone (1% chance on normal, 2% chance on Expert and higher) from Green Jellyfish, Blood/Dark Mummy and Pixie</span></div><br><br><br>" +
         "<p class='recipeTextCenter'>At</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Tinkerers_Workshop.png' alt='Tinkerers Workshop'><span class='tooltiptext'>Tinkerer's Workshop</span></div><p class='recipeTextCenter'>Bought from<div class='tooltip' style=''><img src='../terrariaImg/Goblin_Tinkerer.png' alt='Goblin Tinkerer Map icon'><span class='tooltiptext'>Goblin Tinkerer</span></div></p></div>"
@@ -384,7 +384,7 @@ function showCCMRecipe() {
 function showthePlanRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/The_Plan.png' alt='The Plan'><h2 class='mainItem'>The Plan</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/The_Plan.png' alt='The Plan'><h2 class='mainRecipeItem'>The Plan</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Trifold_Map.png' alt='Trifold Map'><span class='tooltiptext'>Trifold Map (1% chance on normal, 2% chance on Expert and higher) from Giant Bat, Light Mummy and Clown</span></div><br><br><br><p style='margin-left: 15px;'>with</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Fast_Clock.png' alt='Fast Clock'><span class='tooltiptext'>Fast Clock (1% chance on normal, 2% chance on Expert and higher) from Mummy, Pixie and Wraith</span></div><br><br><br><br>" +
         "<p class='recipeTextCenter'>At</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Tinkerers_Workshop.png' alt='Tinkerers Workshop'><span class='tooltiptext'>Tinkerer's Workshop</span></div><p class='recipeTextCenter'>Bought from<div class='tooltip' style=''><img src='../terrariaImg/Goblin_Tinkerer.png' alt='Goblin Tinkerer Map icon'><span class='tooltiptext'>Goblin Tinkerer</span></div></p></div>"
@@ -394,7 +394,7 @@ function showthePlanRecipe() {
 function showObsidianskullRecipe2() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 15px 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Obsidian_Skull.png' alt='Obsidian Skull'><h2 class='mainItem'>Obsidian Skull</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made with</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 15px 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Obsidian_Skull.png' alt='Obsidian Skull'><h2 class='mainRecipeItem'>Obsidian Skull</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Obsidian.png' alt='Obsidian'><span class='tooltiptext'>Obsidian</span></div><p class='recipeTextCenter'>Obtained from <div class='tooltip' style='float: left'><img src='../terrariaImg/Water.png' alt='Water'><span class='tooltiptext'>Water</span></div> <p class='recipeTextCenter'>+</p> <div class='tooltip' style='float: left'><img src='../terrariaImg/Lava.png' alt='Lava'><span class='tooltiptext'>Lava</span></div></p><br><br><br>" +
         "<div class='tooltip' style='float: left;'><img style='' src='../terrariaImg/Obsidian.png' alt='Obsidian'><span class='tooltiptext'>Obsidian</span></div><p class='recipeTextCenter'>X 20 at </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Furnace.png' alt='Furnace'><span class='tooltiptext'>Furnace</span></div></div>"
     const closeBox = document.getElementById('closeBox');
@@ -404,7 +404,7 @@ function showObsidianskullRecipe2() {
 function showOSRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Obsidian_Shield.png' alt='Obsidian Shield'><h2 class='mainItem'>Obsidian Shield</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Obsidian_Shield.png' alt='Obsidian Shield'><h2 class='mainRecipeItem'>Obsidian Shield</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Obsidian_Skull.png' alt='Obsidian Skull'><span class='tooltiptext'>Obsidian Skull</span></div><br><br><br><br><p style='margin-left: 15px;'>with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Cobalt_Shield.png' alt='Cobalt Shield'><span class='tooltiptext'>Cobalt Shield</span></div><p class='recipeTextCenter'>Obtained from </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Gold_Chest.png' alt='Gold Chest'><span class='tooltiptext'>Opened Dungeon Chest</span></div><p class='recipeTextCenter'>or</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Golden_Lock_Box.png' alt='Golden Lock Box'><span class='tooltiptext'>Golden Lock Box (14.29% chance) (obtained from opening dungeon crates from fishing)</span></div><br><br><br>" +
         "<p class='recipeTextCenter'>At</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Tinkerers_Workshop.png' alt='Tinkerers Workshop'><span class='tooltiptext'>Tinkerer's Workshop</span></div><p class='recipeTextCenter'>Bought from<div class='tooltip' style=''><img src='../terrariaImg/Goblin_Tinkerer.png' alt='Goblin Tinkerer Map icon'><span class='tooltiptext'>Goblin Tinkerer</span></div></p></div>" +
@@ -416,7 +416,7 @@ function showOSRecipe() {
 function showBlindfold() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Blindfold.png' alt='Blindfold'><h2 class='mainItem'>Blindfold</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Blindfold.png' alt='Blindfold'><h2 class='mainRecipeItem'>Blindfold</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Slimeling.png' alt='Slimeling'><span class='tooltiptext'>Slimeling</span></div><br><br><p>or</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Corrupt_Slime.png' alt='Corrupt Slime'><span class='tooltiptext'>Corrupt Slime</span></div><br><br><br><p>or</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Crimslime.png' alt='Crimslime'><span class='tooltiptext'>Crimslime</span></div><br><br><br><p>or</p>" +
@@ -429,7 +429,7 @@ function showBlindfold() {
 function showACRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Ankh_Charm.png' alt='Ankh Charm'><h2 class='mainItem'>Ankh Charm</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Ankh_Charm.png' alt='Ankh Charm'><h2 class='mainRecipeItem'>Ankh Charm</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Armor_Bracing.png' alt='Armor Bracing'><span class='tooltiptext'>Armor Bracing</span></div><br><br><br><p style='margin-left: 15px;'>with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Medicated_Bandage.png' alt='Medicated Bandage'><span class='tooltiptext'>Medicated Bandage</span></div><br><br><br><p style='margin-left: 15px;'>with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Countercurse_Mantra.png' alt='Countercurse Mantra'><span class='tooltiptext'>Countercurse Mantra</span></div><br><br><br<br><br><br><p style='margin-left: 15px;'>with</p>" +
@@ -443,7 +443,7 @@ function showACRecipe() {
 function showASRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Ankh_Shield.png' alt='Ankh Shield'><h2 class='mainItem'>Ankh Shield</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Ankh_Shield.png' alt='Ankh Shield'><h2 class='mainRecipeItem'>Ankh Shield</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Obsidian_Shield.png' alt='Obsidian Shield'><span class='tooltiptext'>Obsidian Shield</span></div><p class='recipeTextCenter'>with</p>" +
         "<div class='tooltip' style='float: left' ><img src='../terrariaImg/Ankh_Charm.png' alt='Ankh Charm'><span class='tooltiptext'>Ankh Charm</span></div><br><br><br><br>" +
         "<p class='recipeTextCenter'>At</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Tinkerers_Workshop.png' alt='Tinkerers Workshop'><span class='tooltiptext'>Tinkerer's Workshop</span></div><p class='recipeTextCenter'>Bought from<div class='tooltip' style=''><img src='../terrariaImg/Goblin_Tinkerer.png' alt='Goblin Tinkerer Map icon'><span class='tooltiptext'>Goblin Tinkerer</span></div></p></div>"
@@ -455,7 +455,7 @@ function showASRecipe() {
 function showBoGRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.3)' src='../terrariaImg/Blade_of_Grass.png' alt='Blade of Grass'><h2 class='mainItem'>Blade of Grass</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.3)' src='../terrariaImg/Blade_of_Grass.png' alt='Blade of Grass'><h2 class='mainRecipeItem'>Blade of Grass</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Jungle_Spores_Item.png' alt='Jungle Spores Item'><span class='tooltiptext'>Jungle Spores (inventory item)</span></div><p class='recipeTextCenter'>X12 Obtained from</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Jungle_Spores.png' alt='Jungle Spores Terrain'><span class='tooltiptext'>Jungle Spores (Block variant) (found in or below the cavern layer of the Underground jungle)</span></div><br><br><br><p style='margin-left: 15px;'>Combined with</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Stinger.png' alt='Stinger'><span class='tooltiptext'>Stinger (100% chance drop)</span></div><p class='recipeTextCenter'>X12 Obtained from</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Hornet.png' alt='Hornet'><span class='tooltiptext'>Hornet</span></div><div class='tooltip' style='float: left'><img src='../terrariaImg/Moss_Hornet.png' alt='Moss Hornet'><span class='tooltiptext'>Moss Hornet</span></div><div class='tooltip' style='float: left'><img src='../terrariaImg/Spiked_Jungle_Slime.png' alt='Spiked Jungle Slime'><span class='tooltiptext'>Spiked Jungle Slime (Tip: when they are in water they cannot shoot their spikes at you)</span></div><br><br><br>" +
@@ -467,7 +467,7 @@ function showBoGRecipe() {
 function showMuramasaRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.3)' src='../terrariaImg/Muramasa.png' alt='Muramasa'><h2 class='mainItem'>Muramasa</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.3)' src='../terrariaImg/Muramasa.png' alt='Muramasa'><h2 class='mainRecipeItem'>Muramasa</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Gold_Chest.png' alt='Gold Chest'><span class='tooltiptext'>Opened Dungeon chest (Requires a Golden key to open obtained from all pre-hardmode dungeon enemies, dungeon pots and wooden chests spawned inside the dungeon)</span></div><br><br><br><p style='margin-left: 15px;'>or</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Golden_Lock_Box.png' alt='Golden Lock Box'><span class='tooltiptext'>Golden Lock box (Requires a Golden key to open) (Obtained from Dungeon/Stockade crates from fishing in the dungeon)</span></div><br><br><br>" +
         "<p>Note: the gold chest is suposed to be an opened gold chest from within the dungeon</p></div>"
@@ -478,7 +478,7 @@ function showMuramasaRecipe() {
 function showFGSRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.3)' src='../terrariaImg/Fiery_Greatsword.png' alt='Fiery Greatsword'><h2 class='mainItem'>Fiery Greatsword</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by using</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.3)' src='../terrariaImg/Fiery_Greatsword.png' alt='Fiery Greatsword'><h2 class='mainRecipeItem'>Fiery Greatsword</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by using</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Hellstone_Bar.png' alt='Hellstone bar'><span class='tooltiptext'>Hellstone Bar</span></div><p class='recipeTextCenter'>X 20 made by combining</p><br><br><br>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Obsidian.png' alt='Obsidian'><span class='tooltiptext'>Obsidian</span></div><p class='recipeTextCenter'>Obtained from <div class='tooltip' style='float: left'><img src='../terrariaImg/Water.png' alt='Water'><span class='tooltiptext'>Water</span></div> <p class='recipeTextCenter'>+</p> <div class='tooltip' style='float: left'><img src='../terrariaImg/Lava.png' alt='Lava'><span class='tooltiptext'>Lava</span></div></p><br><br><br>" +
         "<div class='tooltip' style='float: left;'><img style='' src='../terrariaImg/Obsidian.png' alt='Obsidian'><span class='tooltiptext'>Obsidian</span></div><p class='recipeTextCenter'>X 20 with </p><br><br><br>" +
@@ -491,7 +491,7 @@ function showFGSRecipe() {
 function showLBRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.3)' src='../terrariaImg/Lights_Bane.png' alt='Lights Bane'><h2 class='mainItem'>Light's Bane</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by using</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.3)' src='../terrariaImg/Lights_Bane.png' alt='Lights Bane'><h2 class='mainRecipeItem'>Light's Bane</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by using</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Demonite_Ore.png' alt='Demonite Ore'><span class='tooltiptext'>Demonite Ore</span></div><p class='recipeTextCenter'>X 30 Obtained from </p><br><br><br><div class='tooltip' style='float: left'><img src='../terrariaImg/Eye_of_Cthulhu.png' alt='Eye of Cthulhu'><span class='tooltiptext' style='width: 300px'>Eye of Cthulhu (Spawned manually with a Suspicious looking eye or 33.33% chance after getting atleast 200 Max HP, 10+ defense and more than 4 town npcs and also if the eye hasn't been defeated in the current world while it's night)</span></div><p class='recipeTextCenter'>or</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Eater_of_Worlds.png' alt='Eater of Worlds'><span class='tooltiptext'>Eater of Worlds (spawned by breaking 3 shadow orbs or with the Worm food item in the Corruption)</span></div><br><br><br><br><p class='recipeTextCenter'>at</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Furnace.png' alt='Furnace'><span class='tooltiptext'>Furnace</span></div><br><br><br><p style='margin-left: 15px;'>To make</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Demonite_Bar.png' alt='Demonite Bar'><span class='tooltiptext'>Demonite Bar</span></div><p class='recipeTextCenter'>X 10</p>" +
         "<p class='recipeTextCenter'>at </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Iron_Anvil.png' alt='Iron Anvil'><span class='tooltiptext'>Iron Anvil (made with 5 iron bars at a workbench, can be found in underground cabins and also bought from the merchant NPC)</span></div><p class='recipeTextCenter'>or</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Lead_Anvil.png' alt='Lead Anvil'><span class='tooltiptext'>Lead Anvil (made with 5 lead bars at a workbench or found randomly in underground cabins)</span></div></div>"
@@ -502,7 +502,7 @@ function showLBRecipe() {
 function showBBRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.3)' src='../terrariaImg/Blood_Butcherer.png' alt='Blood Butcherer'><h2 class='mainItem'>Blood Butcherer</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.3)' src='../terrariaImg/Blood_Butcherer.png' alt='Blood Butcherer'><h2 class='mainRecipeItem'>Blood Butcherer</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Crimtane_Ore.png' alt='Crimtane Ore'><span class='tooltiptext'>Crimtane Ore</span></div><p class='recipeTextCenter'>X 30 Obtained from </p><br><br><br><div class='tooltip' style='float: left'><img src='../terrariaImg/Eye_of_Cthulhu.png' alt='Eye of Cthulhu'><span class='tooltiptext' style='width: 300px'>Eye of Cthulhu (Spawned manually with a Suspicious looking eye or 33.33% chance after getting atleast 200 Max HP, 10+ defense and more than 4 town npcs and also if the eye hasn't been defeated in the current world while it's night)</span></div><p class='recipeTextCenter'>or</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Brain_of_Cthulhu.png' alt='Brain of Cthulhu'><span class='tooltiptext'>Brain of Cthulhu (Spawned by breaking 3 Crimson hearts or by using the Bloody Spine in the Crimson)</span></div></p><br><br><br><br><p class='recipeTextCenter'>at</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Furnace.png' alt='Furnace'><span class='tooltiptext'>Furnace</span></div><br><br><br><p style='margin-left: 15px;'>To make</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Crimtane_Bar.png' alt='Crimtane Bar'><span class='tooltiptext'>Crimtane Bar</span></div><p class='recipeTextCenter'>X 10</p>" +
         "<p class='recipeTextCenter'>at </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Iron_Anvil.png' alt='Iron Anvil'><span class='tooltiptext'>Iron Anvil (made with 5 iron bars at a workbench, can be found in underground cabins and also bought from the merchant NPC)</span></div><p class='recipeTextCenter'>or</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Lead_Anvil.png' alt='Lead Anvil'><span class='tooltiptext'>Lead Anvil (made with 5 lead bars at a workbench or found randomly in underground cabins)</span></div></div>"
@@ -513,7 +513,7 @@ function showBBRecipe() {
 function showNERecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Nights_Edge.png' alt='Nights Edge'><h2 class='mainItem'>Night's Edge</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Nights_Edge.png' alt='Nights Edge'><h2 class='mainRecipeItem'>Night's Edge</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left'><img style='transform: scale(1)'  src='../terrariaImg/Blade_of_Grass.png' alt='Blade of Grass'><span class='tooltiptext'>Blade of Grass</span></div><br><br><br><br><br><p style='margin-left: 15px;'>Combined with</p>" +
         "<div class='tooltip' style='float: left'><img style='transform: scale(1)' src='../terrariaImg/Muramasa.png' alt='Muramasa'><span class='tooltiptext'>Muramasa</span></div><br><br><br><br><br><p style='margin-left: 15px;'>Combined with</p>" +
         "<div class='tooltip' style='float: left'><img style='transform: scale(1)' src='../terrariaImg/Fiery_Greatsword.png' alt='Fiery Greatsword'><span class='tooltiptext'>Fiery Greatsword</span></div><br><br><br><br><br><p style='margin-left: 15px;'>Combined with</p>" +
@@ -526,7 +526,7 @@ function showNERecipe() {
 function showCBRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Chlorophyte_Bar.png' alt='Chlorophyte Bar'><h2 class='mainItem'>Chlorophyte Bar</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by smelting</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(2)' src='../terrariaImg/Chlorophyte_Bar.png' alt='Chlorophyte Bar'><h2 class='mainRecipeItem'>Chlorophyte Bar</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by smelting</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Chlorophyte_Ore.png' alt='Chlorophyte Ore'><span class='tooltiptext'>Chlorophyte ore (found in hardmode jungle (obtainable after defeating the mech bosses and crafting a hallowed pickaxe/drill)</span></div><p class='recipeTextCenter'>X 5</p><br><br><br>" +
         "<p class='recipeTextCenter'>at</p> <div class='tooltip' style='float: left'><img src='../terrariaImg/Adamantite_Forge.png' alt='Adamantite Forge'><span class='tooltiptext'>Adamantite Forge (obtainable by combining a Hellforge and 30 Adamantite Ore)</span></div> <p class='recipeTextCenter'>or</p> <div class='tooltip' style='float: left'><img src='../terrariaImg/Titanium_Forge.png' alt='Titanium Forge'><span class='tooltiptext'>Titanium Forge (obtainable by combining a Hellforge and 30 Titanium ore)</span></div></div>"
     const closeBox = document.getElementById('closeBox');
@@ -536,7 +536,7 @@ function showCBRecipe() {
 function showExcaliburRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.3)' src='../terrariaImg/Excalibur.png' alt='Excalibur'><h2 class='mainItem'>Excalibur</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by using</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.3)' src='../terrariaImg/Excalibur.png' alt='Excalibur'><h2 class='mainRecipeItem'>Excalibur</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by using</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Hallowed_Bar.png' alt='Hallowed Bar'><span class='tooltiptext'>Hallowed Bar</span></div><p class='recipeTextCenter'>Obtained from </p><br><br><br>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Retinazer.png' alt='The Twins'><span class='tooltiptext'>The Twins (randomly spawns during the night after entering hardmode or by using the Mechanical Eye)</span></div> <p class='recipeTextCenter'>or</p> <div class='tooltip' style='float: left'><img src='../terrariaImg/The_Destroyer.png' alt='The Destroyer'><span class='tooltiptext'>The Destroyer (randomly spawns during the night after entering hardmode or by using the Mechanical Worm)</span></div><p class='recipeTextCenter'>or</p> <div class='tooltip' style='float: left'><img src='../terrariaImg/Skeletron_Prime.png' alt='Skeletron Prime'><span class='tooltiptext'>Skeletron Prime (randomly spawns during the night after entering hardmode or by using the Mechanical Skull)</span></div><br><br><br><br>" +
         "<div class='tooltip' style='float: left'><img style='float: left' src='../terrariaImg/Hallowed_Bar.png' alt='Hallowed Bar'><span class='tooltiptext'>Hallowed Bar</span></div><p class='recipeTextCenter'>X 12 </p><br><br><br>" +
@@ -547,7 +547,7 @@ function showExcaliburRecipe() {
 function showTExcaliburRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/True_Excalibur.png' alt='True Excalibur'><h2 class='mainItem'>True Excalibur</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/True_Excalibur.png' alt='True Excalibur'><h2 class='mainRecipeItem'>True Excalibur</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left'><img style='transform: scale(1)'  src='../terrariaImg/Excalibur.png' alt='Excalibur'><span class='tooltiptext'>Excalibur</span></div><br><br><br><br><br><p style='margin-left: 15px;'>with</p><br>" +
         "<div class='tooltip' style='float: left'><img style='transform: scale(1)'  src='../terrariaImg/Chlorophyte_Bar.png' alt='Chlorophyte Bar'><span class='tooltiptext'>Chlorophyte Bar</span></div><p class='recipeTextCenter'>X 24</p><br><br><br>" +
         "<p class='recipeTextCenter'>at </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Mythril_Anvil.png' alt='Mythril Anvil'><span class='tooltiptext'>Mythril Anvil (made with 10 Mythril bars at a Pre-hardmode Anvil)</span></div><p class='recipeTextCenter'>or</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Orichalcum_Anvil.png' alt='Orichalcum Anvil'><span class='tooltiptext'>Orichalcum Anvil (made with 12 Orichalcum bars at a Pre-hardmode Anvil)</span></div></div>"
@@ -558,7 +558,7 @@ function showTExcaliburRecipe() {
 function showTNERecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/True_Nights_Edge.png' alt='True Nights Edge'><h2 class='mainItem'>True Night's Edge</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/True_Nights_Edge.png' alt='True Nights Edge'><h2 class='mainRecipeItem'>True Night's Edge</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left'><img style='transform: scale(1)'  src='../terrariaImg/Nights_Edge.png' alt='Nights Edge'><span class='tooltiptext'>Night's Edge</span></div><br><br><br><p style='margin-left: 15px;'>with</p><br>" +
         "<div class='tooltip' style='float: left'><img style='transform: scale(1)' src='../terrariaImg/Soul_of_Sight.png' alt='Soul of Sight'><span class='tooltiptext'>Soul of Sight</span></div><p class='recipeTextCenter'>X 20 from</p><div class='tooltip' style='float: left;'><img src='../terrariaImg/Retinazer.png' alt='The Twins'><span class='tooltiptext'>The Twins (randomly spawns during the night after entering hardmode or by using the Mechanical Eye)</span></div><br><p style='margin-left: 15px;'>Combined with</p><br><br>" +
         "<div class='tooltip' style='float: left'><img style='transform: scale(1)' src='../terrariaImg/Soul_of_Might.png' alt='Soul of Might'><span class='tooltiptext'>Soul of Might</span></div><p class='recipeTextCenter'>X 20 from</p><div class='tooltip' style='float: left'><img src='../terrariaImg/The_Destroyer.png' alt='The Destroyer'><span class='tooltiptext'>The Destroyer (randomly spawns during the night after entering hardmode or by using the Mechanical Worm)</span></div><br><p style='margin-left: 15px;'>Combined with</p><br><br>" +
@@ -571,7 +571,7 @@ function showTNERecipe() {
 function showTerrabladeRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Terra_Blade.png' alt='Terra Blade'><h2 class='mainItem'>Terra Blade</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Terra_Blade.png' alt='Terra Blade'><h2 class='mainRecipeItem'>Terra Blade</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by combining</p>" +
         "<div class='tooltip' style='float: left'><img style='transform: scale(1)'  src='../terrariaImg/True_Nights_Edge.png' alt='True Nights Edge'><span class='tooltiptext'>True Night's Edge</span></div><br><br><br><br><br><p style='margin-left: 15px;'>with</p>" +
         "<div class='tooltip' style='float: left'><img style='transform: scale(1)' src='../terrariaImg/True_Excalibur.png' alt='True Excalibur'><span class='tooltiptext'>True Excalibur</span></div><br><br><br><br><br><p style='margin-left: 15px;'>with</p>" +
         "<div class='tooltip' style='float: left'><img style='transform: scale(1)' src='../terrariaImg/Broken_Hero_Sword.png' alt='Broken Hero Sword'><span class='tooltiptext'>Broken Hero Sword (25% chance)</span></div><p class='recipeTextCenter'>from</p><div class='tooltip' style='float: left'><img style='transform: scale(1)' src='../terrariaImg/Mothron.png' alt='Mothron'><span class='tooltiptext'>Mothron (spawns during a Solar Eclipse during Hardmode after defeating Plantera)</span></div><br><br><br><br>" +
@@ -583,7 +583,7 @@ function showTerrabladeRecipe() {
 function showCopperSSRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Copper_Shortsword.png' alt='Copper Shortsword'><h2 class='mainItem'>Copper Shortsword</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by using<br> (or spawning with it)</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Copper_Shortsword.png' alt='Copper Shortsword'><h2 class='mainRecipeItem'>Copper Shortsword</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Made by using<br> (or spawning with it)</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Copper_Bar.png' alt='Copper Bar'><span class='tooltiptext'>Copper Bar (can also be found by opening fishing crates)</span></div><p class='recipeTextCenter'>X 5</p><br><br><br><p>Obtained from</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Copper_Ore.png' alt='Copper Ore'><span class='tooltiptext'>Copper Ore (found by mining or if your world has tin by opening fishing crates)</span></div><p class='recipeTextCenter'>X 15 at </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Furnace.png' alt='Furnace'><span class='tooltiptext'>Furnace</span></div><br><br><br>" +
         "<p class='recipeTextCenter'>at </p><div class='tooltip' style='float: left'><img src='../terrariaImg/Iron_Anvil.png' alt='Iron Anvil'><span class='tooltiptext'>Iron Anvil (made with 5 iron bars at a workbench, can be found in underground cabins and also bought from the merchant NPC)</span></div><p class='recipeTextCenter'>or</p><div class='tooltip' style='float: left'><img src='../terrariaImg/Lead_Anvil.png' alt='Lead Anvil'><span class='tooltiptext'>Lead Anvil (made with 5 lead bars at a workbench or found randomly in underground cabins)</span></div></div>"
@@ -594,7 +594,7 @@ function showCopperSSRecipe() {
 function showStarfuryRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Starfury.png' alt='Starfury'><h2 class='mainItem'>Starfury</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Starfury.png' alt='Starfury'><h2 class='mainRecipeItem'>Starfury</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Skyware_Chest.png' alt='Skyware chest'><span class='tooltiptext'>Skyware Chest (33.33% chance) (found in floating island houses)</span></div><p class='recipeTextCenter'>or</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Sky_Crate.png' alt='Sky Crate'><span class='tooltiptext'>Sky Crate (1/3 chance) (Obtained from Sky lake fishing in pre-hardmode)</span></div><p class='recipeTextCenter'>or</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Azure_Crate.png' alt='Azure Crate'><span class='tooltiptext'>Azure Crate (1/3 chance) (Obtained from Sky lake fishing in hardmode)</span></div></div>"
@@ -605,7 +605,7 @@ function showStarfuryRecipe() {
 function showESRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Enchanted_Sword.png' alt='Enchanted Sword'><h2 class='mainItem'>Enchanted Sword</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Enchanted_Sword.png' alt='Enchanted Sword'><h2 class='mainRecipeItem'>Enchanted Sword</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Enchanted_Sword_Shrine.png' alt='Enchanted Sword Shrine'><span class='tooltiptext' style='width: 200px'>Enchanted Sword Shrine (98% chance to drop) (only the right image can give the Enchanted sword the left image is simply a fake) (the sword shrine can also give the Terragrim at a 2% chance)</span></div><br><br><br><br><p>or</p><br>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img src='../terrariaImg/Golden_Crate.png' alt='Golden Crate'><span class='tooltiptext'>Golden Crate (2% chance) (Obtained from pre-hardmode fishing in any biome)</span></div><p class='recipeTextCenter'>or</p>" +
         "<div class='tooltip' style='float: left'><img src='../terrariaImg/Titanium_Crate.png' alt='Titanium Crate'><span class='tooltiptext'>Titanium Crate (2% chance) (Obtained from hardmode fishing in any biome)</span></div></div>"
@@ -616,7 +616,7 @@ function showESRecipe() {
 function showBKRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Bee_Keeper.png' alt='Bee Keeper'><h2 class='mainItem'>Bee Keeper</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Bee_Keeper.png' alt='Bee Keeper'><h2 class='mainRecipeItem'>Bee Keeper</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
         "<div class='tooltip' style='float: left; margin: 15px 0 15px 10px'><img src='../terrariaImg/Queen_Bee.png' alt='Queen Bee'><span class='tooltiptext'>Queen Bee (33.33% chance)</span></div></div>"
     const closeBox = document.getElementById('closeBox');
     closeBox.addEventListener('click', closeCraftGuide);
@@ -625,7 +625,7 @@ function showBKRecipe() {
 function showSeedlerRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Seedler.png' alt='Seedler'><h2 class='mainItem'>Seedler</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Seedler.png' alt='Seedler'><h2 class='mainRecipeItem'>Seedler</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
         "<div class='tooltip' style='float: left; margin: 15px 0 15px 10px'><img src='../terrariaImg/Plantera.png' alt='Plantera'><span class='tooltiptext'>Plantera (11.11% chance)</span></div></div>"
     const closeBox = document.getElementById('closeBox');
     closeBox.addEventListener('click', closeCraftGuide);
@@ -634,7 +634,7 @@ function showSeedlerRecipe() {
 function showTHMBRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/The_Horsemans_Blade.png' alt='The Horsemans Blade'><h2 class='mainItem'>The Horseman's Blade</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/The_Horsemans_Blade.png' alt='The Horsemans Blade'><h2 class='mainRecipeItem'>The Horseman's Blade</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
         "<div class='tooltip' style='float: left; margin: 15px 0 15px 10px'><img src='../terrariaImg/Pumpking.png' alt='Pumpking'><span class='tooltiptext'>Pumpking (1.79-14.29% chance)</span></div></div>"
     const closeBox = document.getElementById('closeBox');
     closeBox.addEventListener('click', closeCraftGuide);
@@ -643,7 +643,7 @@ function showTHMBRecipe() {
 function showIWRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Influx_Waver.png' alt='Influx Waver'><h2 class='mainItem'>Influx Waver</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Influx_Waver.png' alt='Influx Waver'><h2 class='mainRecipeItem'>Influx Waver</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
         "<div class='tooltip' style='float: left; margin: 15px 0 15px 10px'><img src='../terrariaImg/Martian_Saucer.png' alt='Martian Saucer'><span class='tooltiptext'>Martian Saucer (16.67% chance)</span></div></div>"
     const closeBox = document.getElementById('closeBox');
     closeBox.addEventListener('click', closeCraftGuide);
@@ -652,7 +652,7 @@ function showIWRecipe() {
 function showStarwrathRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Star_Wrath.png' alt='Star Wrath'><h2 class='mainItem'>Star Wrath</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Star_Wrath.png' alt='Star Wrath'><h2 class='mainRecipeItem'>Star Wrath</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
         "<div class='tooltip' style='float: left; margin: 15px 0 15px 10px'><img src='../terrariaImg/Moon_Lord.png' alt='Moon Lord'><span class='tooltiptext'>Moon Lord (11.11% chance)</span></div></div>"
     const closeBox = document.getElementById('closeBox');
     closeBox.addEventListener('click', closeCraftGuide);
@@ -661,7 +661,7 @@ function showStarwrathRecipe() {
 function showMeowmereRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Meowmere.png' alt='Meowmere'><h2 class='mainItem'>Meowmere</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Meowmere.png' alt='Meowmere'><h2 class='mainRecipeItem'>Meowmere</h2><p style='margin: 10px 5% 0 0; font-size: 20px'>Obtained from</p>" +
         "<div class='tooltip' style='float: left; margin: 15px 0 15px 10px'><img src='../terrariaImg/Moon_Lord.png' alt='Moon Lord'><span class='tooltiptext'>Moon Lord (11.11% chance)</span></div></div>"
     const closeBox = document.getElementById('closeBox');
     closeBox.addEventListener('click', closeCraftGuide);
@@ -670,7 +670,7 @@ function showMeowmereRecipe() {
 function showZenithRecipe() {
     showCraftGuide();
     craftGuide.innerHTML = "";
-    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Zenith.png' alt='Zenith'><h2 class='mainItem'>Zenith</h2><p style=' margin: 10px 5% 0 0; font-size: 20px'>Made by combining all swords below</p>" +
+    craftGuide.innerHTML += "<p id='closeBox'>&times;</p><div style='margin: 10px 0 0 10px'><img style='transform: scale(1.5)' src='../terrariaImg/Zenith.png' alt='Zenith'><h2 class='mainRecipeItem'>Zenith</h2><p style=' margin: 10px 5% 0 0; font-size: 20px'>Made by combining all swords below</p>" +
         "<div class='tooltip' style='float: left; margin-left: 10px'><img style='transform: scale(1)' src='../terrariaImg/Copper_Shortsword.png' alt='Copper ShortSword'><span class='tooltiptext'>Copper Shortsword</span></div><div class='tooltip' style='float: left'><img style='transform: scale(1)' src='../terrariaImg/Starfury.png' alt='Starfury'><span class='tooltiptext'>Starfury</span></div>" +
         "<div class='tooltip' style='float: left'><img style='transform: scale(1)' src='../terrariaImg/Enchanted_Sword.png' alt='Enchanted Sword'><span class='tooltiptext'>Enchanted Sword</span></div><div class='tooltip' style='float: left'><img style='transform: scale(1)' src='../terrariaImg/Bee_Keeper.png' alt='Bee keeper'><span class='tooltiptext'>Bee keeper</span></div>" +
         "<div class='tooltip' style='float: left; height: 74px'><img style='transform: scale(0.8)' src='../terrariaImg/Seedler.png' alt='Seedler'><span class='tooltiptext'>Seedler</span></div><div class='tooltip' style='float: left'><img style='transform: scale(1)' src='../terrariaImg/Terra_Blade.png' alt='Terra Blade'><span class='tooltiptext'>Terra Blade</span></div>" +

@@ -20,6 +20,12 @@ p, label, h2 {
     color: #FFFFFF;
 }
 
+.mainRecipeItem {
+    font-size: 1.5em;
+    color: #89BFE2;
+    font-family: 'VT323', monospace;
+}
+
 .recipeButton1, .recipeButton2, .recipeButton3, .recipeButton4, .mainRecipeButton {
     border: black 1px solid;
     background-color: darkgray;
@@ -493,7 +499,8 @@ html {
     }
 
     .itemZH2Center {
-        margin: 0;
+        margin-right: 30px;
+        font-size: 10px;
     }
 
     .recipeButton3 {
@@ -527,16 +534,16 @@ html {
     }
 
     #checkTItemT {
-        margin-left: 0px;
+        margin-left: 0;
     }
     #checkCItemT {
-        margin-left: 0px;
+        margin-left: 0;
     }
     #checkAItemT {
-        margin-left: 0px;
+        margin-left: 0;
     }
     #checkZItemT {
-        margin-left: 0px;
+        margin-left: 0;
     }
 
     .mainItem {
@@ -550,9 +557,9 @@ html {
         position: fixed;
         box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
         border-radius: 8px;
-        width: 320px;
+        width: 310px;
         height: auto;
-        top: 45%;
+        top: 20%;
         left: 0;
     }
 
@@ -612,6 +619,7 @@ html {
     }
 
     #Gold_Watch {
+        width: 75px;
         margin-right: 75px;
     }
 
@@ -647,23 +655,29 @@ html {
 
         display: grid;
         grid-area: Zen;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: 30% 30% 30%;
+        grid-template-rows: auto auto auto auto auto auto auto;
         grid-gap: 10px;
         grid-template-areas:
-        ". SD THB IW SW M . . ."
-        "TerB TerB CS SF ES BK . . ."
-        "TE TNE . . . . . . ."
-        "E NE . . . . . . ."
-        "CB BoG Mur FG LB BB . . .";
+        "IW SW M"
+        "BK SD THB"
+        "CS SF ES"
+        "TE TerB TNE"
+        "E CB NE"
+        "FG . BB"
+        "BoG Mur LB";
 
         margin: 10px 0;
         width: 320px;
         height: auto;
     }
 
+    .materialFormClassT4 {
+        width: 20px;
+    }
+
     .mainItemMatsT4 {
-        width: 201px;
+        width: 43px;
     }
 
 }
@@ -684,12 +698,12 @@ html {
     }
 
     .itemAH2Center {
-        margin-left: 40px;
+        margin-left: 50px;
         font-size: 1em;
     }
 
     .itemZH2Center {
-        margin-left: 40px;
+        margin-left: 60px;
         font-size: 1em;
     }
 
@@ -837,6 +851,7 @@ html {
     }
 
     #Gold_Watch {
+        width: 173px;
         margin-right: 175px;
     }
 
@@ -887,6 +902,10 @@ html {
         height: auto;
     }
 
+    .materialFormClassT4 {
+        width: 30px;
+    }
+
     .mainItemMatsT4 {
         width: 173px;
     }
@@ -902,6 +921,25 @@ html {
     img {
         transform: scale(1.5);
         padding: 10px;
+    }
+
+    .itemTH2Center {
+        margin-left: 50px;
+    }
+
+    .itemCH2Center {
+        margin: 0 0 0 50px;
+        font-size: 1em;
+    }
+
+    .itemAH2Center {
+        margin-left: 50px;
+        font-size: 1em;
+    }
+
+    .itemZH2Center {
+        margin-left: 70px;
+        font-size: 1em;
     }
 
     .recipeButton1 {
@@ -1081,6 +1119,10 @@ html {
         height: auto;
     }
 
+    .materialFormClassT4 {
+        width: 40px;
+    }
+
     .mainItemMatsT4 {
         width: 171px;
     }
@@ -1096,6 +1138,25 @@ html {
     img {
         transform: scale(1.5);
         padding: 10px;
+    }
+
+    .itemTH2Center {
+        margin-left: 50px;
+    }
+
+    .itemCH2Center {
+        margin: 0 0 0 50px;
+        font-size: 1em;
+    }
+
+    .itemAH2Center {
+        margin-left: 50px;
+        font-size: 1em;
+    }
+
+    .itemZH2Center {
+        margin-left: 80px;
+        font-size: 1em;
     }
 
     .recipeButton1 {
@@ -1144,7 +1205,7 @@ html {
         margin-left: 50px;
     }
     #checkCItemT {
-        margin-left: 0px;
+        margin-left: 0;
     }
     #checkAItemT {
         margin-left: 23px;
@@ -1229,6 +1290,10 @@ html {
 
     #PDA {
         width: 580px;
+    }
+
+    #Gold_Watch {
+        width: 333px;
     }
 
     .AnkhShield {
