@@ -1,3 +1,37 @@
+//Static Stars
+
+
+function getRandomNumber(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+(function staticStars() {
+    var rand,
+        stars = [];
+    var intViewportWidth = window.innerWidth - 10;
+    var intViewportHeight = window.innerHeight - 10;
+
+    for (let i = 0; i <= 400; i++) {
+        rand = getRandomNumber(0, 3); // for random size of each star. I am also using it for animation duration, which is defined in CSS
+
+        stars[i] = document.createElement("div");
+        stars[i].id = "star-" + i;
+        stars[i].style.width = rand + "px";
+        stars[i].style.height = rand + "px";
+        stars[i].style.borderRadius = "50%";
+        stars[i].style.backgroundColor = "#89BFE2";
+        stars[i].style.position = "absolute";
+        stars[i].style.top = Math.random() * intViewportHeight + "px"; // random postion from top
+        stars[i].style.left = Math.random() * intViewportWidth + "px"; // random postion from left
+        stars[i].style.animation =
+            "glow " + rand + 1 + "s linear infinite alternate"; // random animation duration
+
+        document.body.appendChild(stars[i]);
+    }
+})();
+document.body.style.width = "100%";
+document.body.style.height = "100%";
+
 //Common object
 const craftGuide = document.getElementById("itemCraftGuideModal");
 

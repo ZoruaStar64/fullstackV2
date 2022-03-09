@@ -422,6 +422,7 @@ input {
     .favoriteLabel {
         width: 75px;
         height: 175px;
+        margin-left: 15px;
     }
 
     .Games {
@@ -440,6 +441,7 @@ input {
     .gameLabel {
         width: 75px;
         height: 175px;
+        margin-left: 15px;
     }
 
     .labelText {

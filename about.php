@@ -63,7 +63,8 @@ if (isset($_GET["logout"])) {
             &#9734; Using Figma / Adobe XD.<br>
             &#9734; Making a favorite system and storing this to a userprofile.<br>
             &#9734; Filtering items in a database.<br>
-            &#9734; Sketch and design before building.
+            &#9734; Sketch and design before building.<br>
+            &#9734; Making responsive designs.
 
         </p>
     </div>
