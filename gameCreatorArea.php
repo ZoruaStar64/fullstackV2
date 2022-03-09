@@ -10,6 +10,12 @@ if ($userId ==! 1) {
 }
 
 ?>
+<style>
+    div {
+        color: #89BFE2;
+        background-color: #5C5C5C;
+    }
+</style>
 <form id="createGame" action='includes/inc.createGame.php' method='POST' enctype="multipart/form-data">
 
     <div>
@@ -45,3 +51,5 @@ if ($userId ==! 1) {
     <input id="itemCreationButton" type='submit' name='createItem' value='Create Item'>
 
 </form>
+<script src="JS/stars.js"></script>
+

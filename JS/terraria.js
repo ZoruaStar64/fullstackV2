@@ -1,6 +1,5 @@
 //Static Stars
 
-
 function getRandomNumber(min, max) {
     return Math.random() * (max - min) + min;
 }
@@ -39,7 +38,7 @@ const itemTree1 = document.getElementById("mainItemTree1");
 const itemTree2 = document.getElementById("mainItemTree2");
 const itemTree3 = document.getElementById("mainItemTree3");
 const itemTree4 = document.getElementById("mainItemTree4");
-let i;
+
 
 function expandPanel1() {
     this.classList.toggle("active");
