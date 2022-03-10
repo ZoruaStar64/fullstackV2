@@ -173,6 +173,23 @@ html {
     border-radius: 8px;
 }
 
+#futureUpdateButton {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#futureUpdatesContainer {
+    position: fixed;
+    background-color: #1F1F1F;
+    border: 1px solid #89BFE2;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
+    top: 25px;
+    left: 10px;
+    padding: 10px 10px;
+}
+
 #modalBoxL, #modalBoxR {
     position: fixed;
     background-color: #1F1F1F;
@@ -181,7 +198,7 @@ html {
     box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
 }
 
-#closeBox1, #closeBox2 {
+#closeBox1, #closeBox2, #closeBox3 {
     float: right;
     font-size: 20px;
     margin: 5px 10px 0 0;
