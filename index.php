@@ -41,12 +41,13 @@ if (isset($_GET["logout"])) {
     <p id="futureUpdateButton">Future Updates</p>
     <div id="futureUpdatesContainer" style="display: none">
         <p id="closeBox3">&times;</p>
-        <p>1: Luigi's mansion 1 Tracking map.<br>
+        <p> 1: Luigi's mansion 1 Tracking map.<br>
             2: Luigi's mansion 2 Tracking map.<br>
             3: Fully fixing the stars/falling stars being weird while scrolling.<br>
             4: Adding a word filter for the username/bio.<br>
             5: Adding a reset password button which will send an e-mail.<br>
-            6: Adding a button to view the password you're currently typing.</p>
+            6: Adding a button to view the password you're currently typing.<br>
+            7: Adding support for screens above 1440px (until 1920x1080)</p>
     </div>
 <?php
 
