@@ -179,7 +179,7 @@ html {
     left: 5px;
 }
 
-#futureUpdatesContainer {
+#futureUpdatesContainer, .errorBox {
     position: fixed;
     background-color: #1F1F1F;
     border: 1px solid #89BFE2;
@@ -188,6 +188,20 @@ html {
     top: 25px;
     left: 10px;
     padding: 10px 10px;
+}
+#futureUpdatesContainer {
+    z-index: 1;
+}
+
+.errorBox p {
+    color: red;
+}
+.errorBox {
+    display: none;
+}
+
+.errorBoxVisible {
+    display: block;
 }
 
 #modalBoxL, #modalBoxR {
@@ -248,7 +262,7 @@ input {
     width: 30%;
     height: 30%;
     border: 2px solid black;
-    border-radius: 50%;
+    border-radius: 8px;
 }
 
 @media all and (min-width: 320px) {
@@ -380,6 +394,13 @@ input {
         left: 4%;
     }
 
+     #creationButton {
+        width: 40%;
+        height: 20%;
+    }
+
+
+
 }
 
 @media all and (min-width: 768px) {
@@ -507,6 +528,11 @@ input {
         height: 150px;
         top: 26%;
         left: 17%;
+    }
+
+    #ActualLoginButton, #creationButton {
+        width: 30%;
+        height: 30%;
     }
 
 }

@@ -2,8 +2,6 @@
 session_start();
 require_once('creds.php');
 
-
-
 global $link;
 $showloggedin = false;
 
@@ -27,44 +25,85 @@ $creationMessage = "";
 
 if (isset($_POST["createAcc"])) {
 
-    if (isset($_POST["emailReg"])) {
+    $errorDetails = [];
+    $createAccErrCount = 0;
+    if (empty($_POST["emailReg"])) {
+        $emailErr = "<p>Email Error: Email is required</p>";
+        $errorDetails['emailErr'] = $emailErr;
+        $createAccErrCount = 1;
+    } else {
+        $emailReg = (isset($_POST["emailReg"]));
+        // check if e-mail address is well-formed
+        if (!filter_var($emailReg, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "<p>Email Error: Invalid email format</p>";
+            $errorDetails['emailErr'] = $emailErr;
+            $createAccErrCount = 1;
+        }
+    }
+/*    if (isset($_POST["emailReg"])) {
         $emailReg = $_POST["emailReg"];
-    }
+    }*/
 
-    if (isset($_POST["passwordReg"])) {
+    if (empty($_POST["passwordReg"])) {
+        $passwordErr = "<p>Password Error: Password is required (how would you even login without one?)</p>";
+        $errorDetails['passwordErr'] = $passwordErr;
+        $createAccErrCount = 1;
+    }
+    else {
         $passwordReg = $_POST["passwordReg"];
+        if (!preg_match("/^[a-zA-Z-0-9#$%^&*']*$/",$passwordReg)) {
+            $passwordErr = "<p>Password Error: Illegal password input detected</p>";
+            $errorDetails['passwordErr'] = $passwordErr;
+            $createAccErrCount = 1;
+        }
     }
+/*    if (isset($_POST["passwordReg"])) {
+        $passwordReg = $_POST["passwordReg"];
+    }*/
 
-    if (isset($_POST["nickname"])) {
+    if (empty($_POST["nickname"])) {
+        $nicknameErr = "<p>Name Error: Nickname is required</p>";
+        $errorDetails['nicknameErr'] = $nicknameErr;
+        $createAccErrCount = 1;
+    }
+    else {
         $nickname = $_POST["nickname"];
+        if (!preg_match("/^[a-zA-Z-_0-9' ]*$/",$nickname)) {
+            $nicknameErr = "<p>Name Error: Only letters and white space allowed</p>";
+            $errorDetails['nicknameErr'] = $nicknameErr;
+            $createAccErrCount = 1;
+        }
     }
+/*    if (isset($_POST["nickname"])) {
+        $nickname = $_POST["nickname"];
+    }*/
 
-    if (isset($_POST["gender"])) {
+    if (empty($_POST["gender"])) {
+        $genderErr = "<p>Gender Error: Gender is required</p>";
+        $errorDetails['genderErr'] = $genderErr;
+        $createAccErrCount = 1;
+    }
+    else {
         foreach ($_POST["gender"] as $theGender) {
             $gender = $theGender;
         }
-
     }
-    createAccount($link, $emailReg, $nickname, $passwordReg, $gender);
-}
-/*
-function createAccount ($link, $emailReg, $nickname, $passwordReg, $gender)
-{
-
-    $query = "INSERT INTO u3651p69583_tracker.Users(`e-mail`, nickname, password, gender) VALUE (?, ?, ?, ?)";
-    $stmt1 = mysqli_prepare($link, $query);
-    $stmt1->bind_param("ssss", $emailReg, $nickname, $passwordReg, $gender);
-    if (!$stmt1) {
-        die("mysqli error: " . mysqli_error($link));
-    } else {
-        mysqli_stmt_execute($stmt1);
-
-        $creationMessage = "Account created!";
-        echo mysqli_stmt_error($stmt1);
-        mysqli_stmt_close($stmt1);
+/*    if (isset($_POST["gender"])) {
+        foreach ($_POST["gender"] as $theGender) {
+            $gender = $theGender;
+        }
+    }*/
+    if ($createAccErrCount === 1) {
+        $creationMessage = "<p>One or Multiple errors have occured with making an account<br> please check the error messages and try again</p>";
+        $errorDetails['creationErr'] = $creationMessage;
+        $errorDetails['errCode'] = $createAccErrCount;
+        return $errorDetails;
     }
+    else {
+        createAccount($link, $emailReg, $nickname, $passwordReg, $gender);
+    }
+
 }
-*/
 
 function createAccount ($link, $emailReg, $nickname, $passwordReg, $gender)
 {

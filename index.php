@@ -5,6 +5,16 @@ require_once('creds.php');
 require_once('functions.php');
 /*setcookie("userCookie", $profilePicture, $userId, $userName, time(), "/~/");*/
 
+$creationMessage = $errorDetails['creationErr'];
+$emailErr = $errorDetails['emailErr'];
+$passwordErr = $errorDetails['passwordErr'];
+$nicknameErr = $errorDetails['nicknameErr'];
+$genderErr = $errorDetails['genderErr'];
+$errCode = $errorDetails['errCode'];
+if ($errCode === 1) {
+    $errorClass = "errorBoxVisible";
+}
+
 $details = userCreds();
 $profilePicture = $details["profilePicture"];
 $userName = $details["userName"];
@@ -48,6 +58,15 @@ if (isset($_GET["logout"])) {
             5: Adding a reset password button which will send an e-mail.<br>
             6: Adding a button to view the password you're currently typing.<br>
             7: Adding support for screens above 1440px (until 1920x1080)</p>
+    </div>
+    <div class="errorBox <?php echo $errorClass ?>" >
+        <?php
+        echo $creationMessage;
+        echo $emailErr;
+        echo $passwordErr;
+        echo $nicknameErr;
+        echo $genderErr;
+        ?>
     </div>
 <?php
 
