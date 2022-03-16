@@ -81,6 +81,11 @@ if ($_POST["changeBio"]) {
         echo $bio;
         header( "refresh:5;url=../profile.php?id=$userId" );
     }
+    if (preg_match("/(fuck|bitch|shit|cunt|dick|ass|slut|asshole|nigger|neger|slet|motherfucker|fucker|pussy|faggot|fucking|rape|rapist|pedophile|pedo|cock|loli)/", $bio)) {
+        echo "don't use bad/harmfull language";
+        $errorCount = 1;
+        header( "refresh:5;url=../profile.php?id=$userId" );
+    }
     if ($errorCount === 0) {
         editBio($link, $bio, $userId);
     }
@@ -97,7 +102,7 @@ if (isset($_POST["changeGender"])) {
 }
 
 
-if (empty($_POST["changeNickname"])) {
+if (empty($_POST["changeNickname"]) && empty($_POST["changeBio"])) {
     $nicknameErr = "<p>Name Error: Nickname is required</p>";
     echo "Nickname is required";
     header( "refresh:5;url=../profile.php?id=$userId" );
@@ -106,9 +111,14 @@ else {
     $errorCount = 0;
     $username = $_POST["changedName"];
     $userId = $_POST["hiddenId"];
-    if (!preg_match("/^[a-zA-Z-_0-9' ]*$/",$username)) {
-        $nicknameErr = "<p>Name Error: Only letters, numbers and white space allowed</p>";
+    if (!preg_match("/^[a-zA-Z-_0-9']*$/",$username)) {
+        $nicknameErr = "<p>Name Error: Only letters and numbers allowed</p>";
         echo $nicknameErr;
+        $errorCount = 1;
+        header( "refresh:5;url=../profile.php?id=$userId" );
+    }
+    if ($username === "fuck" || "bitch" || "nigger" || "slut" || "neger" || "fucking" || "pussy" || "faggot" || "motherfucker" || "shit" || "asshole" || "fucker" || "rape" || "rapist" || "pedophile" || "cock" || "cunt") {
+        echo "<p>don't use harmfull language</p>";
         $errorCount = 1;
         header( "refresh:5;url=../profile.php?id=$userId" );
     }

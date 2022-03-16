@@ -60,10 +60,16 @@ if (isset($_POST["createAcc"])) {
         $errorDetails['nicknameErr'] = $nicknameErr;
         $createAccErrCount = 1;
     }
+
     else {
         $nickname = $_POST["nickname"];
-        if (!preg_match("/^[a-zA-Z-_0-9' ]*$/",$nickname)) {
-            $nicknameErr = "<p>Name Error: Only letters, numbers and white space allowed</p>";
+        if (!preg_match("/^[a-zA-Z-_0-9']*$/",$nickname)) {
+            $nicknameErr = "<p>Name Error: Only letters and numbers allowed</p>";
+            $errorDetails['nicknameErr'] = $nicknameErr;
+            $createAccErrCount = 1;
+        }
+        else if ($nickname === "fuck" || "bitch" || "nigger" || "slut" || "neger" || "fucking" || "pussy" || "faggot" || "motherfucker" || "shit" || "asshole" || "fucker" || "rape" || "rapist" || "pedophile" || "cock" || "cunt") {
+            $nicknameErr = "<p>don't use harmfull language</p>";
             $errorDetails['nicknameErr'] = $nicknameErr;
             $createAccErrCount = 1;
         }
