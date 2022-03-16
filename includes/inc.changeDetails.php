@@ -69,11 +69,21 @@ if (isset($_POST["changePFP"])) {
     editPFP($link, $target_file, $userId);
 }
 
-if (isset($_POST["changeBio"])) {
+if ($_POST["changeBio"]) {
 
+    $errorCount = 0;
     $bio = $_POST["changedBio"];
     $userId = $_POST["hiddenId"];
-    editBio($link, $bio, $userId);
+    if (!preg_match("/^[a-zA-Z-_0-9!?+=#&^' ]*$/",$bio)) {
+        $bioErr = "<p>Invalid characters error: don't use characters like ,.;:][}{)(*%$@<>\|'</p>";
+        $errorCount = 1;
+        echo $bioErr;
+        echo $bio;
+        header( "refresh:5;url=../profile.php?id=$userId" );
+    }
+    if ($errorCount === 0) {
+        editBio($link, $bio, $userId);
+    }
 }
 
 if (isset($_POST["changeGender"])) {
@@ -86,12 +96,28 @@ if (isset($_POST["changeGender"])) {
     editGender($link, $gender, $userId);
 }
 
-if (isset($_POST["changeNickname"])) {
 
+if (empty($_POST["changeNickname"])) {
+    $nicknameErr = "<p>Name Error: Nickname is required</p>";
+    echo "Nickname is required";
+    header( "refresh:5;url=../profile.php?id=$userId" );
+}
+else {
+    $errorCount = 0;
     $username = $_POST["changedName"];
     $userId = $_POST["hiddenId"];
-    editUsername($link, $username, $userId);
+    if (!preg_match("/^[a-zA-Z-_0-9' ]*$/",$username)) {
+        $nicknameErr = "<p>Name Error: Only letters, numbers and white space allowed</p>";
+        echo $nicknameErr;
+        $errorCount = 1;
+        header( "refresh:5;url=../profile.php?id=$userId" );
+    }
+    if ($errorCount === 0) {
+        editUsername($link, $username, $userId);
+    }
+
 }
+
 
 
 

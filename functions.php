@@ -32,7 +32,7 @@ if (isset($_POST["createAcc"])) {
         $errorDetails['emailErr'] = $emailErr;
         $createAccErrCount = 1;
     } else {
-        $emailReg = (isset($_POST["emailReg"]));
+        $emailReg = $_POST["emailReg"];
         // check if e-mail address is well-formed
         if (!filter_var($emailReg, FILTER_VALIDATE_EMAIL)) {
             $emailErr = "<p>Email Error: Invalid email format<br>Use @ followed by the domain name<br>such as: @gmail or @outlook</p>";
@@ -40,9 +40,6 @@ if (isset($_POST["createAcc"])) {
             $createAccErrCount = 1;
         }
     }
-/*    if (isset($_POST["emailReg"])) {
-        $emailReg = $_POST["emailReg"];
-    }*/
 
     if (empty($_POST["passwordReg"])) {
         $passwordErr = "<p>Password Error: Password is required (how would you even login without one?)</p>";
@@ -57,9 +54,6 @@ if (isset($_POST["createAcc"])) {
             $createAccErrCount = 1;
         }
     }
-/*    if (isset($_POST["passwordReg"])) {
-        $passwordReg = $_POST["passwordReg"];
-    }*/
 
     if (empty($_POST["nickname"])) {
         $nicknameErr = "<p>Name Error: Nickname is required</p>";
@@ -74,9 +68,6 @@ if (isset($_POST["createAcc"])) {
             $createAccErrCount = 1;
         }
     }
-/*    if (isset($_POST["nickname"])) {
-        $nickname = $_POST["nickname"];
-    }*/
 
     if (empty($_POST["gender"])) {
         $genderErr = "<p>Gender Error: Gender is required</p>";
@@ -88,11 +79,7 @@ if (isset($_POST["createAcc"])) {
             $gender = $theGender;
         }
     }
-/*    if (isset($_POST["gender"])) {
-        foreach ($_POST["gender"] as $theGender) {
-            $gender = $theGender;
-        }
-    }*/
+
     if ($createAccErrCount === 1) {
         $creationMessage = "<p>One or Multiple errors have occured with making an account<br> please check the error messages and try again</p>";
         $errorDetails['creationErr'] = $creationMessage;
