@@ -35,7 +35,7 @@ if (isset($_POST["createAcc"])) {
         $emailReg = (isset($_POST["emailReg"]));
         // check if e-mail address is well-formed
         if (!filter_var($emailReg, FILTER_VALIDATE_EMAIL)) {
-            $emailErr = "<p>Email Error: Invalid email format</p>";
+            $emailErr = "<p>Email Error: Invalid email format<br>Use @ followed by the domain name<br>such as: @gmail or @outlook</p>";
             $errorDetails['emailErr'] = $emailErr;
             $createAccErrCount = 1;
         }
@@ -51,8 +51,8 @@ if (isset($_POST["createAcc"])) {
     }
     else {
         $passwordReg = $_POST["passwordReg"];
-        if (!preg_match("/^[a-zA-Z-0-9#$%^&*']*$/",$passwordReg)) {
-            $passwordErr = "<p>Password Error: Illegal password input detected</p>";
+        if (!preg_match("/^[a-zA-Z-0-9#%^&*+=?!']*$/",$passwordReg)) {
+            $passwordErr = "<p>Password Error: Illegal password input detected<br>Don't use symbols like: )(:;'][}{_<>/\|~$@</p>";
             $errorDetails['passwordErr'] = $passwordErr;
             $createAccErrCount = 1;
         }
@@ -69,7 +69,7 @@ if (isset($_POST["createAcc"])) {
     else {
         $nickname = $_POST["nickname"];
         if (!preg_match("/^[a-zA-Z-_0-9' ]*$/",$nickname)) {
-            $nicknameErr = "<p>Name Error: Only letters and white space allowed</p>";
+            $nicknameErr = "<p>Name Error: Only letters, numbers and white space allowed</p>";
             $errorDetails['nicknameErr'] = $nicknameErr;
             $createAccErrCount = 1;
         }

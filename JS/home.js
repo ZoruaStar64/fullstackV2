@@ -8,6 +8,17 @@ const closeBox1 = document.getElementById('closeBox1');
 const closeBox2 = document.getElementById('closeBox2');
 const closeBox3 = document.getElementById('closeBox3');
 
+function showPassword() {
+    const passTextbox = document.getElementById("passTextbox");
+    const viewButton = document.getElementById("viewPassCircle");
+    if (passTextbox.type === "password") {
+        viewButton.style.filter = "grayscale(0%)";
+        passTextbox.type = "text";
+    } else {
+        passTextbox.type = "password";
+        viewButton.style.filter = "grayscale(100%)";
+    }
+}
 
 function showRegisterForm() {
     if (modalBoxR.style.display === 'none') {

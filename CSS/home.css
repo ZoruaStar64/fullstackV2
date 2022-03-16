@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 @keyframes glow {
@@ -173,10 +174,22 @@ html {
     border-radius: 8px;
 }
 
+#viewPassCircle {
+    position: absolute;
+    top: 67px;
+    left: 470px;
+    border-radius: 100px;
+    width: 10px;
+    height: 10px;
+    background-color: #89BFE2;
+    filter: grayscale(100%) ;
+}
+
 #futureUpdateButton {
     position: absolute;
     top: 5px;
     left: 5px;
+    z-index: 2;
 }
 
 #futureUpdatesContainer, .errorBox {
@@ -190,7 +203,7 @@ html {
     padding: 10px 10px;
 }
 #futureUpdatesContainer {
-    z-index: 1;
+    z-index: 2;
 }
 
 .errorBox p {
@@ -198,6 +211,7 @@ html {
 }
 .errorBox {
     display: none;
+    z-index: 2;
 }
 
 .errorBoxVisible {

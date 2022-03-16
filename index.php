@@ -56,8 +56,7 @@ if (isset($_GET["logout"])) {
             3: Fully fixing the stars/falling stars being weird while scrolling.<br>
             4: Adding a word filter for the username/bio.<br>
             5: Adding a reset password button which will send an e-mail.<br>
-            6: Adding a button to view the password you're currently typing.<br>
-            7: Adding support for screens above 1440px (until 1920x1080)</p>
+            6: Adding support for screens above 1440px (until 1920x1080)</p>
     </div>
     <div class="errorBox <?php echo $errorClass ?>" >
         <?php
@@ -169,7 +168,8 @@ if ($showloggedin == true) {
         </div>
 
         <div class="inputContainer">
-            <label>Password</label> : <input type='password' name='passwordLogin' value=''>
+            <label>Password</label> : <input id="passTextbox" type='password' name='passwordLogin' value=''>
+            <div id="viewPassCircle" onclick="showPassword()"></div>
         </div>
 
         <input id="ActualLoginButton" type='submit' name='login' value='Login'>

@@ -23,6 +23,7 @@ function getRandomNumber(min, max) {
         stars[i].style.animation =
             "glow " + rand + 1 + "s linear infinite alternate"; // random animation duration
 
+
         document.body.appendChild(stars[i]);
     }
 })();
@@ -46,6 +47,7 @@ function getRandomNumber(min, max) {
     stars.style.position = "absolute";
     stars.style.top = "-10px";
     stars.style.right = randPosition + "px";
+    stars.style.zIndex = "0";
 
     document.body.appendChild(stars);
 
