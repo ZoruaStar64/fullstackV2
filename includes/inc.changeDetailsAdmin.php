@@ -1,12 +1,11 @@
 <?php
 session_start();
-require_once('creds.php');
-require('adminFunctions.php');
+require_once('../creds.php');
+require('../adminFunctions.php');
 $userIdREAL = $_SESSION['user']['userId'];
 if ($userIdREAL ==! 1) {
-    header("Location: index.php");
+    header("Location: ../index.php");
 }
-global $link;
 
 JSC($_FILES);
 JSC($_POST);
@@ -42,8 +41,7 @@ if ($_FILES["changedPFP"]["size"] > 500000) {
 }
 
 // Allow certain file formats
-if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-    /*&& $imageFileType != "gif"*/) {
+if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
     echo "Sorry, only JPG, JPEG & PNG files are allowed.";
     $uploadOk = 0;
 }
@@ -89,12 +87,12 @@ if ($_POST["changeBio"]) {
         $errorCount = 1;
         echo $bioErr;
         echo $bio;
-        header("refresh:5;url=../profile.php?id=$userId");
+        header("refresh:5;url=../adminPanel.php");
     }
     if (preg_match("/(fuck|bitch|shit|cunt|dick|ass|slut|asshole|nigger|neger|slet|nigga|motherfucker|fucker|pussy|faggot|fucking|rape|rapist|pedophile|pedo|cock|loli|shota|cancer|kanker|hentai|porn|nazi|rule34|rule63|e621|)/", $bio)) {
         echo "don't use bad/harmfull language";
         $errorCount = 1;
-        header("refresh:5;url=../profile.php?id=$userId");
+        header("refresh:5;url=../adminPanel.php");
     }
     if ($errorCount === 0) {
         editBioAdmin($link, $bio, $userId);
@@ -114,32 +112,34 @@ if (isset($_POST["changeGender"])) {
     editGenderAdmin($link, $gender, $userId);
 }
 
+if (isset($_POST["changeNickname"])) {
 
-if (empty($_POST["changeNickname"]) && empty($_POST["changeBio"])) {
-    $nicknameErr = "<p>Name Error: Nickname is required</p>";
-    echo "Nickname is required";
-    header("refresh:5;url=../profile.php?id=$userId");
-} else {
-    $errorCount = 0;
-    $username = $_POST["changedName"];
-    foreach ($_POST["usersId"] as $theId) {
-        $userId = $theId;
-    }
-    if (!preg_match("/^[a-zA-Z-_0-9']*$/", $username)) {
-        $nicknameErr = "<p>Name Error: Only letters and numbers allowed</p>";
-        echo $nicknameErr;
-        $errorCount = 1;
-        header("refresh:5;url=../profile.php?id=$userId");
-    }
-    if ($username === "fuck" || "bitch" || "nigger" || "slut" || "neger" || "nigga" || "fucking" || "pussy" || "faggot" || "motherfucker" ||
-        "shit" || "asshole" || "fucker" || "rape" || "rapist" || "pedophile" || "cock" || "cunt" || "ass" || "cancer" || "kanker" || "loli" || "shota" ||
-        "hentai" || "porn" || "rule34" || "rule63" || "e621" || "nazi") {
-        echo "<p>don't use harmfull/inappopriate language</p>";
-        $errorCount = 1;
-        header("refresh:5;url=../profile.php?id=$userId");
-    }
-    if ($errorCount === 0) {
-        editUsernameAdmin($link, $username, $userId);
-    }
+    if (empty($_POST["changeNickname"])) {
+        $nicknameErr = "<p>Name Error: Nickname is required</p>";
+        echo "Nickname is required";
+        header("refresh:5;url=../adminPanel.php");
+    } else {
+        $errorCount = 0;
+        $username = $_POST["changedName"];
+        foreach ($_POST["usersId"] as $theId) {
+            $userId = $theId;
+        }
+        if (!preg_match("/^[a-zA-Z-_0-9']*$/", $username)) {
+            $nicknameErr = "<p>Name Error: Only letters and numbers allowed</p>";
+            echo $nicknameErr;
+            $errorCount = 1;
+            header("refresh:5;url=../adminPanel.php");
+        }
+        if ($username === "fuck" || "bitch" || "nigger" || "slut" || "neger" || "nigga" || "fucking" || "pussy" || "faggot" || "motherfucker" ||
+            "shit" || "asshole" || "fucker" || "rape" || "rapist" || "pedophile" || "cock" || "cunt" || "ass" || "cancer" || "kanker" || "loli" || "shota" ||
+            "hentai" || "porn" || "rule34" || "rule63" || "e621" || "nazi") {
+            echo "<p>don't use harmfull/inappopriate language</p>";
+            $errorCount = 1;
+            header("refresh:5;url=../adminPanel.php");
+        }
+        if ($errorCount === 0) {
+            editUsernameAdmin($link, $username, $userId);
+        }
 
+    }
 }

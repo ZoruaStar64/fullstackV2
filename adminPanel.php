@@ -83,7 +83,7 @@ if ($userId ==! 1) {
                 new Bio : <input type='text' name='changedBio' value='' required>
             </div>
             <br>
-            <label>User Id:</label><select name="usersId" required>
+            <label>User Id:</label><select name="usersId[]" required>
                 <?php
                 $countUsers = "SELECT COUNT(*) as total FROM Users";
                 $totalUsers = $link->query($countUsers);
@@ -114,7 +114,7 @@ if ($userId ==! 1) {
                 <input class="pictureSelector" type='file' name='changedPFP' value='' required>
             </div>
             <br>
-            <label>User Id:</label><select name="usersId" required>
+            <label>User Id:</label><select name="usersId[]" required>
                 <?php
                 $countUsers = "SELECT COUNT(*) as total FROM Users";
                 $totalUsers = $link->query($countUsers);
@@ -140,7 +140,7 @@ if ($userId ==! 1) {
                 new Nickname : <input type='text' name='changedName' value='' required>
             </div>
             <br>
-            <label>User Id:</label><select name="usersId" required>
+            <label>User Id:</label><select name="usersId[]" required>
                 <?php
                 $countUsers = "SELECT COUNT(*) as total FROM Users";
                 $totalUsers = $link->query($countUsers);
@@ -168,7 +168,7 @@ if ($userId ==! 1) {
                 <option value="secret">secret</option>
             </select>
             <br>
-            <label>User Id:</label><select name="usersId" required>
+            <label>User Id:</label><select name="usersId[]" required>
                 <?php
                 $countUsers = "SELECT COUNT(*) as total FROM Users";
                 $totalUsers = $link->query($countUsers);

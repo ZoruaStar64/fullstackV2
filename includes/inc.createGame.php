@@ -2,6 +2,7 @@
 
 require_once('../functions.php');
 require_once('../creds.php');
+require('../adminFunctions.php');
 JSC($_FILES);
 JSC($_POST);
 

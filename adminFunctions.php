@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('creds.php');
+require_once('functions.php');
 $userIdREAL = $_SESSION['user']['userId'];
 if ($userIdREAL ==! 1) {
     header("Location: index.php");
@@ -21,7 +22,7 @@ function createGame($link, $gameName, $gameCover, $pageLink) {
             echo mysqli_stmt_error($stmt1);
             mysqli_stmt_close($stmt1);
             echo "Game created!";
-            header("refresh:5;url=/adminPanel.php");
+            header("refresh:5;url=../adminPanel.php");
         }
     }
 }
@@ -40,7 +41,7 @@ function createItem($link, $itemName, $gameId) {
             echo mysqli_stmt_error($stmt1);
             mysqli_stmt_close($stmt1) or die ('Erroe 3');
             echo "item created!";
-            header("refresh:5;url=/adminPanel.php");
+            header("refresh:5;url=../adminPanel.php");
         }
     }
 }
@@ -53,10 +54,10 @@ function editGenderAdmin ($link, $gender, $userId) {
         die("mysqli error:" . mysqli_error($link));
     } else {
         mysqli_stmt_execute($stmt1);
-
+        echo '<p>succesfully changed the gender of the user with the id: '. $userId .'!</p>';
         mysqli_stmt_close($stmt1);
         refreshDetails($link);
-        header("Location: ../adminPanel.php");
+        header("refresh:5;url=../adminPanel.php");
     }
 }
 
@@ -68,10 +69,10 @@ function editUsernameAdmin ($link, $username, $userId) {
         die("mysqli error:" . mysqli_error($link));
     } else {
         mysqli_stmt_execute($stmt1);
-
+        echo '<p>succesfully changed the username of the user with the id: '. $userId .'!</p>';
         mysqli_stmt_close($stmt1);
         refreshDetails($link);
-        header("Location: ../adminPanel.php");
+        header("refresh:5;url=../adminPanel.php");
     }
 }
 
@@ -85,11 +86,11 @@ function editBioAdmin ($link, $bio, $userId) {
     } else {
         mysqli_stmt_execute($stmt1);
 
-        echo "Your bio has been changed!";
+        echo '<p>succesfully changed the bio of the user with the id: '. $userId .'!</p>';
         /*echo mysqli_stmt_error($stmt1);*/
         mysqli_stmt_close($stmt1);
         refreshDetails($link);
-        header("Location: ../adminPanel.php");
+        header("refresh:5;url=../adminPanel.php");
     }
 }
 
@@ -103,10 +104,10 @@ function editPFPAdmin ($link, $PFP, $userId) {
     } else {
         mysqli_stmt_execute($stmt1);
 
-        echo "Your pfp has been changed!";
+        echo '<p>succesfully changed the pfp of the user with the id: '. $userId .'!</p>';
         /*echo mysqli_stmt_error($stmt1);*/
         mysqli_stmt_close($stmt1);
         refreshDetails($link);
-        header("Location: ../adminPanel.php");
+        header("refresh:5;url=../adminPanel.php");
     }
 }

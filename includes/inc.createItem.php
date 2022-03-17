@@ -2,6 +2,7 @@
 session_start();
 require_once('../creds.php');
 require_once('../functions.php');
+require('../adminFunctions.php');
 $userId = $_SESSION['user']['userId'];
 
 if ($userId ==! 1) {
