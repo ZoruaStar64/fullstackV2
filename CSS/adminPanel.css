@@ -1,0 +1,261 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+@keyframes glow {
+    to {
+        opacity: 0;
+    }
+}
+
+p, label, a, h1, h2 {
+    font-family: 'VT323', monospace;
+    color: #89BFE2;
+}
+
+h1 {
+    color: #A439D7;
+    text-align: center;
+    font-size: 4em;
+}
+
+.titleContainer {
+    grid-area: title;
+}
+
+.pageContainer {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 25px;
+    grid-template-areas:
+    "header"
+    "title"
+    "main"
+    "footer";
+}
+
+.mainBody {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "gameCreate itemCreate"
+    "bio pfp"
+    "nickname gender";
+    text-align: center;
+    font-size: 20px;
+    grid-area: main;
+}
+
+.mainBody p {
+    text-align: left;
+    grid-area: main;
+    margin: 5px 0 5px 10px;
+}
+
+footer, footer p {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: #5C5C5C;
+    color: white;
+    grid-area: footer;
+}
+
+html {
+    background-color: #1F1F1F;
+}/*#F7E8FD#8844D5*/
+
+.linkContainer {
+    grid-area: header;
+    display: flex;
+    background-color: #5C5C5C;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 8px;
+}
+
+#bioBox, #pfpBox, #genderBox, #nickBox, #gameCreationBox, #itemCreationBox {
+    background-color: #1F1F1F;
+    border: 1px solid #89BFE2;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
+    color: #89BFE2;
+    margin-bottom: 20px;
+}
+
+#bioBox {
+    grid-area: bio;
+}
+#pfpBox {
+    grid-area: pfp;
+}
+#nickBox {
+    grid-area: nickname;
+}
+#genderBox {
+    grid-area: gender;
+}
+#gameCreationBox {
+    grid-area: gameCreate;
+}
+#itemCreationBox {
+    grid-area: itemCreate;
+}
+
+label {
+    padding-left: 5px;
+}
+
+input {
+    float: left;
+    width: 95%;
+    margin-left: 2%;
+}
+
+.inputContainer {
+    margin-top: 2%;
+}
+
+#creationButton {
+    background-color: #5C5C5C;
+    color: #89BFE2;
+    align-self: center;
+    border-radius: 8px;
+    padding: 5px;
+    cursor: pointer;
+    border-style: none;
+}
+
+@media all and (min-width: 320px) {
+
+    .mainBody {
+        grid-gap: 15px;
+        margin-left: 3%;
+        width: 320px;
+    }
+
+    .mainBody p {
+        font-size: 15px;
+    }
+
+    #creationButton {
+        margin: 2% 50% 0 25%;
+        width: 50%;
+        height: 50%;
+    }
+
+    .pictureSelector {
+        margin: 15px 0 0 10%;
+    }
+
+    .linkContainer {
+        width: 100vw;
+        height: 60px;
+        font-size: 24px;
+        float: none;
+        margin: 0 0 0 0;
+    }
+
+    #bioBox, #pfpBox, #genderBox, #nickBox, #itemCreationBox, #gameCreationBox {
+        width: 150px;
+        height: 300px;
+        font-size: 18px;
+    }
+
+}
+
+@media all and (min-width: 768px) {
+
+    .mainBody {
+        grid-gap: 25px;
+        margin-left: 8%;
+        width: 720px;
+    }
+
+    .mainBody p {
+        font-size: 20px;
+    }
+
+    #creationButton {
+        margin: 2% 50% 0 25%;
+        width: 50%;
+        height: 50%;
+    }
+
+    .pictureSelector {
+        margin: 15px 0 0 10%;
+    }
+
+    .linkContainer {
+        width: 100vw;
+        height: 60px;
+        font-size: 24px;
+        float: none;
+        margin: 0 0 0 0;
+    }
+
+    #bioBox, #pfpBox, #genderBox, #nickBox, #itemCreationBox, #gameCreationBox {
+        width: 250px;
+        height: 300px;
+        font-size: 18px;
+    }
+
+}
+
+@media all and (min-width: 1024px) {
+
+    .mainBody {
+        margin-left: 15%;
+    }
+
+    #creationButton {
+        margin: 2% 50% 0 35%;
+        width: 30%;
+        height: 30%;
+    }
+
+    .pictureSelector {
+        margin: 15px 0 0 25%;
+    }
+
+    .linkContainer {
+        width: 500px;
+        height: 60px;
+        font-size: 24px;
+        float: right;
+        margin: 50px 260px 0 0;
+    }
+
+    #bioBox, #pfpBox, #genderBox, #nickBox, #itemCreationBox, #gameCreationBox {
+        width: 350px;
+        height: 300px;
+        font-size: 20px;
+    }
+
+}
+
+@media all and (min-width: 1440px) {
+
+    .linkContainer {
+        width: 500px;
+        height: 60px;
+        font-size: 24px;
+        float: right;
+        margin: 50px 70px 0 0;
+    }
+
+    #bioBox, #pfpBox, #genderBox, #nickBox, #itemCreationBox, #gameCreationBox {
+        width: 500px;
+        height: 300px;
+        font-size: 20px;
+    }
+
+}

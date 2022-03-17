@@ -17,4 +17,4 @@ print_r($gameId);
 
 createItem($link, $itemName, $gameId);
 
-echo "<br><a href='../gameCreatorArea.php'>Make another Item/Game</a> ";
+echo "<br><a href='../adminPanel.php'>Make another Item/Game</a> ";
