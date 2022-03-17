@@ -68,7 +68,9 @@ if (isset($_POST["createAcc"])) {
             $errorDetails['nicknameErr'] = $nicknameErr;
             $createAccErrCount = 1;
         }
-        else if ($nickname === "fuck" || "bitch" || "nigger" || "slut" || "neger" || "fucking" || "pussy" || "faggot" || "motherfucker" || "shit" || "asshole" || "fucker" || "rape" || "rapist" || "pedophile" || "cock" || "cunt") {
+        else if ($nickname === "fuck" || "bitch" || "nigger" || "slut" || "neger" || "nigga" || "fucking" || "pussy" || "faggot" || "motherfucker" ||
+            "shit" || "asshole" || "fucker" || "rape" || "rapist" || "pedophile" || "cock" || "cunt" || "ass" || "cancer" || "kanker" || "loli" || "shota" ||
+            "hentai" || "porn" || "rule34" || "rule63" || "e621" || "nazi") {
             $nicknameErr = "<p>don't use harmfull language</p>";
             $errorDetails['nicknameErr'] = $nicknameErr;
             $createAccErrCount = 1;

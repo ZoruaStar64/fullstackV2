@@ -55,6 +55,7 @@ function getRandomNumber(min, max) {
         if (motion == intViewportHeight + 0) {
             // to clear the interval if the star has already fallen (covered enough distance to be out of the screen)
             clearInterval(interval);
+            document.body.removeChild(stars);
         } else {
             motion++;
             stars.style.top = motion + "px";

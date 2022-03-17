@@ -53,9 +53,9 @@ if (isset($_GET["logout"])) {
         <p id="closeBox3">&times;</p>
         <p> 1: Luigi's mansion 1 Tracking map.<br>
             2: Luigi's mansion 2 Tracking map.<br>
-            3: Fully fixing the stars/falling stars being weird while scrolling.<br>
-            4: Adding a word filter for the username/bio.<br>
-            5: Adding a reset password button which will send an e-mail.<br>
+            3: Fully fix the stars being weird while scrolling.<br>
+            4: Adding a reset password button which will send an e-mail.<br>
+            5: fix the future updates button not working upon logging in<br>
             6: Adding support for screens above 1440px (until 1920x1080)</p>
     </div>
     <div class="errorBox <?php echo $errorClass ?>" >
@@ -81,7 +81,7 @@ if ($showloggedin == false) {
     <h1>Startracker</h1>
     <p style="margin: 15px 0 30px 0; text-align: center">Welcome</p>
         <p>Welcome to the Startracker website!<br><br>
-        You can use this website to keep track various games' progress that i plan to implement!<br>
+        You can use this website to keep track of various games' progress that i plan to implement!<br>
         Currently the only game available is Terraria,<br>
         in which you can see the recipes on how to craft the more difficult items.<br><br>
         You will unfortunately need to make an account to access the rest of the website.<br>
