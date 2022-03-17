@@ -81,7 +81,7 @@ if ($_POST["changeBio"]) {
         echo $bio;
         header( "refresh:5;url=../profile.php?id=$userId" );
     }
-    if (preg_match("/(fuck|bitch|shit|cunt|dick|ass|slut|asshole|nigger|neger|slet|nigga|motherfucker|fucker|pussy|faggot|fucking|rape|rapist|pedophile|pedo|cock|loli|shota|cancer|kanker|hentai|porn|nazi|rule34|rule63|e621|)/", $bio)) {
+    if (preg_match("/(fuck|bitch|shit|cunt|dick|ass|slut|asshole|nigger|neger|slet|nigga|motherfucker|fucker|pussy|faggot|fucking|rape|rapist|pedophile|pedo|cock|loli|shota|cancer|kanker|hentai|porn|nazi|rule34|rule63|e621|penis|vagina)/", $bio)) {
         echo "don't use bad/harmfull language";
         $errorCount = 1;
         header( "refresh:5;url=../profile.php?id=$userId" );
@@ -119,7 +119,7 @@ else {
     }
     if ($username === "fuck" || "bitch" || "nigger" || "slut" || "neger" || "nigga" || "fucking" || "pussy" || "faggot" || "motherfucker" ||
         "shit" || "asshole" || "fucker" || "rape" || "rapist" || "pedophile" || "cock" || "cunt" || "ass" || "cancer" || "kanker" || "loli" || "shota" ||
-        "hentai" || "porn" || "rule34" || "rule63" || "e621" || "nazi") {
+        "hentai" || "porn" || "rule34" || "rule63" || "e621" || "nazi" || "penis" || "vagina") {
         echo "<p>don't use harmfull/inappopriate language</p>";
         $errorCount = 1;
         header( "refresh:5;url=../profile.php?id=$userId" );

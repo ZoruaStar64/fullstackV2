@@ -6,9 +6,9 @@ function getRandomNumber(min, max) {
     var rand,
         stars = [];
     var intViewportWidth = window.innerWidth - 10;
-    var intViewportHeight = window.innerHeight - 10;
+    var intViewportHeight = document.body.scrollHeight - 10;
 
-    for (let i = 0; i <= 400; i++) {
+    for (let i = 0; i <= 600; i++) {
         rand = getRandomNumber(0, 3); // for random size of each star. I am also using it for animation duration, which is defined in CSS
 
         stars[i] = document.createElement("div");

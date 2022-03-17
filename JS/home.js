@@ -8,6 +8,31 @@ const closeBox1 = document.getElementById('closeBox1');
 const closeBox2 = document.getElementById('closeBox2');
 const closeBox3 = document.getElementById('closeBox3');
 
+function showFutureUpdates() {
+    if (futureUpdateContainer.style.display === 'none') {
+        futureUpdateContainer.style.display = 'block';
+    }
+    else {
+        futureUpdateContainer.style.display = 'none';
+    }
+}
+futureUpdateButton.addEventListener('click', showFutureUpdates);
+
+function closeForm() {
+    if (modalBoxR.style.display === 'block') {
+        modalBoxR.style.display = 'none';
+    }
+    else if (modalBoxL.style.display === 'block') {
+        modalBoxL.style.display = 'none';
+    }
+    else if (futureUpdateContainer.style.display === 'block') {
+        futureUpdateContainer.style.display = 'none';
+    }
+}
+closeBox1.addEventListener('click', closeForm);
+closeBox2.addEventListener('click', closeForm);
+closeBox3.addEventListener('click', closeForm);
+
 function showPassword() {
     const passTextbox = document.getElementById("passTextbox");
     const viewButton = document.getElementById("viewPassCircle");
@@ -42,27 +67,5 @@ function showLoginForm() {
 }
 loginButton.addEventListener('click', showLoginForm);
 
-function showFutureUpdates() {
-    if (futureUpdateContainer.style.display === 'none') {
-        futureUpdateContainer.style.display = 'block';
-    }
-    else {
-        futureUpdateContainer.style.display = 'none';
-    }
-}
-futureUpdateButton.addEventListener('click', showFutureUpdates);
 
-function closeForm() {
-    if (modalBoxR.style.display === 'block') {
-        modalBoxR.style.display = 'none';
-    }
-    else if (modalBoxL.style.display === 'block') {
-        modalBoxL.style.display = 'none';
-    }
-    else if (futureUpdateContainer.style.display === 'block') {
-        futureUpdateContainer.style.display = 'none';
-    }
-}
-closeBox1.addEventListener('click', closeForm);
-closeBox2.addEventListener('click', closeForm);
-closeBox3.addEventListener('click', closeForm)
+

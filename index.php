@@ -53,10 +53,9 @@ if (isset($_GET["logout"])) {
         <p id="closeBox3">&times;</p>
         <p> 1: Luigi's mansion 1 Tracking map.<br>
             2: Luigi's mansion 2 Tracking map.<br>
-            3: Fully fix the stars being weird while scrolling.<br>
+            3: Fix the stars being weird upon opening a crafting tree in the terraria page.<br>
             4: Adding a reset password button which will send an e-mail.<br>
-            5: fix the future updates button not working upon logging in<br>
-            6: Adding support for screens above 1440px (until 1920x1080)</p>
+            5: Adding support for screens above 1440px (until 1920x1080)</p>
     </div>
     <div class="errorBox <?php echo $errorClass ?>" >
         <?php
