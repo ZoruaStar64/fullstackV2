@@ -6,7 +6,7 @@ session_start();
 <html lang="en">
 <head>
     <link rel="stylesheet" href="CSS/luigisMansion1.css">
-    <link rel="shortcut icon" href="img/ColoredStar.png">
+    <link rel="shortcut icon" href="img/FavStar.png">
     <title>Star Game Tracker</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
