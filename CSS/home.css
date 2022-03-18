@@ -637,3 +637,75 @@ input {
     }
 
 }
+
+@media all and (min-width: 1680px) {
+
+    .mainBody {
+        margin-left: 30%;
+        text-align: center;
+        font-size: 25px;
+        grid-area: main;
+        width: 720px;
+    }
+
+    .mainBody p {
+        font-size: 35px;
+    }
+
+    .linkContainer {
+        grid-area: header;
+        display: flex;
+        background-color: #5C5C5C;
+        width: 500px;
+        height: 60px;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 30px;
+        float: right;
+        margin: 50px 70px 0 0;
+    }
+
+}
+
+@media all and (min-width: 1920px) {
+
+    .mainBody {
+        margin-left: 30%;
+        text-align: center;
+        font-size: 30px;
+        grid-area: main;
+        width: 820px;
+    }
+
+    .mainBody p {
+        font-size: 40px;
+    }
+
+    .linkContainer {
+        grid-area: header;
+        display: flex;
+        background-color: #5C5C5C;
+        width: 600px;
+        height: 80px;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 35px;
+        float: right;
+        margin: 50px 70px 0 0;
+    }
+
+    #modalBoxR {
+        width: 500px;
+        height: 300px;
+        top: 36%;
+        left: 35%;
+    }
+
+    #modalBoxL {
+        width: 500px;
+        height: 150px;
+        top: 36%;
+        left: 35%;
+    }
+
+}

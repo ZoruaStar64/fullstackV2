@@ -36,7 +36,7 @@ $bio = $details["bio"];
 
     <div class="titleContainer">
         <h1>Startracker</h1>
-        <p style="margin: 15px 0 30px 0; text-align: center">Profile</p>
+        <h2 style="margin: 15px 0 30px 0; text-align: center">Profile</h2>
     </div>
 
     <div class="mainBody">

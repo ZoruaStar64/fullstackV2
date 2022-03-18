@@ -65,6 +65,10 @@ h1 {
     grid-area: favorited;
 }
 
+.noFavs {
+    color: #89BFE2;
+}
+
 .labelText {
     transform: rotate(-90deg);
     position: absolute;
@@ -90,12 +94,12 @@ h1 {
     margin-left: 35px;
     background-color: #5C5C5C;
     color: #89BFE2;
+    text-decoration: none;
     text-align: center;
     align-self: center;
     width: 30%;
     height: 100%;
 }
-
 
 .linkContainer {
     grid-area: header;
@@ -138,17 +142,6 @@ footer, footer p {
     margin-top: 50px;
 }
 
-.favStarUnchecked {
-    background: url(../img/FavStar.png);
-    filter: grayscale(100%);
-    border: none;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 120px;
-    left: 70px;
-}
-
 .favStarChecked {
     background: url(../img/FavStar.png);
     filter: grayscale(0%);
@@ -168,8 +161,6 @@ footer, footer p {
 
     h1 {
         font-size: 4em;
-        font-family: 'VT323', monospace;
-        color: #A439D7;
         text-align: center;
     }
 
@@ -177,7 +168,6 @@ footer, footer p {
         width: 100%;
         font-size: 15px;
         text-align: center;
-        color: #89BFE2;
     }
 
     .mainBody {
@@ -206,12 +196,9 @@ footer, footer p {
 
     }
     .favoriteLabel {
-        display: flex;
         width: 100vw;
         height: 75px;
         margin-left: 0;
-        background-color: #5C5C5C;
-        grid-area: favoriteLabel;
     }
 
     .labelText {
@@ -224,8 +211,6 @@ footer, footer p {
 
     .iconArea {
         margin-left: 0;
-        display: grid;
-        grid-area: icon;
         align-content: center;
     }
 
@@ -235,8 +220,6 @@ footer, footer p {
 
     .changeDetails {
         margin-left: 25px;
-        background-color: #5C5C5C;
-        color: #89BFE2;
         text-align: center;
         align-self: center;
         width: 60%;
@@ -267,9 +250,6 @@ footer, footer p {
     }
 
     .favStarChecked {
-        background: url(../img/FavStar.png);
-        filter: grayscale(0%);
-        border: none;
         width: 40px;
         height: 40px;
         position: absolute;
@@ -294,7 +274,6 @@ footer, footer p {
         width: 100%;
         font-size: 30px;
         text-align: center;
-        color: #89BFE2;
     }
 
     .mainBody {
@@ -321,8 +300,6 @@ footer, footer p {
 
     .changeDetails {
         margin-left: 35px;
-        background-color: #5C5C5C;
-        color: #89BFE2;
         text-align: center;
         align-self: center;
         width: 41%;
@@ -331,7 +308,6 @@ footer, footer p {
 
     .Favorites {
         grid-area: Favorites;
-
         width: 100%;
         height: 100%;
         display: grid;
@@ -345,13 +321,9 @@ footer, footer p {
     }
 
     .favoriteLabel {
-        display: flex;
         width: 90%;
         height: 75px;
         margin-left: 40px;
-        background-color: #5C5C5C;
-        grid-area: favoriteLabel;
-
     }
 
     .labelText {
@@ -371,9 +343,6 @@ footer, footer p {
     }
 
     .favStarChecked {
-        background: url(../img/FavStar.png);
-        filter: grayscale(0%);
-        border: none;
         width: 40px;
         height: 40px;
         position: absolute;
@@ -422,8 +391,6 @@ footer, footer p {
 
     .changeDetails {
         margin-left: 35px;
-        background-color: #5C5C5C;
-        color: #89BFE2;
         text-align: center;
         align-self: center;
         width: 43%;
@@ -443,12 +410,9 @@ footer, footer p {
     }
 
     .favoriteLabel {
-        display: flex;
         width: 75px;
         height: 175px;
         margin-left: 15px;
-        background-color: #5C5C5C;
-        grid-area: favoriteLabel;
     }
 
     .labelText {
@@ -469,9 +433,6 @@ footer, footer p {
     }
 
     .favStarChecked {
-        background: url(../img/FavStar.png);
-        filter: grayscale(0%);
-        border: none;
         width: 40px;
         height: 40px;
         position: absolute;
@@ -516,8 +477,6 @@ footer, footer p {
 
     .changeDetails {
         margin-left: 35px;
-        background-color: #5C5C5C;
-        color: #89BFE2;
         text-align: center;
         align-self: center;
         width: 34%;
@@ -525,12 +484,9 @@ footer, footer p {
     }
 
     .favoriteLabel {
-        display: flex;
         width: 75px;
         height: 175px;
         margin-left: 15px;
-        background-color: #5C5C5C;
-        grid-area: favoriteLabel;
     }
 
     .labelText {
@@ -552,14 +508,167 @@ footer, footer p {
     }
 
     .favStarChecked {
-        background: url(../img/FavStar.png);
-        filter: grayscale(0%);
-        border: none;
         width: 40px;
         height: 40px;
         position: absolute;
         top: 120px;
         left: 70px;
+    }
+
+}
+
+@media all and (min-width: 1680px) {
+
+    p, label, a {
+        font-size: 30px;
+    }
+
+    h1 {
+        font-size: 6em;
+    }
+
+    .linkContainer {
+        margin: 50px 70px 0 0;
+        width: 500px;
+    }
+
+    .mainBody {
+        width: 1200px;
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 25px;
+        grid-template-areas:
+    "icon details"
+    "Favorites Favorites";
+    }
+
+    #profilePicture {
+        margin: 0 0 10px 35px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .changeDetails {
+        margin-left: 35px;
+        text-align: center;
+        align-self: center;
+        width: 34%;
+        height: 100%;
+    }
+
+    .favoriteLabel {
+        width: 100px;
+        height: 250px;
+        margin-left: 15px;
+    }
+
+    .labelText {
+        transform: rotate(-90deg);
+        position: absolute;
+        margin-top: 100px;
+        margin-left: -25px;
+    }
+
+    .cover {
+        width: 175px;
+        height: 250px;
+    }
+
+    .gamePanel {
+        width: 175px;
+        height: 250px;
+        position: relative;
+    }
+
+    .favStarChecked {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 190px;
+        left: 115px;
+    }
+
+}
+
+@media all and (min-width: 1920px) {
+
+    a {
+        font-size: 35px;
+    }
+
+    p, label {
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 6em;
+    }
+
+    .linkContainer {
+        margin: 50px 70px 0 0;
+        width: 500px;
+        height: 75px;
+    }
+
+    .mainBody {
+        width: 1600px;
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 25px;
+        grid-template-areas:
+    "icon details"
+    "Favorites Favorites";
+    }
+
+    #profilePicture {
+        margin: 0 0 10px 35px;
+        width: 215px;
+        height: 215px;
+    }
+
+    .changeDetails {
+        margin-left: 35px;
+        text-align: center;
+        align-self: center;
+        width: 34%;
+        height: 100%;
+    }
+
+    .favoriteLabel {
+        width: 125px;
+        height: 275px;
+        margin-left: 15px;
+    }
+
+    .labelText {
+        transform: rotate(-90deg);
+        position: absolute;
+        margin-top: 120px;
+        margin-left: -35px;
+        font-size: 50px;
+    }
+
+    .cover {
+        width: 200px;
+        height: 275px;
+    }
+
+    .gamePanel {
+        width: 200px;
+        height: 275px;
+        position: relative;
+    }
+
+    .favStarChecked {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 215px;
+        left: 135px;
     }
 
 }

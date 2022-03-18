@@ -55,7 +55,7 @@ if (isset($_GET["logout"])) {
             2: Luigi's mansion 2 Tracking map.<br>
             3: Fix the stars being weird upon opening a crafting tree in the terraria page.<br>
             4: Adding a reset password button which will send an e-mail.<br>
-            5: Adding support for screens above 1440px (until 1920x1080)</p>
+            5: Add user roles (these will be used for things like verifying e-mails)</p>
     </div>
     <div class="errorBox <?php echo $errorClass ?>" >
         <?php

@@ -103,6 +103,7 @@ html {
 .tooltip {
     position: relative;
     display: inline-block;
+    margin-left: 5px;
     /*border-bottom: 1px dotted black;*/ /* If you want dots under the hoverable text */
 }
 
@@ -1330,17 +1331,17 @@ html {
 
         display: grid;
         grid-area: Zen;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: auto auto auto auto auto;
         grid-gap: 10px;
         grid-template-areas:
-        ". SD THB IW SW M . . ."
-        "TerB TerB CS SF ES BK . . ."
-        "TE TNE . . . . . . ."
-        "E NE . . . . . . ."
-        "CB BoG Mur FG LB BB . . .";
+        ". SD THB IW SW M"
+        "TerB TerB CS SF ES BK"
+        "TE TNE . . . ."
+        "E NE . . . ."
+        "CB BoG Mur FG LB BB";
 
-        margin: 10px 0;
+        margin: 10px -2%;
         width: 1440px;
         height: auto;
     }
@@ -1351,6 +1352,438 @@ html {
 
     #Terra_Blade {
         width: 402px;
+    }
+
+}
+
+@media all and (min-width: 1680px) {
+
+    img {
+        transform: scale(1.5);
+        padding: 10px;
+    }
+
+    .itemTH2Center {
+        margin-left: 50px;
+    }
+
+    .itemCH2Center {
+        margin: 0 0 0 50px;
+        font-size: 1em;
+    }
+
+    .itemAH2Center {
+        margin-left: 50px;
+        font-size: 1em;
+    }
+
+    .itemZH2Center {
+        margin-left: 80px;
+        font-size: 1em;
+    }
+
+    .recipeButton1 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
+    }
+
+    .recipeButton2 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
+    }
+
+    .recipeButton3 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
+    }
+
+    .recipeButton4 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
+    }
+
+    #mainItemTree1, #mainItemTree2, #mainItemTree3, #mainItemTree4 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48% 0 48%;
+    }
+
+    .linkContainer {
+        width: 500px;
+        height: 60px;
+        font-size: 24px;
+        margin: 40px 50px 40px 0;
+        border-radius: 8px;
+    }
+
+    #checkMainItemT {
+        margin-left: 0;
+    }
+
+    #checkTItemT {
+        margin-left: 50px;
+    }
+    #checkCItemT {
+        margin-left: 0;
+    }
+    #checkAItemT {
+        margin-left: 23px;
+    }
+    #checkZItemT {
+        margin-left: 50px;
+    }
+
+    .mainItem {
+        margin-left: 0;
+    }
+
+    .craftGuideStyleModal {
+        margin: 0;
+        text-align: start;
+        position: fixed;
+        box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
+        border-radius: 8px;
+        width: 300px;
+        height: auto;
+        top: 15%;
+        left: 1%;
+    }
+
+    .Terraspark {
+        text-align: center;
+        display: grid;
+        grid-area: TS;
+        grid-template-columns: 0.1fr 0.1fr;
+        grid-template-rows: auto auto auto;
+        grid-gap: 10px;
+        grid-template-areas:
+        "FS LW"
+        "LB MC"
+        "SB OSK1";
+
+        margin: 10px 18%;
+        width: 1680px;
+        height: auto; /*83 vh old*/
+    }
+
+    .mainItemMatsT1 {
+        width: 461px;
+    }
+
+    .Cellphone {
+
+        display: grid;
+        grid-area: CP;
+        grid-template-columns: 25% 20% 15% 15%;
+        grid-template-rows: auto auto auto;
+        grid-gap: 10px;
+        grid-template-areas:
+        ". PDA PDA ."
+        "GPS REK GT FF"
+        "W . . .";
+
+        margin: 10px 3.3%;
+        width: 1680px;
+        height: auto;
+
+    }
+
+    .materialFormClassT2 {
+        width: 390px;
+    }
+
+    .mainItemMatsT2 {
+        width: 343px;
+    }
+
+    .imageGPS {
+        margin-left: 125px;
+    }
+    .imagePDA {
+        margin-left: 230px;
+    }
+
+    #GPS {
+        width: 470px;
+    }
+
+    #PDA {
+        width: 580px;
+    }
+
+    #Gold_Watch {
+        width: 333px;
+    }
+
+    .AnkhShield {
+        display: grid;
+        grid-area: AS;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-gap: 10px;
+        grid-template-areas:
+        ". OS AC ."
+        ".OSK2 B ."
+        "AB MB CCM TP";
+
+        margin: 10px -2%;
+        width: 1680px;
+        height: auto;
+    }
+
+    .materialFormClassT3 {
+        width: 343px;
+    }
+
+    .mainItemMatsT3 {
+        width: 343px;
+    }
+
+    .Zenith {
+
+        display: grid;
+        grid-area: Zen;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-gap: 10px;
+        grid-template-areas:
+        ". SD THB IW SW M"
+        "TerB TerB CS SF ES BK"
+        "TE TNE . . . ."
+        "E NE . . . ."
+        "CB BoG Mur FG LB BB";
+
+        margin: 10px -2%;
+        width: 1680px;
+        height: auto;
+    }
+
+    .mainItemMatsT4 {
+        width: 201px;
+    }
+
+    #Terra_Blade {
+        width: 402px;
+    }
+
+}
+
+@media all and (min-width: 1920px) {
+
+    img {
+        transform: scale(1.5);
+        padding: 10px;
+    }
+
+    .itemTH2Center {
+        margin-left: 50px;
+    }
+
+    .itemCH2Center {
+        margin: 0 0 0 50px;
+        font-size: 1em;
+    }
+
+    .itemAH2Center {
+        margin-left: 50px;
+        font-size: 1em;
+    }
+
+    .itemZH2Center {
+        margin-left: 80px;
+        font-size: 1em;
+    }
+
+    .recipeButton1 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
+    }
+
+    .recipeButton2 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
+    }
+
+    .recipeButton3 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
+    }
+
+    .recipeButton4 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48%;
+    }
+
+    #mainItemTree1, #mainItemTree2, #mainItemTree3, #mainItemTree4 {
+        width: 60px;
+        font-size: 15px;
+        margin: 0 48% 0 48%;
+    }
+
+    .linkContainer {
+        width: 500px;
+        height: 60px;
+        font-size: 24px;
+        margin: 40px 50px 40px 0;
+        border-radius: 8px;
+    }
+
+    #checkMainItemT {
+        margin-left: 0;
+    }
+
+    #checkTItemT {
+        margin-left: 50px;
+    }
+    #checkCItemT {
+        margin-left: 0;
+    }
+    #checkAItemT {
+        margin-left: 23px;
+    }
+    #checkZItemT {
+        margin-left: 50px;
+    }
+
+    .mainItem {
+        margin-left: 0;
+    }
+
+    .craftGuideStyleModal {
+        margin: 0;
+        text-align: start;
+        position: fixed;
+        box-shadow: 4px 4px 6px 3px rgba(137, 191, 226, 0.8);
+        border-radius: 8px;
+        width: 300px;
+        height: auto;
+        top: 15%;
+        left: 1%;
+    }
+
+    .Terraspark {
+        text-align: center;
+        display: grid;
+        grid-area: TS;
+        grid-template-columns: 0.1fr 0.1fr;
+        grid-template-rows: auto auto auto;
+        grid-gap: 10px;
+        grid-template-areas:
+        "FS LW"
+        "LB MC"
+        "SB OSK1";
+
+        margin: 10px 22%;
+        width: 1920px;
+        height: auto; /*83 vh old*/
+    }
+
+    .mainItemMatsT1 {
+        width: 461px;
+    }
+
+    .Cellphone {
+
+        display: grid;
+        grid-area: CP;
+        grid-template-columns: 25% 20% 15% 15%;
+        grid-template-rows: auto auto auto;
+        grid-gap: 10px;
+        grid-template-areas:
+        ". PDA PDA ."
+        "GPS REK GT FF"
+        "W . . .";
+
+        margin: 10px 5.6%;
+        width: 1920px;
+        height: auto;
+
+    }
+
+    .materialFormClassT2 {
+        width: 390px;
+    }
+
+    .mainItemMatsT2 {
+        width: 343px;
+    }
+
+    .imageGPS {
+        margin-left: 155px;
+    }
+    .imagePDA {
+        margin-left: 230px;
+    }
+
+    #GPS {
+        width: 500px;
+    }
+
+    #PDA {
+        width: 580px;
+    }
+
+    #Gold_Watch {
+        width: 333px;
+    }
+
+    .AnkhShield {
+        display: grid;
+        grid-area: AS;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-gap: 10px;
+        grid-template-areas:
+        ". OS AC ."
+        ".OSK2 B ."
+        "AB MB CCM TP";
+
+        margin: 10px 0;
+        width: 1920px;
+        height: auto;
+    }
+
+    .materialFormClassT3 {
+        width: 343px;
+    }
+
+    .mainItemMatsT3 {
+        width: 343px;
+    }
+
+    .Zenith {
+
+        display: grid;
+        grid-area: Zen;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-gap: 10px;
+        grid-template-areas:
+        ". SD THB IW SW M"
+        "TerB TerB CS SF ES BK"
+        "TE TNE . . . ."
+        "E NE . . . ."
+        "CB BoG Mur FG LB BB";
+
+        margin: 10px 0;
+        width: 1920px;
+        height: auto;
+    }
+
+    .mainItemMatsT4 {
+        width: 201px;
+    }
+
+    #Terra_Blade {
+        width: 502px;
     }
 
 }

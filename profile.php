@@ -17,7 +17,6 @@ $gender = $details["gender"];
 $email = $details["email"];
 ?>
 
-<!--<meta content="width=device-width, initial-scale=1" name="viewport" />-->
 <!doctype html>
 <html lang="en">
 <head>
