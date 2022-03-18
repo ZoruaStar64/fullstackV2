@@ -216,7 +216,9 @@ function loadTerrariaItems($link) {
 <header>
     <div class="linkContainer"><a href="index.php">Home</a> <a href="profile.php?id=<?php echo $userId ?>">Profile</a> <a href='index.php?logout'>Logout</a> <a href="about.php">About</a></div>
 </header>
-
+<div>
+<h1>Hi! If you're on this page then you're on the wrong page<br><br><a href="terrariaChecklist.php">Go here instead!</a></h1>
+</div>
     <?php loadTerrariaItems($link); ?>
 
 <script src="JS/oldterraria.js"></script>
